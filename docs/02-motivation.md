@@ -6,7 +6,7 @@ Most DeFi lending protocols reverse this process. Capital is first deposited int
 
 Cardano's eUTxO architecture is uniquely suited to the loan-first model. Unlike account-based DeFi, where lending is typically organized around shared liquidity pools, Cardano's transaction-based architecture naturally represents individual financial relationships as distinct on-chain objects. This makes it well suited for programmable institutional credit markets built around discrete lending agreements.
 
-Individual loans can exist as distinct on-chain UTxOs with their own state and logic, allowing them to be independently discovered, funded, and settled before being aggregated into larger credit portfolios. This creates a strong foundation for programmable credit markets that more closely resemble real-world lending.
+Individual loans can exist as distinct on-chain UTxOs with their own state and logic, allowing them to be independently discovered, funded, and settled before being aggregated into larger credit portfolios. This creates a shared institutional credit market where thousands of regulated financial institutions can independently access digital capital through common open infrastructure rather than fragmented bilateral relationships.
 
 Two problems block real-world credit activity on Cardano today.
 
@@ -28,7 +28,7 @@ Demand for lending capacity far exceeds what they can fund internally, and the c
 
 The opportunity extends far beyond a small pilot cohort. Cooperative financial institutions are among the most scalable channels for deploying productive capital. Rather than onboarding thousands of individual businesses one by one, a single institutional relationship immediately provides access to an established lending operation with existing borrowers, underwriting processes, repayment collection and local regulatory compliance.
 
-This allows Cardano-native capital to scale through existing financial infrastructure rather than replacing it.
+This allows Cardano-native capital to scale through existing financial infrastructure rather than replacing it. This institutional-first approach enables ecosystem builders to scale credit markets by onboarding financial institutions rather than thousands of individual borrowers, dramatically reducing the cost and complexity of market expansion.
 
 ## Bringing the Two Together
 

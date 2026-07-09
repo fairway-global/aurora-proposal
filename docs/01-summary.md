@@ -1,5 +1,33 @@
 # 1. Summary
 
+## Proposal at a Glance
+
+| Category | Summary |
+| ----- | ----- |
+| **Treasury Request** | **2,900,000 ADA** |
+| **Development Budget** | **2,200,000 ADA** |
+| **Pilot Liquidity** | **700,000 ADA** (targeting approximately USD 100,000 equivalent at conversion) |
+| **Delivery Period** | 12 months |
+| **Purpose** | Build open-source institutional credit market infrastructure and validate it through a Treasury-backed SACCO pilot |
+| **Primary Deliverables** | Metadata standard, off-chain indexer, developer tooling, dRep dashboard, pilot case study, Capital Provider Readiness Framework |
+| **Funding Model** | Development funding released only upon milestone approval. Pilot liquidity released progressively (30% / 30% / 40%) based on successful deployment and repayment performance. |
+| **Treasury Custody** | Independent 2-of-3 Treasury multisignature administered by Independent Treasury Trustees. Development and pilot liquidity follow separate governance workflows. |
+| **Development Custody** | Independent 3-of-5 multisignature with two consortium signers and three independent signers. |
+| **Treasury Protection** | Progressive deployments, milestone gating, public reporting, independent audits, published wallet addresses, and dRep monitoring dashboard. |
+| **End of Pilot** | Remaining Treasury principal together with Treasury-entitled proceeds returned according to the approved participation framework. |
+| **Open Source** | Apache License 2.0; repositories, documentation and build instructions published no later than M2. |
+
+## Governance Safeguards
+
+* Independent Treasury Trustees control Treasury custody.
+* Treasury funds remain undelegated and delegated to **Abstain** until approved disbursement.
+* Public milestone reporting and independent financial review.
+* Canonical proposal published through immutable IPFS reference.
+* Remaining Treasury principal and Treasury-entitled proceeds returned at project completion.
+* Undistributed development funds refunded if milestones are not completed.
+
+## Proposal Summary
+
 Cardano's eUTxO model enables decentralized credit markets built around individual Loan Request UTxOs rather than pooled liquidity. The infrastructure is designed as reusable, jurisdiction-agnostic public infrastructure that can support institutional credit markets wherever compatible lending institutions and regulated settlement providers exist. This proposal, led by Fairway in collaboration with Fallen Icarus and Sundial, delivers the infrastructure and market validation required to establish open, programmable credit markets on Cardano.
 
 The project consists of two complementary phases.
@@ -10,7 +38,7 @@ The project establishes an optional metadata and trust layer that enables identi
 
 A versioned transaction metadata standard and open-source off-chain indexer allow participants to verify zero-knowledge proofs derived from verifiable credentials while keeping the underlying lending infrastructure fully permissionless. The same framework is designed to support future trust, reputation and verification use cases beyond KYC.
 
-The infrastructure is designed to integrate with Pogun's credit market and other compatible Cardano lending implementations, while remaining independent of any single protocol or production deployment.
+The infrastructure is designed to integrate with Pogun's credit market architecture and other compatible Cardano lending implementations while remaining independent of any single protocol. The objective is to establish reusable public infrastructure that multiple credit market implementations can adopt rather than creating another isolated lending platform.
 
 ## Phase 2: Validate Through Real Lending
 
@@ -30,15 +58,19 @@ The pilot's lasting value is not the lending activity itself, but the reusable m
 
 ## Open Ecosystem Commitment
 
-Sundown extends existing Cardano lending infrastructure rather than replacing it.
+Sundown extends existing Cardano lending infrastructure rather than replacing it
 
-The project introduces an optional metadata, verification and discovery layer that complements existing lending protocols, including Pogun, while preserving open participation and avoiding liquidity fragmentation.
+The project is designed to complement existing credit market initiatives rather than compete with them. Protocols such as Pogun focus on originating and settling credit relationships. Sundown provides reusable metadata, verification and discovery infrastructure that enables institutional participation across compatible credit market implementations. By separating lending logic from institutional infrastructure, future builders can innovate independently while sharing common standards rather than recreating institutional onboarding, verification and discovery systems.
 
 The pilot is designed to remain compatible with the credit market architecture pioneered by Fallen Icarus and implemented by Pogun. Where appropriate, it may integrate with Pogun's production infrastructure. However, the objectives of this proposal do not depend on any single implementation. Should Pogun's production deployment be delayed or unavailable, the consortium may utilize equivalent audited lending contracts or compatible partner infrastructure while preserving the same metadata standard, indexer architecture and credit market model.
 
-All infrastructure, standards and implementation learnings developed through the project will be open source and available for the broader Cardano ecosystem to adopt, extend and integrate into future credit market applications.
+All software, standards and implementation learnings developed through the project will be released as open source under the Apache License 2.0 (or your chosen license). Public source repositories, documentation and build instructions will be published no later than completion of M2. The Cardano ecosystem may freely use, audit, modify, fork and integrate the resulting infrastructure into future credit market applications in accordance with the license terms.
 
-The consortium does not seek Treasury funding to operate a private lending platform. Treasury funding establishes reusable open infrastructure, including metadata standards, verification frameworks, indexing infrastructure and operational models, that any Cardano credit market participant may adopt without requiring Fairway or continued Treasury funding.
+The consortium does not seek Treasury funding to operate a private lending platform. No consortium member receives preferential rights to operate or commercialize the resulting infrastructure. Any individual or organization may use, operate, extend or commercialize the open-source outputs under the terms of the applicable license without requiring Fairway, Sundial, Fallen Icarus or further Treasury funding.
+
+Treasury funding establishes reusable open infrastructure, including metadata standards, verification frameworks, indexing infrastructure and operational models, that any Cardano credit market participant may adopt without requiring Fairway or continued Treasury funding.
+
+The purpose of this proposal is to establish an **open, community-owned institutional layer** for Cardano credit markets before proprietary implementations emerge. Any future credit market implementation may build upon these standards without requiring Fairway, Sundial, Fallen Icarus or additional Treasury funding.
 
 ## Consortium
 

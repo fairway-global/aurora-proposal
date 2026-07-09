@@ -22,14 +22,17 @@ The project is delivered through five milestones across two phases. ADA funds de
 
 * Tx metadata standard specification for identity proofs, verification status and compliance information.
 * Indexer architecture document.
-* Confirmed SACCO cohort with signed partnership agreements.
+* Confirmed SACCO cohort with executed Memorandums of Understanding and a framework for pilot participation agreements prior to the first pilot liquidity deployment.
 * Pilot operating model covering participant roles, settlement flow and risk parameters.
 
 #### Success Criteria
 
 * Metadata specification published and open for community review.
+
 * Indexer design reviewed by Fallen Icarus for alignment with Cardano credit market architecture, CIP-89, and compatibility with Pogun's implementation.
-* At least three SACCOs confirmed for pilot participation (Three Ethiopian SACCOs have signed Memorandums of Understanding to participate in the initial pilot, with many additional institutions currently progressing through onboarding discussions).
+
+* At least three SACCOs confirmed for pilot participation. Three Ethiopian SACCOs have already executed Memorandums of Understanding with the consortium, with additional institutions progressing through onboarding. Prior to the first pilot liquidity deployment, each participating institution will execute the required pilot participation agreement governing capital deployment, repayment obligations, operational responsibilities and reporting requirements. Where confidentiality permits, redacted copies of these agreements will be published. Where publication is not possible, their execution will be independently verified before pilot liquidity is released.
+
 * Pilot operating model approved by project partners.
 
 **ADA Release:** 300,000
@@ -78,7 +81,7 @@ The project is delivered through five milestones across two phases. ADA funds de
 
 **ADA Release:** 400,000
 
-**Pilot Liquidity Release:** ≈ 30,000$
+**Pilot Liquidity Release**: approximately 30,000 USDM equivalent
 
 ### M4: Pilot Round 2 and Market Validation
 
@@ -94,14 +97,15 @@ The project is delivered through five milestones across two phases. ADA funds de
 #### Success Criteria
 
 * Repayment activity recorded on-chain from Round 1 loans.
-* Additional ≈ 30,000 USDM deployed, plus any recycled capital.
+* Additional ≈30,000 USDM deployed, plus any recycled capital.
 * Public progress report published.
-* Prospective capital providers have evaluated the metadata standard, indexer and pilot workflows.
-* Capital provider requirements documented and prioritized for implementation.
+* Documented engagement completed with **at least five** prospective capital providers representing stablecoin issuers, institutional allocators and Bitcoin-backed capital sources.
+* Operational, reporting and compliance requirements from participating capital providers documented and prioritized.
+* Capital Provider Readiness Framework published, including documented institutional requirements, identified implementation priorities, and recommendations for future Cardano credit market infrastructure adoption.
 
 **ADA Release:** 500,000
 
-**Pilot Liquidity Release:** ≈ 30,000$ (contingent on demonstrated repayment activity from Round 1)
+**Pilot Liquidity Release:** approximately 30,000 USDM equivalent (contingent on demonstrated repayment activity from Round 1)
 
 ### M5: Pilot Round 3, Capital Readiness and Ecosystem Handover
 
@@ -125,7 +129,7 @@ The project is delivered through five milestones across two phases. ADA funds de
 * Capital Provider Readiness Framework completed and published.
 * Infrastructure recommendations finalized based on institutional validation.
 * Final documentation and open-source deliverables published.
-* Treasury principal and Treasury-entitled proceeds returned according to the approved participation framework.
+* Treasury principal and Treasury-entitled proceeds returned according to the approved pilot participation framework.
 
 **ADA Release:** 500,000
 

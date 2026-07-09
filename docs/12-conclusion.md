@@ -6,8 +6,8 @@ The metadata standard and off-chain indexer are open-source public goods. The pi
 
 If it works, Cardano has a replicable model for connecting on-chain capital with productive real-world lending, and SACCOs leave with the on-chain reputations they need to keep attracting capital long after the pilot ends.
 
-Because all deliverables are open source and jurisdiction agnostic, the infrastructure can be adopted by other credit market participants without requiring further Treasury funding or dependence on the consortium.
+Because all deliverables are open source, protocol independent and jurisdiction agnostic, the resulting infrastructure can be adopted by Pogun and future Cardano credit market infrastructure implementations without further Treasury funding or dependence on the consortium.
 
 ---
 
-[← 11. Governance and Oversight](11-governance-and-oversight.md) · [Table of Contents](../README.md) · [13. Governance Metadata and Net Change Limit →](13-governance-metadata-and-net-change-limit.md)
+[← 11. Governance and Oversight](11-governance-and-oversight.md) · [Table of Contents](../README.md) · [13. Governance Submission Requirements →](13-governance-submission-requirements.md)

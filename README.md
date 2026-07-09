@@ -18,19 +18,19 @@
 ### Proposal
 
 1. [Summary](docs/01-summary.md)
-   - Phase 1: Build Open Credit Market Infrastructure · Phase 2: Validate Through Real Lending · Open Ecosystem Commitment · Consortium · Pilot Service Providers
+   - Proposal at a Glance · Governance Safeguards · Proposal Summary · Phase 1: Build Open Credit Market Infrastructure · Phase 2: Validate Through Real Lending · Open Ecosystem Commitment · Consortium · Pilot Service Providers
 2. [Motivation](docs/02-motivation.md)
    - Institutions need KYC, but on-chain lending is pseudonymous · SACCOs need capital, but traditional finance rails are too expensive · Bringing the Two Together
 3. [Proposed Solution](docs/03-proposed-solution.md)
    - Why metadata instead of smart contract logic? · How It Works · What We Build
 4. [Pilot Implementation](docs/04-pilot-implementation.md)
-   - Structure · Process Flow · Why This Is Low Risk · What the Pilot Proves
+   - Structure · Process Flow · Why This Model Scales · How Risk Is Contained · What the Pilot Proves
 5. [Treasury Participation Model](docs/05-treasury-participation-model.md)
    - ADA Allocation · Pilot Liquidity · Transparency and Audit · After the Pilot · Operational Risk Management
 6. [Deliverables](docs/06-deliverables.md)
    - Phase 1: Infrastructure · Phase 2: Pilot
 7. [Budget and Resource Allocation](docs/07-budget-and-resource-allocation.md)
-   - ADA Allocation by Partner · Team Responsibilities · Pilot Capital
+   - Operating Budget Allocation · Pilot Liquidity (Separate Treasury Allocation) · Team Responsibilities · Pilot Capital
 8. [Consortium and Relevant Experience](docs/08-consortium-and-relevant-experience.md)
    - Fairway · Fallen Icarus · Sundial · Previous Delivery
 9. [Milestones and Success Criteria](docs/09-milestones-and-success-criteria.md)
@@ -39,7 +39,8 @@
 11. [Governance and Oversight](docs/11-governance-and-oversight.md)
     - Independent Treasury Trustees · Development Fund Custody · Milestone Approval · Pilot Liquidity Oversight · Refund Conditions · Reporting
 12. [Conclusion](docs/12-conclusion.md)
-13. [Governance Metadata and Net Change Limit](docs/13-governance-metadata-and-net-change-limit.md)
+13. [Governance Submission Requirements](docs/13-governance-submission-requirements.md)
+    - Canonical Proposal Reference · Net Change Limit (NCL) · Prior Treasury Funding Disclosure · Conflicts and Related Parties
 
 ### Appendices
 
@@ -50,11 +51,13 @@
 
 ## At a Glance
 
-| Component | Amount | Purpose |
-| --- | --- | --- |
-| Operating Budget | 2,200,000 ADA | Infrastructure development, pilot execution and ecosystem delivery |
-| Pilot Liquidity | 700,000 ADA | Targeting approximately USD 100,000 of lending capital |
-| **Total Treasury Withdrawal** | **2,900,000 ADA** | |
+| Component | ADA | Approx. USD\* | Purpose |
+| --- | --- | --- | --- |
+| Operating Budget | 2,200,000 | $352,000 | Infrastructure development, pilot execution and ecosystem delivery |
+| Pilot Liquidity | 700,000 | $112,000 | Revolving lending capital administered independently by Treasury Trustees |
+| **Total Treasury Withdrawal** | **2,900,000** | **$464,000** | |
+
+\*Illustrative values calculated using a reference ADA price of US$0.16.
 
 **Phase 1** builds an optional metadata and trust layer — a versioned transaction metadata standard and open-source off-chain indexer — that lets identity, compliance and other trust signals attach to Cardano-native lending without modifying the underlying smart contracts.
 

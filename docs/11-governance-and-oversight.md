@@ -16,7 +16,7 @@ Development funding and pilot liquidity follow separate operational workflows wh
 | Christian Taylor | @DeOpenSourceGuy |
 | Elder Millennial | @TheElderMillenial |
 
-The Independent Treasury Trustees are well-established Cardano ecosystem contributors selected based on their governance experience, longstanding participation in the Cardano ecosystem and reputation within the community. They serve in their individual capacity and are independent of the proposing consortium.
+The Independent Treasury Trustees are well-established Cardano ecosystem contributors selected based on their governance experience, longstanding participation in the Cardano ecosystem and reputation within the community. They serve in their individual capacity and are independent of the proposing consortium. Trustees receive no performance-based compensation tied to pilot lending outcomes or deployment volume.
 
 The Independent Treasury Trustees:
 
@@ -92,7 +92,9 @@ If a development milestone is not completed within 90 days of its target date an
 
 If the project terminates before completion, any undistributed development funds remaining in the Treasury multisignature are returned to the Treasury within 30 days.
 
-Pilot liquidity that has not yet been deployed is returned immediately upon project termination. Liquidity already deployed into active lending agreements remains subject to the applicable loan agreements and is returned to the Treasury as repayments are received. Where repayments are delayed or not received due to SACCO default or other credit events, the resulting losses are allocated in accordance with the approved pilot participation framework and do not create additional financial obligations for the consortium or the Independent Treasury Trustees.
+Pilot liquidity that has not yet been deployed is returned immediately upon project termination. Liquidity already deployed into active lending agreements remains subject to the applicable participation and loan agreements and is returned to the Treasury as repayments are received. The maximum Treasury loss is limited to the amount of pilot liquidity actively deployed at any point in time and, through the staged 30% / 30% / 40% release model, cannot exceed the amount approved for the current deployment round.
+
+Participating SACCOs remain responsible for originating, underwriting, servicing and collecting loans in accordance with the executed pilot participation agreements. Realized losses arising from approved lending activities are limited to the deployed Treasury pilot capital and do not create additional financial obligations for the consortium, the Independent Treasury Trustees or the Cardano Treasury beyond the deployed pilot allocation.
 
 ## Reporting
 

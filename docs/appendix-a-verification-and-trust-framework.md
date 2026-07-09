@@ -47,4 +47,4 @@ The framework enables compliance and trust models to be implemented without impo
 
 ---
 
-[← 13. Governance Metadata and Net Change Limit](13-governance-metadata-and-net-change-limit.md) · [Table of Contents](../README.md) · [Appendix B: Progressive Pilot Deployment Model →](appendix-b-progressive-pilot-deployment-model.md)
+[← 13. Governance Submission Requirements](13-governance-submission-requirements.md) · [Table of Contents](../README.md) · [Appendix B: Progressive Pilot Deployment Model →](appendix-b-progressive-pilot-deployment-model.md)

@@ -46,7 +46,7 @@ Validate:
 
 **Pilot Capital**
 
-Deployment toward the full 100% of the pilot liquidity allocation equivalent to approximately **USD 100,000**.
+Deployment toward the full 100% of the pilot liquidity allocation equivalent to approximately **USD 100,000**. The USD equivalent is illustrative and depends on the ADA/USD exchange rate at the time of conversion.
 
 **Structure**
 

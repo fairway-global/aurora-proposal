@@ -2,7 +2,7 @@
 
 This proposal builds an optional metadata and trust layer designed for Cardano credit market infrastructure, with initial integration targeting Pogun's credit market architecture while remaining compatible with alternative implementations.
 
-The broader objective is to establish the foundations of a Cardano-native credit market, where lending opportunities can be discovered, evaluated and funded through open market infrastructure. Rather than modifying the underlying lending protocol, the proposal focuses on the metadata, verification and discovery infrastructure required to support institutional participation.
+The broader objective is to establish the foundations of a Cardano-native credit market, where lending opportunities can be discovered, evaluated and funded through open market infrastructure. The proposal intentionally focuses on institutional infrastructure rather than lending logic. Existing and future Cardano credit market implementations remain free to innovate independently while sharing a common metadata, verification and discovery layer.
 
 The solution does not modify core lending smart contracts. Instead, it uses Cardano transaction metadata to attach identity and compliance information to loan UTxOs, and an off-chain indexer to read and verify that metadata. This allows the infrastructure to remain compatible with Pogun's architecture while also supporting alternative audited credit market implementations where appropriate.
 
@@ -28,7 +28,7 @@ Verification therefore becomes optional infrastructure rather than a protocol re
 
 ### Loan Origination
 
-A SACCO or other originator creates a Loan Request UTxO through a compatible Cardano credit market implementation, with the initial pilot targeting Pogun's credit market architecture.
+A SACCO or other originator creates a Loan Request UTxO through a compatible Cardano credit market infrastructure implementation, with the initial pilot targeting Pogun's credit market architecture.
 
 Depending on the implementation, a Loan Request UTxO may represent a SACCO funding request, a lending program, or an individual lending opportunity.
 
@@ -52,7 +52,7 @@ Any participant may fund a lending opportunity through the underlying credit mar
 
 As loans are repaid, repayment history is trustlessly associated with the originating entity and its verification credentials.
 
-Over time, these repayment records can contribute to privacy-preserving reputation systems and future trust frameworks, including those enabled by Midnight and other zero-knowledge technologies.
+Over time, repayment history establishes portable institutional credit histories that future capital providers can evaluate through the same open infrastructure. These histories form the basis for privacy-preserving institutional reputation systems rather than protocol-specific trust models.
 
 ### Settlement
 
@@ -74,7 +74,7 @@ Both components will be released as open public infrastructure for the broader C
 
 ![Cardano Credit Market](../assets/cardano-credit-market.png)
 
-*Image 1. 	Cardano Credit market*
+*Image 1. 	Cardano Credit market infrastructure*
 
 ---
 

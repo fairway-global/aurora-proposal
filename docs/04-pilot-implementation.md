@@ -41,37 +41,47 @@ The objective is not to prescribe a single market structure from the outset, but
 
 6. **Capital Recycling.** As loans are repaid, Treasury capital becomes available for redeployment into new lending opportunities. Subsequent deployment rounds may incorporate additional institutions and alternative Loan Request UTxO structures based on operational feedback and pilot outcomes.
 
-## Why This Is Low Risk
+## Why This Model Scales
+
+The long-term opportunity extends far beyond the initial pilot. Cooperative financial institutions already operate at significant scale across emerging markets, creating one of the largest and most scalable distribution channels for productive credit. Rather than building a lending network borrower by borrower, Cardano-native capital can reach thousands of existing financial institutions that already understand their local markets.
+
+Rather than originating and servicing thousands of individual SME loans directly, the proposed model connects global digital capital with regulated financial institutions that already possess borrower relationships, underwriting expertise, repayment infrastructure and regulatory standing. Every new institutional relationship immediately expands lending capacity without requiring new borrower acquisition or operational infrastructure.
+
+This creates a highly scalable distribution model. Each new institutional relationship immediately provides access to an established lending operation rather than requiring the ecosystem to build new borrower acquisition, underwriting and servicing capabilities from scratch.
+
+Each participating SACCO establishes a portable, verifiable on-chain credit history through its repayment performance. As more institutions participate, capital providers can allocate funds based on transparent on-chain performance rather than building separate due diligence processes for every institution.
+
+Because the infrastructure is open and jurisdiction agnostic, the same institutional onboarding framework can be reused to connect thousands of regulated financial institutions across different jurisdictions using a common metadata standard, verification framework and indexing infrastructure. This reduces duplicated effort while increasing interoperability across future Cardano credit market implementations.
+
+## How Risk Is Contained
 
 The pilot launches with participating SACCOs that have already executed Memorandums of Understanding with the consortium and already perform lending as their core business.
 
 Rather than replacing existing financial institutions, Cardano supplies capital and infrastructure to organizations that already possess local expertise, borrower relationships and servicing capabilities.
 
-Treasury capital is not exposed to a single institution. The pilot begins with three independent SACCOs and progressively expands only where repayment performance and operational readiness have been demonstrated.
+Treasury capital is deployed progressively across multiple participating institutions. Subsequent capital deployments occur only after satisfactory repayment performance, operational compliance and successful completion of earlier deployment rounds have been demonstrated.
 
-$100k goes a long way in Ethiopia. Typical SACCO loans are small and short, so the pilot can fund meaningful lending activity across multiple institutions without requiring a large Treasury commitment.
+Typical SACCO loans in Ethiopia are relatively small and short-duration, allowing meaningful lending activity across multiple institutions while validating repeated repayment and capital recycling during the pilot.
 
-SACCOs already have the legal structures, borrower relationships, and servicing operations in place. Cardano is not taking on the role of lender; it is supplying capital to institutions that already know how to lend.
+Targeting regulated financial institutions rather than individual borrowers also reduces operational and currency risk. Loans are denominated in USDM (or another approved Cardano-native USD-denominated stable asset) but disbursed in Ethiopian Birr. Participating institutions, with diversified loan portfolios, established underwriting practices and operational reserves, are significantly better positioned to manage this exposure than individual SME borrowers.
 
-Targeting SACCOs rather than end-borrowers also manages exchange rate risk. Loans are denominated in USDM (or another approved Cardano-native USD-denominated stable asset), but disbursed in Ethiopian Birr, creating currency exposure. SACCOs, as institutions with diversified loan portfolios and operational reserves, are better positioned to absorb this risk than individual SME borrowers would be.
+Because all loans exist on-chain as UTxOs, Treasury-funded activity remains independently auditable. The indexer API and dRep monitoring dashboard enable transparent verification of capital deployment, repayments and loan performance without relying solely on off-chain reporting.
 
-Because all loans live on-chain as UTxOs, dReps and any other Cardano stakeholder can monitor loan health in real time without relying on off-chain reporting. The indexer API makes this data queryable, and a lightweight dashboard for dReps to track the status of Treasury-funded loans is a natural addition to the tooling scope.
-
-The phased deployment model further reduces risk by validating operational processes before expanding participation or introducing more sophisticated market structures.
+The phased deployment model validates operational processes before expanding participation or increasing capital deployment.
 
 ## What the Pilot Proves
 
-The pilot validates the complete lifecycle of a Cardano-native credit market:
+The pilot validates the complete lifecycle of a Cardano-native institutional credit market:
 
-* Metadata attachment.
-* Zero-knowledge proof verification.
-* Indexed loan discovery.
-* On-chain capital participation.
-* Stablecoin settlement.
-* Real-world loan disbursement.
-* Repayment tracking.
-* Capital recycling.
-* Reputation formation.
+* Metadata attachment
+* Zero-knowledge proof verification
+* Indexed loan discovery
+* On-chain capital participation
+* Stablecoin settlement
+* Real-world loan disbursement
+* Repayment tracking
+* Capital recycling
+* Institutional credit history formation
 
 The primary objective of the pilot is to validate Cardano's novel technical approach to programmable credit markets. The resulting economic impact, expanding lending capacity for regulated financial institutions and improving access to affordable capital, is the real-world validation of that infrastructure rather than the primary deliverable itself.
 
@@ -79,7 +89,9 @@ More broadly, the pilot evaluates whether Cardano's eUTxO architecture can suppo
 
 The pilot also validates whether the metadata standard, indexer and reporting infrastructure satisfy the requirements of prospective capital providers evaluating future participation.
 
-The long-term objective is to establish the foundations for open credit market infrastructure capable of supporting institutional, stablecoin, ADA and Bitcoin-backed capital participation across multiple jurisdictions and lending models.
+Beyond the technology itself, the pilot validates a repeatable institutional onboarding model capable of scaling from an initial cohort of participating financial institutions to thousands of regulated lenders using the same open infrastructure.
+
+The long-term objective is to establish the foundations for open, jurisdiction-agnostic credit market infrastructure capable of supporting institutional, stablecoin, ADA and Bitcoin-backed capital participation across multiple jurisdictions and lending models.
 
 ---
 

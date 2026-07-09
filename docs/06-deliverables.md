@@ -5,7 +5,7 @@
 1. **Tx metadata standard.** A versioned, open-source schema for attaching identity proofs, verification status, and compliance information to credit market UTxOs. Designed to be extensible beyond KYC and support future trust, reputation and verification use cases.
 2. **Off-chain indexer.** An open-source service that monitors the chain for credit market UTxOs, verifies attached ZK proofs, tracks loan lifecycles, and exposes a query API for filtered loan discovery.
 3. **Documentation.** Integration guides for originators, capital providers, and developers who want to build on the metadata standard or operate their own indexer infrastructure.
-4. **Credit Market Research.** Documentation of lessons learned regarding different Loan Request UTxO models, including SACCO-level, program-level and more granular lending structures evaluated during the pilot.
+4. **Institutional Credit Market Framework.** Documentation of lessons learned regarding different Loan Request UTxO models, including SACCO-level, program-level and more granular lending structures evaluated during the pilot.
 
 ## Phase 2: Pilot
 

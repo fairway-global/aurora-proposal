@@ -2,22 +2,33 @@
 
 The Treasury withdrawal consists of two components.
 
-| Component | Amount | Purpose |
-| ----- | ----- | ----- |
-| Operating Budget | 2,200,000 ADA | Infrastructure development, pilot execution and ecosystem delivery |
-| Pilot Liquidity | 700,000 ADA | Targeting approximately USD 100,000 of lending capital |
-| **Total Treasury Withdrawal** | **2,900,000 ADA** |  |
+| Component | ADA | Approx. USD\* | Delivery Scope | Purpose |
+| ----- | ----- | ----- | ----- | ----- |
+| Operating Budget | 2,200,000 | $352,000 | 12-month multidisciplinary delivery | Infrastructure development, pilot execution and ecosystem delivery |
+| Pilot Liquidity | 700,000 | $112,000 | Treasury-managed revolving pilot liquidity | Revolving lending capital administered independently by Treasury Trustees |
+| **Total** | **2,900,000** | **$464,000** | — |  |
 
-## ADA Allocation by Partner
+\*Illustrative values calculated using a reference ADA price of **US$0.16**.
 
-| Partner | Primary Responsibilities | ADA |
-| ----- | ----- | ----- |
-| Fairway | Metadata standard, off-chain indexer, verification infrastructure, SACCO onboarding, pilot execution, reporting and ecosystem coordination | 1,200,000 |
-| Sundial | Capital provider development, market-readiness activities and institutional engagement required to transition the pilot from Treasury-seeded validation to sustainable private capital participation. | 450,000 |
-| Fallen Icarus | Credit market architecture, UTxO lending design review, metadata framework review and technical oversight | 250,000 |
-| Shared | Security audits, external reviews, legal support, infrastructure hosting and contingency | 300,000 |
-| Pilot Liquidity | Independent pilot lending liquidity targeting approximately USD 100,000. Administered separately from the operating budget by the Independent Treasury Trustees (2-of-3 multisig) and deployed through progressive lending rounds under the approved pilot governance framework. | 700,000 |
-| **Total** |  | **2,900,000** |
+The USD values above are provided solely to assist reviewers in understanding the approximate scale of the proposal. Treasury funding is requested in ADA. Deliverables are fixed by scope rather than USD expenditure and remain unchanged regardless of subsequent ADA price movements. Any increase in ADA purchasing power during the delivery period increases implementation capacity or reduces the Treasury's effective USD cost without reducing the committed project scope.
+
+## Operating Budget Allocation
+
+The operating budget reflects responsibility for producing project deliverables rather than compensation of individual contributors. Activities include engineering, architecture, ecosystem development, project management, testing, documentation, governance, pilot execution and external professional services delivered throughout the 12-month implementation period.
+
+| Partner | ADA | Approx. USD\* | Primary Responsibilities |
+| ----- | ----- | ----- | ----- |
+| Fairway | **1,200,000** | **$192,000** | Metadata standard, off-chain indexer, verification infrastructure, SACCO onboarding, pilot execution, reporting and ecosystem coordination |
+| Sundial | **450,000** | **$72,000** | Deliverables include documented engagement with prospective capital providers, completed requirements assessments covering operational, compliance and reporting readiness, publication of a Capital Provider Readiness Framework, and recommendations for future participation by stablecoin providers, institutional allocators, ADA holders and Bitcoin-backed capital sources. These outputs provide reusable guidance for future Cardano credit market participants beyond the scope of this pilot. |
+| Fallen Icarus | **250,000** | **$40,000** | Credit market architecture, UTxO lending design review, metadata framework review and technical oversight |
+| Shared Resources | **300,000** | **$48,000** | Independent security audits, external technical reviews, independent legal and regulatory review covering cross-border lending, stablecoin settlement, custody arrangements and applicable regulatory considerations, infrastructure hosting, and project contingency. |
+| **Operating Budget Total** | **2,200,000** | **$352,000** |  |
+
+## Pilot Liquidity (Separate Treasury Allocation)
+
+| Allocation | ADA | Approx. USD\* | Administration |
+| ----- | ----- | ----- | ----- |
+| Pilot Liquidity | **700,000** | **$112,000** | Administered independently by the Independent Treasury Trustees (2-of-3 multisig) and deployed through progressive lending rounds under the approved pilot governance framework |
 
 ## Team Responsibilities
 
@@ -45,7 +56,7 @@ This includes:
 * Gathering ecosystem feedback to improve usability and readiness.
 * Developing a Capital Provider Readiness Framework with recommendations for future stablecoin, ADA and Bitcoin-backed capital participation.
 
-The objective is to ensure the infrastructure is ready for broader adoption by professional capital providers after Treasury funding concludes.
+Outputs include the Capital Provider Readiness Framework, documented institutional requirements, operational and compliance assessments, and recommendations supporting future stablecoin, ADA and Bitcoin-backed capital participation.
 
 ### Fallen Icarus
 
@@ -53,7 +64,7 @@ Fallen Icarus provides credit market architecture guidance, including:
 
 * UTxO-based credit market architecture and lending model design.
 * Review of the transaction metadata standard and indexer architecture.
-* Technical guidance to ensure compatibility with Pogun's credit market architecture and other Cardano credit market implementations.
+* Technical guidance ensuring compatibility with Pogun and other compatible Cardano credit market implementations while preserving protocol independence.
 * Ongoing consultation on credit market design, loan lifecycle models, reputation systems and future protocol evolution.
 
 ### Shared Resources
@@ -62,7 +73,7 @@ Shared resources cover:
 
 * Independent security audits.
 * External technical reviews.
-* Legal and compliance support.
+* Independent legal and regulatory review covering cross-border lending, stablecoin settlement, custody arrangements and applicable regulatory considerations for pilot deployment.
 * Infrastructure hosting.
 * Project contingency.
 
