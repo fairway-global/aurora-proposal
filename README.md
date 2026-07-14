@@ -16,7 +16,7 @@ Aurora is a Cardano Treasury proposal to fund reusable credit-market infrastruct
 
 ## Start Here
 
-- [日本語版](docs/ja/README.md) — Japanese reviewer entry point and complete translated proposal.
+- [日本語版](docs-jp-ドキュメント/README.md) — Japanese reviewer entry point and complete translated proposal.
 - [Reviewer Brief](docs/00-reviewer-brief.md) — funding request, evaluator signals, and governance safeguards.
 - [Full Proposal](proposal.md) — complete regenerated proposal from the latest source document.
 - [Milestones](docs/09-milestones-and-success-criteria.md) — release schedule, deliverables, success criteria, and pilot liquidity gates.
