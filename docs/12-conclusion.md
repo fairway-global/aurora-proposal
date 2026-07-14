@@ -8,6 +8,8 @@ If it works, Cardano has a replicable model for connecting on-chain capital with
 
 Because all deliverables are open source, protocol independent and jurisdiction agnostic, the resulting infrastructure can be adopted by Pogun and future Cardano credit market infrastructure implementations without further Treasury funding or dependence on the consortium.
 
+#
+
 ---
 
-[← 11. Governance and Oversight](11-governance-and-oversight.md) · [Table of Contents](../README.md) · [13. Governance Submission Requirements →](13-governance-submission-requirements.md)
+[← 11. Governance and Oversight](./11-governance-and-oversight.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [13. Governance Submission Requirements →](./13-governance-submission-requirements.md)

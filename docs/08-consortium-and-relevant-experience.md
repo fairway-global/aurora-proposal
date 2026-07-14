@@ -14,9 +14,11 @@ He authored cardano-loans, the p2p lending protocol with trustlessly negotiable 
 
 ### Sundial
 
-Sundial Protocol is a Bitcoin-native finance layer on Cardano, building institutional-grade BTC yield and credit infrastructure without token emissions, wrapped assets, or custodial compromise. Led by founder and CEO Sheldon Hunt, the team placed 1st in the Institutional Track at Paris Blockchain Week (3rd overall out of 1,000+ entrants), completed a third-party security audit with Hacken, and operates a live testnet.
+Sundial Protocol is a Bitcoin-native finance layer on Cardano focused on institutional Bitcoin yield and credit infrastructure. Led by founder and CEO Sheldon Hunt, the team placed 1st in the Institutional Track at Paris Blockchain Week (3rd overall out of 1,000+ entrants), completed a third-party security audit with Hacken, and operates a live testnet.
 
-Sundial's role in this consortium is advisory and strategic: contributing capital-formation expertise, institutional investor relationships, and positioning for the integration of Bitcoin-backed liquidity into pilot credit markets once infrastructure is validated.
+Within this consortium, Sundial contributes institutional market expertise, capital-provider relationships and ecosystem partnerships to help validate that the open infrastructure developed through this proposal aligns with the operational, compliance and reporting requirements of future private capital providers. Sundial's role is to support ecosystem readiness and institutional adoption rather than develop protocol-specific functionality, and the resulting infrastructure remains open for adoption by any compatible Cardano credit market implementation.
+
+Sundial is an ecosystem implementation partner rather than the beneficiary of exclusive rights. The infrastructure developed through this proposal is open source and may be adopted by Sundial, Pogun, Fairway or any future Cardano credit market implementation on equal terms.
 
 ### Previous Delivery
 
@@ -26,4 +28,4 @@ The proposal builds upon existing relationships, infrastructure and operational 
 
 ---
 
-[← 7. Budget and Resource Allocation](07-budget-and-resource-allocation.md) · [Table of Contents](../README.md) · [9. Milestones and Success Criteria →](09-milestones-and-success-criteria.md)
+[← 7. Budget and Resource Allocation](./07-budget-and-resource-allocation.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [9. Milestones and Success Criteria →](./09-milestones-and-success-criteria.md)

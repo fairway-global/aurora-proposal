@@ -97,7 +97,7 @@ The project is delivered through five milestones across two phases. ADA funds de
 #### Success Criteria
 
 * Repayment activity recorded on-chain from Round 1 loans.
-* Additional ≈30,000 USDM deployed, plus any recycled capital.
+* Additional ≈ 30,000 USDM deployed, plus any recycled capital.
 * Public progress report published.
 * Documented engagement completed with **at least five** prospective capital providers representing stablecoin issuers, institutional allocators and Bitcoin-backed capital sources.
 * Operational, reporting and compliance requirements from participating capital providers documented and prioritized.
@@ -111,10 +111,10 @@ The project is delivered through five milestones across two phases. ADA funds de
 
 #### Deliverables
 
-* Final USDM deployment incorporating recycled capital from previous lending rounds together with the final ≈ 40,000 USDM Treasury allocation, completing the ≈  100,000 USDM pilot.
+* Final USDM deployment incorporating recycled capital from previous lending rounds together with the final ≈ 40,000 USDM Treasury allocation, completing the ≈ 100,000 USDM pilot.
 * Pilot case study covering operational outcomes, repayment performance, capital recycling and infrastructure performance.
 * Documented SACCO feedback on onboarding, operational friction and scalability.
-* Sundial Capital Provider Readiness Framework documenting requirements gathered from prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants.
+* Capital Provider Readiness Framework (developed with Sundial) documenting requirements gathered from prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants.
 * Final infrastructure refinements based on pilot and capital-provider feedback, including recommendations for metadata, indexer and institutional workflow integration.
 * Documentation of participation models for future stablecoin, ADA and Bitcoin-backed capital providers.
 * Final public documentation, open-source release and ecosystem handover.
@@ -133,7 +133,7 @@ The project is delivered through five milestones across two phases. ADA funds de
 
 **ADA Release:** 500,000
 
-**Pilot Liquidity Release:** ≈ 40,000$ (contingent on demonstrated repayment activity from Round 2)
+**Pilot Liquidity Release:** ≈ 40,000 USDM equivalent (contingent on demonstrated repayment activity from Round 2)
 
 ## Pilot Liquidity Release Principles
 
@@ -147,4 +147,4 @@ At the conclusion of the pilot, remaining Treasury principal and Treasury-entitl
 
 ---
 
-[← 8. Consortium and Relevant Experience](08-consortium-and-relevant-experience.md) · [Table of Contents](../README.md) · [10. Risks and Mitigation →](10-risks-and-mitigation.md)
+[← 8. Consortium and Relevant Experience](./08-consortium-and-relevant-experience.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [10. Risks and Mitigation →](./10-risks-and-mitigation.md)

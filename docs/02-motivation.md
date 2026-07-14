@@ -38,4 +38,4 @@ The result is not simply a lending pilot, but a practical test of whether Cardan
 
 ---
 
-[← 1. Summary](01-summary.md) · [Table of Contents](../README.md) · [3. Proposed Solution →](03-proposed-solution.md)
+[← 1. Summary](./01-summary.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [3. Proposed Solution →](./03-proposed-solution.md)

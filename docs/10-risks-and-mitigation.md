@@ -18,4 +18,4 @@ The purpose of the pilot is not to eliminate credit risk, but to transparently m
 
 ---
 
-[← 9. Milestones and Success Criteria](09-milestones-and-success-criteria.md) · [Table of Contents](../README.md) · [11. Governance and Oversight →](11-governance-and-oversight.md)
+[← 9. Milestones and Success Criteria](./09-milestones-and-success-criteria.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [11. Governance and Oversight →](./11-governance-and-oversight.md)

@@ -79,4 +79,4 @@ The pilot is designed to limit Treasury exposure through progressive capital dep
 
 ---
 
-[← 4. Pilot Implementation](04-pilot-implementation.md) · [Table of Contents](../README.md) · [6. Deliverables →](06-deliverables.md)
+[← 4. Pilot Implementation](./04-pilot-implementation.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [6. Deliverables →](./06-deliverables.md)

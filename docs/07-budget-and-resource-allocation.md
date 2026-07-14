@@ -44,19 +44,17 @@ Fairway leads implementation and pilot execution, including:
 * Integration with Encryptus and other compatible regulated settlement providers.
 * Pilot operations and reporting.
 
-### Sundial
+### Sundial (Ecosystem & Capital Provider Readiness)
 
-Sundial leads capital-provider development and market-readiness efforts to transition the pilot from Treasury-seeded validation to sustainable private capital participation.
+Sundial contributes institutional market expertise and ecosystem relationships to help validate that the infrastructure developed through this proposal supports future participation by professional capital providers.
 
-This includes:
+**Activities include:**
 
-* Engaging stablecoin providers, institutional allocators and Bitcoin-backed capital participants.
-* Validating compliance, reporting and operational requirements.
-* Assessing integration of the metadata standard and indexer into institutional workflows.
-* Gathering ecosystem feedback to improve usability and readiness.
-* Developing a Capital Provider Readiness Framework with recommendations for future stablecoin, ADA and Bitcoin-backed capital participation.
-
-Outputs include the Capital Provider Readiness Framework, documented institutional requirements, operational and compliance assessments, and recommendations supporting future stablecoin, ADA and Bitcoin-backed capital participation.
+* Engaging prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital providers.
+* Documenting operational, compliance and reporting requirements for future participation.
+* Validating integration of the metadata standard and indexer within institutional workflows.
+* Gathering ecosystem feedback to improve interoperability and market readiness.
+* Producing the Capital Provider Readiness Framework, including documented requirements, implementation priorities and recommendations for broader Cardano ecosystem adoption.
 
 ### Fallen Icarus
 
@@ -87,4 +85,4 @@ At the conclusion of the pilot, the remaining Treasury principal together with a
 
 ---
 
-[← 6. Deliverables](06-deliverables.md) · [Table of Contents](../README.md) · [8. Consortium and Relevant Experience →](08-consortium-and-relevant-experience.md)
+[← 6. Deliverables](./06-deliverables.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [8. Consortium and Relevant Experience →](./08-consortium-and-relevant-experience.md)

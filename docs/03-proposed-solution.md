@@ -72,10 +72,10 @@ A service that reads credit market UTxOs, verifies attached proofs, tracks loan 
 
 Both components will be released as open public infrastructure for the broader Cardano ecosystem to adopt, extend and operate independently and to integrate into future credit market applications. The off-chain indexer could be run locally to avoid dependence on a third-party API service.
 
-![Cardano Credit Market](../assets/cardano-credit-market.png)
+![Cardano credit market infrastructure](../assets/cardano-credit-market.png)
 
-*Image 1. 	Cardano Credit market infrastructure*
+*Image 1\. 	Cardano Credit market infrastructure*
 
 ---
 
-[← 2. Motivation](02-motivation.md) · [Table of Contents](../README.md) · [4. Pilot Implementation →](04-pilot-implementation.md)
+[← 2. Motivation](./02-motivation.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [4. Pilot Implementation →](./04-pilot-implementation.md)

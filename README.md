@@ -2,66 +2,60 @@
 
 **Open Infrastructure for Institutional Credit Markets on Cardano**
 
-*Cardano Treasury Proposal*
+Aurora is a Cardano Treasury proposal to fund reusable credit-market infrastructure: an open metadata standard, an off-chain verification indexer, developer tooling, and a Treasury-backed pilot with regulated Ethiopian SACCOs. The goal is to help Cardano support institutional credit markets without making the underlying lending protocols permissioned.
 
-| | |
+| Field | Detail |
 | --- | --- |
-| **Amount Requested** | 2,900,000 ADA |
-| **Recipient** | Fairway Oy |
-| **Partners** | Sundial Protocol, Fallen Icarus |
+| **Treasury Request** | **2,900,000 ADA** |
+| **Operating Budget** | **2,200,000 ADA** |
+| **Pilot Liquidity** | **700,000 ADA** targeting approximately USD 100,000 equivalent at conversion |
+| **Recipient** | Led by Fairway |
+| **Partners** | Fallen Icarus and Sundial Protocol |
 | **Delivery Period** | 12 months |
+| **License Commitment** | Apache License 2.0 for open-source outputs |
 
----
+## Start Here
 
-## Table of Contents
+- [日本語版](docs/ja/README.md) — Japanese reviewer entry point and complete translated proposal.
+- [Reviewer Brief](docs/00-reviewer-brief.md) — funding request, evaluator signals, and governance safeguards.
+- [Full Proposal](proposal.md) — complete regenerated proposal from the latest source document.
+- [Milestones](docs/09-milestones-and-success-criteria.md) — release schedule, deliverables, success criteria, and pilot liquidity gates.
+- [Governance and Oversight](docs/11-governance-and-oversight.md) — Treasury custody, development custody, milestone approval, refund conditions, and reporting.
+- [Treasury Participation Model](docs/05-treasury-participation-model.md) — pilot liquidity controls, transparency, audit, stablecoin conversion, and capital return model.
 
-### Proposal
+## Proposal Map
 
-1. [Summary](docs/01-summary.md)
-   - Proposal at a Glance · Governance Safeguards · Proposal Summary · Phase 1: Build Open Credit Market Infrastructure · Phase 2: Validate Through Real Lending · Open Ecosystem Commitment · Consortium · Pilot Service Providers
-2. [Motivation](docs/02-motivation.md)
-   - Institutions need KYC, but on-chain lending is pseudonymous · SACCOs need capital, but traditional finance rails are too expensive · Bringing the Two Together
-3. [Proposed Solution](docs/03-proposed-solution.md)
-   - Why metadata instead of smart contract logic? · How It Works · What We Build
-4. [Pilot Implementation](docs/04-pilot-implementation.md)
-   - Structure · Process Flow · Why This Model Scales · How Risk Is Contained · What the Pilot Proves
-5. [Treasury Participation Model](docs/05-treasury-participation-model.md)
-   - ADA Allocation · Pilot Liquidity · Transparency and Audit · After the Pilot · Operational Risk Management
-6. [Deliverables](docs/06-deliverables.md)
-   - Phase 1: Infrastructure · Phase 2: Pilot
-7. [Budget and Resource Allocation](docs/07-budget-and-resource-allocation.md)
-   - Operating Budget Allocation · Pilot Liquidity (Separate Treasury Allocation) · Team Responsibilities · Pilot Capital
-8. [Consortium and Relevant Experience](docs/08-consortium-and-relevant-experience.md)
-   - Fairway · Fallen Icarus · Sundial · Previous Delivery
-9. [Milestones and Success Criteria](docs/09-milestones-and-success-criteria.md)
-   - Milestone Schedule · M1–M5 Deliverables and Success Criteria · Pilot Liquidity Release Principles
-10. [Risks and Mitigation](docs/10-risks-and-mitigation.md)
-11. [Governance and Oversight](docs/11-governance-and-oversight.md)
-    - Independent Treasury Trustees · Development Fund Custody · Milestone Approval · Pilot Liquidity Oversight · Refund Conditions · Reporting
-12. [Conclusion](docs/12-conclusion.md)
-13. [Governance Submission Requirements](docs/13-governance-submission-requirements.md)
-    - Canonical Proposal Reference · Net Change Limit (NCL) · Prior Treasury Funding Disclosure · Conflicts and Related Parties
+| Section | Review Focus |
+| --- | --- |
+| [1. Summary](docs/01-summary.md) | At-a-glance request, safeguards, phases, ecosystem commitment, consortium roles |
+| [2. Motivation](docs/02-motivation.md) | Why institutional credit needs verification infrastructure and why SACCOs are the pilot channel |
+| [3. Proposed Solution](docs/03-proposed-solution.md) | Metadata standard, off-chain indexer, discovery, proof verification, and repayment reputation |
+| [4. Pilot Implementation](docs/04-pilot-implementation.md) | Ethiopian SACCO pilot, process flow, scale thesis, and risk containment |
+| [5. Treasury Participation Model](docs/05-treasury-participation-model.md) | ADA allocation, pilot liquidity, audit, capital recycling, and Treasury return mechanics |
+| [6. Deliverables](docs/06-deliverables.md) | Infrastructure and pilot outputs |
+| [7. Budget and Resource Allocation](docs/07-budget-and-resource-allocation.md) | Operating budget, partner responsibilities, shared resources, and pilot capital |
+| [8. Consortium and Relevant Experience](docs/08-consortium-and-relevant-experience.md) | Fairway, Fallen Icarus, Sundial, and prior delivery context |
+| [9. Milestones and Success Criteria](docs/09-milestones-and-success-criteria.md) | M1-M5 deliverables, ADA releases, and pilot liquidity release principles |
+| [10. Risks and Mitigation](docs/10-risks-and-mitigation.md) | Implementation, repayment, adoption, exchange-rate, settlement, and infrastructure risks |
+| [11. Governance and Oversight](docs/11-governance-and-oversight.md) | Independent trustees, multisig controls, milestone approval, refunds, and reporting |
+| [12. Conclusion](docs/12-conclusion.md) | Why the pilot leaves reusable infrastructure and institutional credit histories behind |
+| [13. Governance Submission Requirements](docs/13-governance-submission-requirements.md) | Canonical reference, NCL, prior funding disclosure, and conflicts |
+| [Appendix A](docs/appendix-a-verification-and-trust-framework.md) | Verification and trust framework |
+| [Appendix B](docs/appendix-b-progressive-pilot-deployment-model.md) | Progressive pilot deployment model |
 
-### Appendices
+## What Treasury Funds
 
-- [Appendix A: Verification & Trust Framework](docs/appendix-a-verification-and-trust-framework.md)
-- [Appendix B: Progressive Pilot Deployment Model](docs/appendix-b-progressive-pilot-deployment-model.md)
+**Phase 1: Infrastructure.** Aurora creates an optional metadata and trust layer for Cardano-native credit markets. Identity proofs, verification status, compliance references, and repayment signals attach to Loan Request UTxOs through transaction metadata and are verified by an open off-chain indexer.
 
----
+**Phase 2: Real-world validation.** The infrastructure is tested through a Treasury-backed pilot with Ethiopian Savings and Credit Cooperative Organizations. Pilot liquidity is converted into an approved Cardano-native USD-denominated stable asset, deployed progressively, recycled as loans are repaid, and returned with Treasury-entitled proceeds at pilot conclusion.
 
-## At a Glance
+## Governance Positioning
 
-| Component | ADA | Approx. USD\* | Purpose |
-| --- | --- | --- | --- |
-| Operating Budget | 2,200,000 | $352,000 | Infrastructure development, pilot execution and ecosystem delivery |
-| Pilot Liquidity | 700,000 | $112,000 | Revolving lending capital administered independently by Treasury Trustees |
-| **Total Treasury Withdrawal** | **2,900,000** | **$464,000** | |
+Aurora is structured as open infrastructure, not a private lending platform. The proposal separates development funds from pilot liquidity, places Treasury custody under independent trustees, gates releases by milestone evidence, and makes deployment and repayment activity independently visible through on-chain records, the indexer, public reports, and a dRep monitoring dashboard.
 
-\*Illustrative values calculated using a reference ADA price of US$0.16.
+## Visual Overview
 
-**Phase 1** builds an optional metadata and trust layer — a versioned transaction metadata standard and open-source off-chain indexer — that lets identity, compliance and other trust signals attach to Cardano-native lending without modifying the underlying smart contracts.
-
-**Phase 2** validates the infrastructure through a Treasury-backed lending pilot with Ethiopian Savings and Credit Cooperative Organizations (SACCOs), deployed progressively across three rounds with capital recycling as loans are repaid.
+![Cardano credit market infrastructure](assets/cardano-credit-market.png)
 
 ---
 

@@ -6,7 +6,7 @@ The pilot validates the Credit Market through three progressive deployment round
 
 **Pilot Capital**
 
-**Approximately 30% of the pilot liquidity allocation (targeting approximately USD30,000 equivalent)**
+**Approximately 30% of the pilot liquidity allocation (targeting approximately USD 30,000 equivalent)**
 
 **Structure**
 
@@ -26,7 +26,7 @@ Validate:
 
 **Pilot Capital**
 
-An additional **30% of the pilot liquidity allocation (targeting approximately USD30,000 equivalent)**
+An additional **30% of the pilot liquidity allocation (targeting approximately USD 30,000 equivalent)**
 
 **Structure**
 
@@ -69,15 +69,15 @@ Validate:
 ```mermaid
 flowchart TD
     A[Cardano Treasury] --> B[Independent Treasury Trustees]
-    B --> C[ADA → Approved Cardano-native<br>USD-denominated stable asset]
-    C --> D[2-of-3 Multisig Custody]
+    B --> C[ADA to approved Cardano-native USD-denominated stable asset]
+    C --> D[2-of-3 multisig custody]
     D --> E[Loan Request UTxOs]
-    E --> F[Initial regulated settlement partner<br>Encryptus]
+    E --> F[Initial regulated settlement partner: Encryptus]
     F --> G[Participating SACCOs]
-    G --> H[Local Borrowers]
+    G --> H[Local borrowers]
     H --> I[Repayments]
-    I --> J[Stable Asset]
-    J --> K[Treasury Capital Recycling]
+    I --> J[Stable asset]
+    J --> K[Treasury capital recycling]
 ```
 
 The pilot is designed to identify the Credit Market structures that provide the best balance between operational simplicity, market efficiency and long-term scalability.
@@ -86,4 +86,4 @@ Rather than prescribing a single market structure from the outset, the framework
 
 ---
 
-[← Appendix A: Verification & Trust Framework](appendix-a-verification-and-trust-framework.md) · [Table of Contents](../README.md)
+[← Appendix A: Verification & Trust Framework](./appendix-a-verification-and-trust-framework.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md)

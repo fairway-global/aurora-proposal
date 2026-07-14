@@ -106,4 +106,4 @@ Each approved development milestone includes a public milestone approval stateme
 
 ---
 
-[← 10. Risks and Mitigation](10-risks-and-mitigation.md) · [Table of Contents](../README.md) · [12. Conclusion →](12-conclusion.md)
+[← 10. Risks and Mitigation](./10-risks-and-mitigation.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [12. Conclusion →](./12-conclusion.md)

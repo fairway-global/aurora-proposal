@@ -52,13 +52,13 @@ The pilot follows a phased deployment model, beginning with SACCO-level Loan Req
 
 Pilot liquidity is recycled as loans are repaid, allowing the same Treasury allocation to support multiple lending rounds while establishing the first on-chain credit histories for participating institutions. Once that trustless on-chain track record exists, participating SACCOs can continue attracting future capital without further Treasury funding.
 
-Throughout the pilot, Sundial leads capital-provider development and market-readiness activities, engaging prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants to validate the compliance, reporting and operational requirements needed for broader market adoption.
+Throughout the pilot, Sundial contributes ecosystem partnerships and institutional market expertise to validate that the infrastructure developed through this proposal can support future participation by stablecoin providers, institutional allocators, Bitcoin-backed capital providers and other professional market participants.
 
 The pilot's lasting value is not the lending activity itself, but the reusable metadata standard, indexer, institutional credit histories and capital-provider framework that remain available to the broader Cardano ecosystem.
 
 ## Open Ecosystem Commitment
 
-Aurora extends existing Cardano lending infrastructure rather than replacing it
+Aurora extends existing Cardano lending infrastructure rather than replacing it.
 
 The project is designed to complement existing credit market initiatives rather than compete with them. Protocols such as Pogun focus on originating and settling credit relationships. Aurora provides reusable metadata, verification and discovery infrastructure that enables institutional participation across compatible credit market implementations. By separating lending logic from institutional infrastructure, future builders can innovate independently while sharing common standards rather than recreating institutional onboarding, verification and discovery systems.
 
@@ -76,7 +76,7 @@ The purpose of this proposal is to establish an **open, community-owned institut
 
 * **Fairway** leads infrastructure development, pilot execution and institutional onboarding.
 * **Fallen Icarus** provides credit market architecture, technical review and lending protocol expertise.
-* **Sundial** leads capital provider engagement and market readiness, ensuring the infrastructure supports future participation by institutional, stablecoin and Bitcoin-backed capital providers.
+* **Sundial** contributes institutional market expertise, ecosystem relationships and capital-provider engagement activities that help ensure the resulting infrastructure meets the operational, compliance and reporting requirements of future private capital providers.
 
 ## Pilot Service Providers
 
@@ -87,4 +87,4 @@ The pilot utilizes independent operational service providers that are **not reci
 
 ---
 
-[Table of Contents](../README.md) · [2. Motivation →](02-motivation.md)
+[Proposal Home](../README.md) · [Full proposal](../proposal.md) · [2. Motivation →](./02-motivation.md)

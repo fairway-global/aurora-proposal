@@ -24,4 +24,4 @@ None of the consortium members has received Cardano Treasury Withdrawal funding 
 
 ---
 
-[← 12. Conclusion](12-conclusion.md) · [Table of Contents](../README.md) · [Appendix A: Verification & Trust Framework →](appendix-a-verification-and-trust-framework.md)
+[← 12. Conclusion](./12-conclusion.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [Appendix A: Verification & Trust Framework →](./appendix-a-verification-and-trust-framework.md)

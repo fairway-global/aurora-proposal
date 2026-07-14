@@ -22,4 +22,4 @@ All infrastructure is open-source and available for the broader Cardano ecosyste
 
 ---
 
-[← 5. Treasury Participation Model](05-treasury-participation-model.md) · [Table of Contents](../README.md) · [7. Budget and Resource Allocation →](07-budget-and-resource-allocation.md)
+[← 5. Treasury Participation Model](./05-treasury-participation-model.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [7. Budget and Resource Allocation →](./07-budget-and-resource-allocation.md)

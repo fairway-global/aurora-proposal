@@ -30,12 +30,12 @@ The objective is not to prescribe a single market structure from the outset, but
 
 5. **Servicing.** SACCOs remain responsible for:
 
-   1. Borrower onboarding.
-   2. Underwriting decisions.
-   3. Local compliance.
-   4. Repayment collection.
-   5. Recovery processes where required.
-   6. Exchange rate risk between USDM and the local fiat currency.
+   - Borrower onboarding.
+   - Underwriting decisions.
+   - Local compliance.
+   - Repayment collection.
+   - Recovery processes where required.
+   - Exchange rate risk between USDM and the local fiat currency.
 
    Repayment events are recorded on-chain and contribute to the development of verifiable credit histories and future reputation systems.
 
@@ -95,4 +95,4 @@ The long-term objective is to establish the foundations for open, jurisdiction-a
 
 ---
 
-[← 3. Proposed Solution](03-proposed-solution.md) · [Table of Contents](../README.md) · [5. Treasury Participation Model →](05-treasury-participation-model.md)
+[← 3. Proposed Solution](./03-proposed-solution.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [5. Treasury Participation Model →](./05-treasury-participation-model.md)
