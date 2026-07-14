@@ -1,4 +1,4 @@
-# Sundown
+# Aurora
 
 **Open Infrastructure for Institutional Credit Markets on Cardano**
 
