@@ -1,984 +1,928 @@
-# Aurora: Open Infrastructure for Institutional Credit Markets on Cardano
+# Aurora
 
-**Cardano Treasury Proposal**
+Open Infrastructure for Institutional Credit Markets on Cardano
 
 | Field | Detail |
 | --- | --- |
-| **Amount Requested** | **2,900,000 ADA** |
-| **Recipient** | **Led by Fairway** |
-| **Partners** | **Fallen Icarus and Sundial Protocol** |
-| **Delivery Period** | **12 months** |
+| Amount Requested | **1,000,000 ADA** |
+| Lead Implementer | **Fairway** |
+| Treasury Custody | Independent **3-of-5 Aurora Treasury Multisig** |
+| Technical Collaborator | **Sundial Protocol** |
+| Delivery Period | Approximately **5 months** |
 
----
-
-## Contents
+## Table of Contents
 
 - [1. Summary](#1-summary)
 - [2. Motivation](#2-motivation)
 - [3. Proposed Solution](#3-proposed-solution)
-- [4. Pilot Implementation](#4-pilot-implementation)
-- [5. Treasury Participation Model](#5-treasury-participation-model)
-- [6. Deliverables](#6-deliverables)
-- [7. Budget and Resource Allocation](#7-budget-and-resource-allocation)
-- [8. Consortium and Relevant Experience](#8-consortium-and-relevant-experience)
-- [9. Milestones and Success Criteria](#9-milestones-and-success-criteria)
-- [10. Risks and Mitigation](#10-risks-and-mitigation)
-- [11. Governance and Oversight](#11-governance-and-oversight)
-- [12. Conclusion](#12-conclusion)
-- [13. Governance Submission Requirements](#13-governance-submission-requirements)
-- [Appendix A: Verification & Trust Framework](#appendix-a-verification--trust-framework)
-- [Appendix B: Progressive Pilot Deployment Model](#appendix-b-progressive-pilot-deployment-model)
-
----
+- [4. Deliverables](#4-deliverables)
+- [5. Budget and Resource Allocation](#5-budget-and-resource-allocation)
+- [6. Consortium and Relevant Experience](#6-consortium-and-relevant-experience)
+- [7. Milestones and Success Criteria](#7-milestones-and-success-criteria)
+- [8. Risks and Mitigation](#8-risks-and-mitigation)
+- [9. Governance and Oversight](#9-governance-and-oversight)
+- [10. Conclusion](#10-conclusion)
+- [11. Governance Submission Requirements](#11-governance-submission-requirements)
+- [Appendix A: Verification Framework](#appendix-a-verification-framework)
 
 # 1. Summary
-
 ## Proposal at a Glance
-
 | Category | Summary |
 | ----- | ----- |
-| **Treasury Request** | **2,900,000 ADA** |
-| **Development Budget** | **2,200,000 ADA** |
-| **Pilot Liquidity** | **700,000 ADA** (targeting approximately USD 100,000 equivalent at conversion) |
-| **Delivery Period** | 12 months |
-| **Purpose** | Build open-source institutional credit market infrastructure and validate it through a Treasury-backed SACCO pilot |
-| **Primary Deliverables** | Metadata standard, off-chain indexer, developer tooling, dRep dashboard, pilot case study, Capital Provider Readiness Framework |
-| **Funding Model** | Development funding released only upon milestone approval. Pilot liquidity released progressively (30% / 30% / 40%) based on successful deployment and repayment performance. |
-| **Treasury Custody** | Independent 2-of-3 Treasury multisignature administered by Independent Treasury Trustees. Development and pilot liquidity follow separate governance workflows. |
-| **Development Custody** | Independent 3-of-5 multisignature with two consortium signers and three independent signers. |
-| **Treasury Protection** | Progressive deployments, milestone gating, public reporting, independent audits, published wallet addresses, and dRep monitoring dashboard. |
-| **End of Pilot** | Remaining Treasury principal together with Treasury-entitled proceeds returned according to the approved participation framework. |
-| **Open Source** | Apache License 2.0; repositories, documentation and build instructions published no later than M2. |
-
-## Governance Safeguards
-
-* Independent Treasury Trustees control Treasury custody.
-* Treasury funds remain undelegated and delegated to **Abstain** until approved disbursement.
-* Public milestone reporting and independent financial review.
-* Canonical proposal published through immutable IPFS reference.
-* Remaining Treasury principal and Treasury-entitled proceeds returned at project completion.
-* Undistributed development funds refunded if milestones are not completed.
+| **Treasury Request** | **1,000,000 ADA** |
+| **Delivery Period** | Approximately **5 months** |
+| **Purpose** | Build open market infrastructure that makes Cardano credit opportunities discoverable, filterable, verifiable and easier to evaluate across compatible lending implementations |
+| **Primary Deliverables** | Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query tooling, Capital Provider Profile Standard, Reference Query Library, developer tooling, reference implementation, documentation and independent review |
+| **Milestones** | **4 implementation milestones** |
+| **Lead Implementer** | **Fairway** |
+| **Technical Collaborator** | **Sundial** |
+| **Technical Advisor** | **Fallen Icarus (Rusty)** |
+| **Treasury Custody** | One dedicated **3-of-5 Aurora Treasury multisignature**, with all five keys held independently of the implementation participants |
+| **Open Source** | Treasury-funded software, standards and reference implementations released under **Apache License 2.0** |
 
 ## Proposal Summary
+Cardano's eUTxO model allows individual credit opportunities to exist as distinct on-chain financial objects rather than requiring all lending activity to be organized through pooled liquidity. A Loan Request UTxO can represent an individual funding request or credit opportunity with its own terms and lifecycle.
 
-Cardano's eUTxO model enables decentralized credit markets built around individual Loan Request UTxOs rather than pooled liquidity. The infrastructure is designed as reusable, jurisdiction-agnostic public infrastructure that can support institutional credit markets wherever compatible lending institutions and regulated settlement providers exist. This proposal, led by Fairway in collaboration with Fallen Icarus and Sundial, delivers the infrastructure and market validation required to establish open, programmable credit markets on Cardano.
+That transaction-based architecture provides the foundation for open credit markets, but settlement alone does not create a coherent market. Capital providers and applications still need consistent ways to describe opportunities, discover them across implementations, filter them according to relevant criteria, evaluate verification information and monitor the information associated with them.
 
-The project consists of two complementary phases.
+Aurora provides that shared market layer.
 
-## Phase 1: Build Open Credit Market Infrastructure
+Standardized metadata can enrich a Loan Request UTxO with machine-readable market information and verification references. The Aurora Discovery Engine indexes those opportunities and exposes them through open discovery and filtering interfaces. The Verification Framework allows compatible applications and capital providers to evaluate attached proofs or verification references according to their own requirements.
 
-The project establishes an optional metadata and trust layer that enables identity, compliance and other trust signals to be attached to Cardano-native lending without modifying the underlying smart contracts.
+Aurora does not replace the underlying lending protocols. It does not originate loans, custody lending capital or decide which opportunities should receive funding. Lending execution remains with compatible credit-market infrastructure. Aurora provides the open standards and software around those lending agreements that allow otherwise independent opportunities to become discoverable, filterable and verifiable through common infrastructure.
 
-A versioned transaction metadata standard and open-source off-chain indexer allow participants to verify zero-knowledge proofs derived from verifiable credentials while keeping the underlying lending infrastructure fully permissionless. The same framework is designed to support future trust, reputation and verification use cases beyond KYC.
+The Treasury-funded implementation is therefore infrastructure-only. It does not require Treasury-funded lending capital, borrower deployment, stablecoin conversion, fiat settlement or commercial loan execution. Commercial activity can use the infrastructure later, but it is not a condition of Treasury delivery.
 
-The infrastructure is designed to integrate with Pogun's credit market architecture and other compatible Cardano lending implementations while remaining independent of any single protocol. The objective is to establish reusable public infrastructure that multiple credit market implementations can adopt rather than creating another isolated lending platform.
+## Core Public Outputs
+Treasury funding produces a common set of reusable public outputs:
 
-## Phase 2: Validate Through Real Lending
+* **Metadata Standard** for describing Aurora-compatible credit opportunities and associated metadata references.
+* **Verification Framework** for attaching and evaluating institutional, eligibility, compliance and other proof-based information.
+* **Aurora Discovery Engine** for indexing, discovery, filtering, verification-information exposure and relevant lifecycle visibility.
+* **Open APIs and filtering capabilities** for compatible applications and capital providers.
+* **Capital Provider Profile Standard** and **Reference Query Library** for expressing capital-provider requirements and translating them into open discovery and filtering workflows.
+* **Developer tooling and reference implementation** demonstrating how compatible applications can integrate with Aurora.
+* **Technical documentation and operating instructions** supporting independent implementation and operation.
+* **Independent security and legal review** within the funded infrastructure scope.
 
-The infrastructure is validated through a Treasury-backed pilot with Ethiopian Savings and Credit Cooperative Organizations (SACCOs).
+The implementation culminates in an end-to-end technical demonstration and public open-source release rather than a commercial lending pilot.
 
-The primary objective of the pilot is to validate Cardano's novel technical approach to programmable institutional credit markets. The resulting economic impact, expanding lending capacity for regulated financial institutions and improving access to affordable capital, serves as the real-world validation of that infrastructure rather than the primary deliverable itself.
+## Consortium and Delivery
+Aurora is delivered as one integrated implementation.
 
-In addition to the operating budget, the Treasury Withdrawal includes a 700,000 ADA allocation reserved exclusively for pilot lending liquidity, targeting approximately USD 100,000 of lending capital at the time of withdrawal. Following withdrawal, this allocation is converted into USDM (or another approved Cardano-native USD-denominated stable asset) and deployed into verified lending opportunities. Participating SACCOs continue performing borrower onboarding, underwriting, loan servicing and collections through their existing legal and operational frameworks, while loan metadata, verification status, funding events and repayment history are recorded on-chain, creating transparent and verifiable lending activity.
+**Fairway** acts as lead implementer and project coordinator, responsible for overall delivery and integration of the funded work.
 
-The pilot follows a phased deployment model, beginning with SACCO-level Loan Request UTxOs and evaluating more granular lending structures as participating institutions and infrastructure mature.
+**Sundial** contributes technical input where relevant to capital-provider-facing standards, discovery and filtering specifications, reference queries, API design and interoperability.
 
-Pilot liquidity is recycled as loans are repaid, allowing the same Treasury allocation to support multiple lending rounds while establishing the first on-chain credit histories for participating institutions. Once that trustless on-chain track record exists, participating SACCOs can continue attracting future capital without further Treasury funding.
+**Fallen Icarus (Rusty)** supports Aurora as a technical advisor and reviewer, providing architectural expertise relating to Cardano's transaction-based credit-market model, Loan Request UTxO design and eUTxO-specific implementation considerations.
 
-Throughout the pilot, Sundial contributes ecosystem partnerships and institutional market expertise to validate that the infrastructure developed through this proposal can support future participation by stablecoin providers, institutional allocators, Bitcoin-backed capital providers and other professional market participants.
+Treasury funds Aurora's common public outputs rather than separate organizational work packages. Contributions from consortium partners and advisors form part of the same implementation and do not create separate Treasury custody or governance tracks.
 
-The pilot's lasting value is not the lending activity itself, but the reusable metadata standard, indexer, institutional credit histories and capital-provider framework that remain available to the broader Cardano ecosystem.
+## Governance Safeguards
+The full **1,000,000 ADA** Treasury allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** controlled entirely by independent Cardano ecosystem representatives.
+
+Fairway, Sundial, Fallen Icarus and other implementation contributors hold no Treasury signing keys. Every Treasury transaction requires approval from at least three of the five independent signers.
+
+Delivery progresses through the four milestones defined in this proposal. Fairway publishes the required milestone evidence before further expenditure is authorized, while the independent signers review that evidence against the approved completion criteria. The Treasury wallet and transactions remain publicly auditable throughout implementation, and unspent Treasury funds are returned if the project terminates under the conditions defined in Section 9.
 
 ## Open Ecosystem Commitment
+Aurora complements existing and future Cardano lending implementations rather than replacing them.
 
-Aurora extends existing Cardano lending infrastructure rather than replacing it.
+The infrastructure is designed to remain protocol independent, modular and optional. It does not require one lending protocol, identity provider, verification technology or Fairway-operated service. The Discovery Engine and associated interfaces are intended to be independently operable, allowing future builders to adopt the standards without depending on the original implementation team. This matches the governing design requirement that Aurora remain open, reusable and operable without Fairway.
 
-The project is designed to complement existing credit market initiatives rather than compete with them. Protocols such as Pogun focus on originating and settling credit relationships. Aurora provides reusable metadata, verification and discovery infrastructure that enables institutional participation across compatible credit market implementations. By separating lending logic from institutional infrastructure, future builders can innovate independently while sharing common standards rather than recreating institutional onboarding, verification and discovery systems.
+All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**. Any individual or organization may use, operate, modify, extend or commercialize those outputs in accordance with the license terms without requiring exclusive permission from Fairway, Sundial, Fallen Icarus or any other contributor.
 
-The pilot is designed to remain compatible with the credit market architecture pioneered by Fallen Icarus and implemented by Pogun. Where appropriate, it may integrate with Pogun's production infrastructure. However, the objectives of this proposal do not depend on any single implementation. Should Pogun's production deployment be delayed or unavailable, the consortium may utilize equivalent audited lending contracts or compatible partner infrastructure while preserving the same metadata standard, indexer architecture and credit market model.
-
-All software, standards and implementation learnings developed through the project will be released as open source under the Apache License 2.0 (or your chosen license). Public source repositories, documentation and build instructions will be published no later than completion of M2. The Cardano ecosystem may freely use, audit, modify, fork and integrate the resulting infrastructure into future credit market applications in accordance with the license terms.
-
-The consortium does not seek Treasury funding to operate a private lending platform. No consortium member receives preferential rights to operate or commercialize the resulting infrastructure. Any individual or organization may use, operate, extend or commercialize the open-source outputs under the terms of the applicable license without requiring Fairway, Sundial, Fallen Icarus or further Treasury funding.
-
-Treasury funding establishes reusable open infrastructure, including metadata standards, verification frameworks, indexing infrastructure and operational models, that any Cardano credit market participant may adopt without requiring Fairway or continued Treasury funding.
-
-The purpose of this proposal is to establish an **open, community-owned institutional layer** for Cardano credit markets before proprietary implementations emerge. Any future credit market implementation may build upon these standards without requiring Fairway, Sundial, Fallen Icarus or additional Treasury funding.
-
-## Consortium
-
-* **Fairway** leads infrastructure development, pilot execution and institutional onboarding.
-* **Fallen Icarus** provides credit market architecture, technical review and lending protocol expertise.
-* **Sundial** contributes institutional market expertise, ecosystem relationships and capital-provider engagement activities that help ensure the resulting infrastructure meets the operational, compliance and reporting requirements of future private capital providers.
-
-## Pilot Service Providers
-
-The pilot utilizes independent operational service providers that are **not recipients of Treasury funding** and are **not members of the delivery consortium**.
-
-* **Independent Treasury Trustees (2-of-3 multisignature custody)** provide independent custody and governance of the Treasury allocation. They receive Treasury funds, approve development milestone releases, authorize the ADA-to-stablecoin conversion, administer pilot liquidity according to the approved governance framework and return the remaining Treasury principal together with Treasury-entitled proceeds at the conclusion of the pilot.
-* **Encryptus (Initial regulated settlement partner).** Provides regulated cross-border settlement infrastructure connecting Cardano-native stable assets with local banking rails for pilot capital deployment and repayment.
+The lasting Treasury-funded output is therefore not a private lending platform or a single deployment. It is reusable Cardano market infrastructure that future lending protocols, applications, verification providers and capital providers can build upon independently.
 
 # 2. Motivation
+In traditional lending, every loan begins as an individual agreement between specific parties with its own terms, risk profile, repayment schedule and settlement conditions. Much like a transaction, each loan exists as a discrete financial object that can be originated, funded, serviced, transferred and settled independently. Only after loans are created do financial institutions aggregate them into portfolios, funds or securitized products.
 
-In traditional lending, every loan begins as an individual agreement between specific parties with its own terms, risk profile, repayment schedule, and settlement conditions. Much like a transaction, each loan exists as a discrete financial object that can be originated, funded, serviced, transferred, and settled independently. Only after loans are created do financial institutions aggregate them into portfolios, funds, or securitized products.
+Most DeFi lending protocols reverse this process. Capital is first deposited into a shared pool, and borrowers draw from that pool according to predefined rules. While effective for certain use cases, this model does not reflect how many real-world credit markets operate.
 
-Most DeFi lending protocols reverse this process. Capital is first deposited into a shared pool, and borrowers draw from that pool according to predefined rules. While effective for certain use cases, this model does not reflect how most real-world credit markets operate.
+Cardano's eUTxO architecture is well suited to the loan-first model. Its transaction-based architecture can represent individual financial relationships as distinct on-chain objects rather than requiring every lending opportunity to be organized through a shared liquidity pool.
 
-Cardano's eUTxO architecture is uniquely suited to the loan-first model. Unlike account-based DeFi, where lending is typically organized around shared liquidity pools, Cardano's transaction-based architecture naturally represents individual financial relationships as distinct on-chain objects. This makes it well suited for programmable institutional credit markets built around discrete lending agreements.
+Individual lending opportunities can therefore exist as separate Loan Request UTxOs with their own terms, state and lifecycle. They can be independently published, funded and settled through compatible lending infrastructure before being aggregated into larger credit portfolios.
 
-Individual loans can exist as distinct on-chain UTxOs with their own state and logic, allowing them to be independently discovered, funded, and settled before being aggregated into larger credit portfolios. This creates a shared institutional credit market where thousands of regulated financial institutions can independently access digital capital through common open infrastructure rather than fragmented bilateral relationships.
+This creates the technical foundation for open credit markets built around individual financial agreements. It does not, by itself, create the shared market infrastructure required for institutions and other capital providers to discover, compare and evaluate those agreements across independent implementations.
 
-Two problems block real-world credit activity on Cardano today.
+Two problems currently prevent individual Cardano credit opportunities from functioning as a coherent and institutionally usable market.
 
-## Institutions need KYC, but on-chain lending is pseudonymous.
+## Institutions need shared market infrastructure, not just permissionless settlement.
+Cardano credit market implementations can enable parties to negotiate and settle individual lending agreements on-chain. Institutional lenders, regulated financial institutions and professional capital providers, however, require more than settlement. They need standardized ways to discover lending opportunities, evaluate relevant information, apply their own eligibility and compliance requirements and monitor performance over time before allocating capital.
 
-Pogun's credit market already lets any two parties negotiate and fund a loan on-chain. But institutional lenders, regulated entities, and professional capital allocators operate under compliance frameworks that require verifiable identity and eligibility checks.
+Without standardized metadata, discovery, filtering and verification infrastructure, each participant must interpret lending opportunities through protocol-specific integrations and independently reconstruct the information required for evaluation.
 
-Without a way to attach those assurances to on-chain activity, these participants simply cannot use the market.
+Advances in verifiable credentials, zero-knowledge proofs and other proof systems make it possible to associate institutional, eligibility, compliance and other verification information with an opportunity without requiring sensitive underlying data to be published on-chain. Implemented through optional transaction metadata and open verification references rather than changes to lending protocols, this infrastructure can support participants that require additional assurance while preserving permissionless use of the underlying market.
 
-Advances in zero-knowledge technologies make it possible to verify that a counterparty satisfies specific requirements without exposing sensitive personal data. Implemented as optional transaction metadata rather than changes to the core contracts, this compliance layer can be added without compromising the permissionless nature of the underlying protocol.
+Verification is therefore one component of the required market layer. Institutions must also be able to index opportunities, filter them according to published attributes, compare relevant information and monitor their lifecycle through consistent interfaces.
 
-## SACCOs need capital, but traditional finance rails are too expensive.
+## Independent credit markets need shared standards, not isolated integrations.
+Without common standards, each lending protocol, application and capital provider must develop its own metadata format, indexing logic, discovery interface, verification workflow and reporting model.
 
-Savings and Credit Cooperative Organizations (SACCOs) are regulated, member-owned financial institutions that provide savings and lending services to their local communities. In many emerging markets they form the primary source of credit for individuals and SMEs underserved by commercial banks. Rather than creating new lending institutions, this proposal connects digital capital with trusted financial institutions that already understand their borrowers, operate within local regulatory frameworks and have established loan servicing capabilities.
+This creates fragmented market information and repeated integration work. Lending opportunities may exist on-chain but remain difficult to discover or compare across implementations. Capital providers must conduct similar technical integration and due-diligence work separately for each protocol, while builders must recreate infrastructure that provides substantially the same market functions.
 
-Ethiopia was selected as the initial pilot jurisdiction because of established consortium relationships, experienced local partners and a mature cooperative financial sector. The infrastructure itself remains **jurisdiction agnostic** and is designed to support institutional credit markets wherever compatible financial institutions and regulated settlement providers exist.
+This fragmentation becomes more costly as additional lending models, jurisdictions, verification systems and capital-provider requirements emerge. Proprietary discovery systems may solve the immediate needs of individual applications, but they do not establish common infrastructure that future Cardano builders can adopt and operate independently.
 
-Demand for lending capacity far exceeds what they can fund internally, and the cost of capital through conventional channels is prohibitive. Through Fairway's local partnerships, the consortium has already secured pilot participation from Ethiopian SACCOs and continues expanding its institutional network.
+Open standards provide a different path. A common Metadata Standard can describe lending opportunities consistently. Shared indexing and discovery infrastructure can expose those opportunities through open APIs. Published filtering and verification specifications can allow capital providers and compatible applications to evaluate opportunities according to their own requirements without depending on one proprietary marketplace or exclusive lending protocol.
 
-The opportunity extends far beyond a small pilot cohort. Cooperative financial institutions are among the most scalable channels for deploying productive capital. Rather than onboarding thousands of individual businesses one by one, a single institutional relationship immediately provides access to an established lending operation with existing borrowers, underwriting processes, repayment collection and local regulatory compliance.
-
-This allows Cardano-native capital to scale through existing financial infrastructure rather than replacing it. This institutional-first approach enables ecosystem builders to scale credit markets by onboarding financial institutions rather than thousands of individual borrowers, dramatically reducing the cost and complexity of market expansion.
+The result is reusable market infrastructure rather than a collection of isolated integrations.
 
 ## Bringing the Two Together
+This proposal addresses both problems through a shared market layer around independent Loan Request UTxOs.
 
-This proposal addresses both problems together: build the metadata and verification infrastructure that lets institutions participate, then validate it through a Treasury-backed pilot that puts real capital to work for SACCOs that need it.
+Standardized metadata enriches each opportunity with machine-readable market information and verification references. Open discovery and indexing infrastructure then makes those opportunities searchable across compatible implementations. Capital providers and applications can discover, filter and evaluate opportunities according to their own requirements while funding and settlement continue through the underlying lending infrastructure.
 
-The result is not simply a lending pilot, but a practical test of whether Cardano can support a new category of programmable credit markets built around open Credit Markets, optional verification, and real-world capital formation.
+Aurora does not replace lending protocols or determine which opportunities should receive capital. It establishes the open standards, verification framework, discovery infrastructure, APIs and developer tooling required for independent Cardano credit opportunities to function as a coherent market.
+
+Treasury funding builds and demonstrates this reusable infrastructure. Live lending, commercial onboarding and the generation of real repayment and underwriting evidence remain activities for separately funded commercial deployment.
 
 # 3. Proposed Solution
+This proposal builds shared market infrastructure for Cardano credit markets through open standards, verification infrastructure, discovery and indexing, filtering capabilities and developer interfaces that operate around compatible lending implementations.
 
-This proposal builds an optional metadata and trust layer designed for Cardano credit market infrastructure, with initial integration targeting Pogun's credit market architecture while remaining compatible with alternative implementations.
+The broader objective is to establish the shared market infrastructure that allows independent lending opportunities to be published, indexed, discovered, filtered, verified, evaluated and monitored through open standards rather than isolated integrations. The proposal intentionally focuses on shared market infrastructure rather than lending logic. Existing and future Cardano credit market implementations remain free to innovate independently while using common infrastructure for standardized market information, verification and discovery.
 
-The broader objective is to establish the foundations of a Cardano-native credit market, where lending opportunities can be discovered, evaluated and funded through open market infrastructure. The proposal intentionally focuses on institutional infrastructure rather than lending logic. Existing and future Cardano credit market implementations remain free to innovate independently while sharing a common metadata, verification and discovery layer.
+The solution does not modify core lending smart contracts. Instead, standardized metadata and verification references can be associated with individual Loan Request UTxOs, while open off-chain infrastructure reads, organizes and exposes that information to compatible applications and capital providers. A Loan Request UTxO enriched with this standardized metadata is referred to here as a “colored” Loan Request UTxO. The term is descriptive and does not represent a new ledger primitive.
 
-The solution does not modify core lending smart contracts. Instead, it uses Cardano transaction metadata to attach identity and compliance information to loan UTxOs, and an off-chain indexer to read and verify that metadata. This allows the infrastructure to remain compatible with Pogun's architecture while also supporting alternative audited credit market implementations where appropriate.
+This separation allows Aurora to remain compatible with different lending implementations rather than requiring participants to adopt a single protocol, verification provider or commercial workflow.
 
 ## Why metadata instead of smart contract logic?
-
 ### Efficiency
+Institutional verification may involve credential systems, proof systems and policy requirements that are unnecessary for the execution of the underlying lending agreement itself.
 
-Verification of identity, compliance and eligibility proofs using zero-knowledge systems can be computationally expensive. Cardano's on-chain execution budgets and available Plutus primitives are not designed for this workload.
-
-By moving proof verification to the off-chain indexer, we avoid these constraints entirely. The indexer can execute arbitrarily complex verification logic without affecting transaction costs or throughput.
+Keeping this information and the corresponding verification logic outside the core lending contracts avoids coupling lending execution to additional verification requirements. The off-chain infrastructure can evaluate relevant proofs and verification references without increasing the execution requirements of the underlying lending contracts.
 
 ### Flexibility
+Verification and market-information requirements differ across jurisdictions, capital providers and use cases and may evolve over time. A versioned Metadata Standard and extensible Verification Framework can support new metadata fields, credential types, proof systems and verification providers without requiring lending contracts to be redeployed or migrated.
 
-Compliance requirements differ across jurisdictions and evolve over time. A metadata standard can be versioned and extended without redeploying or migrating smart contracts. New credential types, proof systems and regulatory frameworks can be supported through updates to the indexer and metadata schema rather than changes to the lending protocol itself.
+This also allows different participants to apply different requirements to the same underlying market rather than imposing one global verification policy on every user.
 
 ### Permissionlessness
+The underlying credit market contracts remain independent of Aurora and fully usable without Aurora metadata.
 
-The core credit market contracts remain untouched and fully open. Any participant can still originate, fund or repay a loan without metadata attached. Participants who require additional assurances can use metadata and verification frameworks to evaluate opportunities, while participants who do not require them can interact directly with the underlying market.
+Participants that require additional information can use Aurora-compatible metadata, verification and filtering infrastructure to evaluate opportunities according to their own requirements. Participants that do not require these capabilities can continue interacting directly with the underlying lending infrastructure.
 
-Verification therefore becomes optional infrastructure rather than a protocol requirement.
+Aurora therefore provides optional market infrastructure rather than creating a protocol-level participation requirement.
 
 ## How It Works
-
 ### Loan Origination
+An originator creates a Loan Request UTxO through a compatible Cardano lending implementation.
 
-A SACCO or other originator creates a Loan Request UTxO through a compatible Cardano credit market infrastructure implementation, with the initial pilot targeting Pogun's credit market architecture.
+Depending on the underlying implementation, a Loan Request UTxO may represent an institutional funding request, a lending facility, a lending program or another individual credit opportunity.
 
-Depending on the implementation, a Loan Request UTxO may represent a SACCO funding request, a lending program, or an individual lending opportunity.
+The originator may attach standardized metadata or references describing institutionally relevant information associated with that opportunity. This may include verification references, jurisdiction, duration, asset, ticket size, eligibility information or other attributes defined by the applicable metadata schema.
 
-Optionally, the originator may attach transaction metadata containing a zero-knowledge proof derived from a verifiable credential, such as a Veridian SSI credential or CIP-170 aligned proof.
+A Loan Request UTxO enriched in this way becomes a “colored” Loan Request UTxO that can be interpreted consistently by Aurora-compatible infrastructure.
 
 ### Indexing and Verification
+The Aurora Discovery Engine reads and organizes compatible Loan Request UTxOs and their associated metadata, transforming otherwise independent on-chain lending opportunities into a searchable market.
 
-The off-chain indexer monitors the blockchain for credit market UTxOs which are identified by their beacon tokens (CIP-89).
+Where verification information is attached, the Verification Framework allows relevant proofs or verification references to be evaluated against the applicable schema or policy. Verification remains extensible so that different credential systems, proof systems and verification providers can coexist without becoming mandatory components of the underlying lending protocol.
 
-When metadata is present, the indexer verifies the attached proof against the relevant credential schema and exposes the verification status through a public API.
+The resulting standardized market information and verification status can be exposed through open APIs for use by capital providers, lending applications and other ecosystem participants.
 
-### Discovery and Funding
+### Discovery and Evaluation
+Capital providers and compatible applications query the Aurora Discovery Engine to discover lending opportunities.
 
-Capital providers query the indexer to discover lending opportunities.
+Opportunities can be filtered according to published metadata and query specifications, including criteria such as jurisdiction, duration, asset, ticket size, verification requirements and other attributes supported by the applicable schema.
 
-Participants may filter opportunities according to their own requirements, including jurisdiction, verification status or other metadata attributes.
+Aurora exposes the information required to discover, filter and evaluate opportunities but does not determine whether an opportunity should receive capital. Individual capital providers remain responsible for applying their own risk, eligibility, compliance and allocation criteria.
 
-Any participant may fund a lending opportunity through the underlying credit market contracts. Verification metadata simply enables additional discovery and filtering mechanisms for participants who require them.
+Aurora's Capital Discovery & Allocation Layer extends this open infrastructure with selected technical contributions from Sundial through a Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution and lightweight reference integration artifacts. These outputs describe how capital-provider requirements can be represented and translated into queries against Aurora-compatible credit opportunities without creating a proprietary allocation system.
 
-### Repayment and Reputation
+### Repayment History and Performance
+Aurora is designed to track relevant loan-lifecycle information exposed by compatible lending implementations, including repayment events where those events are available on-chain.
 
-As loans are repaid, repayment history is trustlessly associated with the originating entity and its verification credentials.
+Over time, repayment history can contribute to portable institutional credit histories and broader institutional track records that future capital providers can evaluate through the same open infrastructure. Standardizing and exposing this information reduces the need for each future participant to reconstruct historical performance independently.
 
-Over time, repayment history establishes portable institutional credit histories that future capital providers can evaluate through the same open infrastructure. These histories form the basis for privacy-preserving institutional reputation systems rather than protocol-specific trust models.
+Treasury funding establishes the infrastructure required to index and expose this information. The real lending activity that generates repayment, default and underwriting evidence remains outside the Treasury-funded scope.
 
-### Settlement
+### Funding and Settlement
+Aurora does not custody capital, fund loans or perform settlement.
 
-The pilot described later combines this infrastructure with regulated settlement infrastructure, initially provided through Encryptus, to support conversion between Cardano-native USD-denominated stable assets and local fiat currencies. The consortium may utilize equivalent regulated settlement providers where operational, regulatory or technical considerations make this appropriate.
+Once a capital provider has evaluated an opportunity, funding takes place through the compatible lending infrastructure that created the underlying Loan Request UTxO. Any subsequent fiat conversion, regulated settlement, borrower disbursement, loan servicing or other commercial operation remains the responsibility of the relevant market participants and service providers.
+
+This separation allows Aurora to provide reusable market infrastructure without requiring one lending protocol, settlement provider, jurisdiction or commercial deployment model.
 
 ## What We Build
-
 ### Metadata Standard
+A versioned, open specification describing credit-market opportunities and the metadata references associated with Loan Request UTxOs.
 
-A versioned schema for attaching identity proofs, verification status and loan-level compliance information to credit market UTxOs.
+The standard is designed to support standardized market information while remaining extensible across lending models, jurisdictions, verification systems and future credit-market applications.
 
-The standard is designed to be extensible and support additional trust and verification use cases over time.
+### Verification Framework
+An extensible framework for attaching and evaluating verifiable institutional, eligibility, compliance and other proof-based information associated with Loan Request UTxOs.
 
-### Off-Chain Indexer
+The framework does not require a single identity system, credential issuer, proof system or verification provider. Different verification mechanisms may coexist while participants retain responsibility for determining which evidence they require.
 
-A service that reads credit market UTxOs, verifies attached proofs, tracks loan lifecycles and exposes a query API for discovery and filtering.
+### Aurora Discovery Engine
+An open-source service that indexes compatible Loan Request UTxOs and associated metadata, supports discovery and filtering, exposes verification information, tracks relevant loan-lifecycle information and provides open APIs for compatible applications.
 
-Both components will be released as open public infrastructure for the broader Cardano ecosystem to adopt, extend and operate independently and to integrate into future credit market applications. The off-chain indexer could be run locally to avoid dependence on a third-party API service.
+The Discovery Engine transforms independent lending opportunities into a searchable market without becoming the underlying lending protocol or a centralized marketplace. It is designed to be independently operable so that builders do not need to depend on Fairway or a single hosted API.
 
-![Cardano credit market infrastructure](assets/cardano-credit-market.png)
+### Developer Tooling and Reference Implementation
+Open developer tooling, documentation and a reference implementation demonstrating how compatible applications can attach standardized metadata, index Loan Request UTxOs, query the Discovery Engine, apply published filtering criteria and evaluate verification references.
 
-*Image 1\. 	Cardano Credit market infrastructure*
+A Treasury-funded technical demonstration will validate this lifecycle on testnet without requiring live lending or Treasury-funded loan capital.
 
-# 4. Pilot Implementation
+### Capital Discovery & Allocation Layer
+Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial
 
-The pilot validates the metadata and indexer infrastructure described in Section 3 through real lending activity with Ethiopian Savings and Credit Cooperative Organizations (SACCOs). An ADA allocation reserved for pilot liquidity is converted into USDM (or another approved Cardano-native USD-denominated stable asset) and deployed through the pilot. Encryptus initially provides the settlement infrastructure connecting on-chain lending activity with local banking rails.
+Its outputs include the Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution, lightweight integration artifacts and supporting documentation.
 
-Ethiopian SACCOs provide an attractive environment for validation. They already originate and service loans, possess established borrower relationships, and face significant unmet demand for lending capital.
+These components remain open standards and reference tooling rather than a proprietary capital-allocation product.
 
-The consortium has already secured pilot participation from Ethiopian SACCOs and continues expanding its institutional network in preparation for deployment. The initial pilot validates the infrastructure with a small cohort of institutions before progressively expanding participation as operational experience and on-chain credit histories are established.
+All Treasury-funded software, standards and reference implementations will be released under Apache License 2.0. The resulting infrastructure is designed for the broader Cardano ecosystem to adopt, extend and operate independently without requiring Fairway, Sundial or any single lending implementation.
 
-The pilot therefore begins with existing financial institutions that have already agreed in principle to participate, rather than requiring the consortium to recruit lending partners after Treasury funding is received.
+# 4. Deliverables
+The project delivers open-source market infrastructure that can be adopted, extended and operated independently by future Cardano credit market implementations.
 
-## Structure
+Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and institutionally usable. It does not fund lending capital, commercial onboarding or live loan execution.
 
-The pilot begins with the simplest operational model: one Loan Request UTxO per participating SACCO.
+## Core Infrastructure Deliverables
+1. **Metadata Standard.**
+   A versioned, open specification describing credit-market opportunities and the metadata references associated with Loan Request UTxOs. The standard defines how institutionally relevant information can be attached consistently without modifying the underlying lending protocol and remains extensible across lending models, jurisdictions and verification systems.
 
-Each SACCO publishes a funding request through Pogun's credit market contracts (or similar) and receives capital to support its existing lending operations. The SACCO continues using its established underwriting, servicing and repayment processes while the pilot validates Cardano's ability to coordinate capital participation and repayment tracking. This approach minimizes operational complexity while the infrastructure is new.
+2. **Verification Framework.**
+   An extensible framework for attaching and evaluating institutional, eligibility, compliance and other proof-based information associated with Loan Request UTxOs. The framework supports multiple credential systems, proof systems and verification providers without requiring a single identity or compliance infrastructure.
 
-As participating institutions become familiar with the framework, subsequent deployment rounds may evaluate more granular structures, including Loan Request UTxOs representing lending programs, loan categories or individual business lending opportunities.
+3. **Aurora Discovery Engine.**
+   An open-source service that indexes compatible Loan Request UTxOs and associated metadata, exposes lending opportunities through open APIs, supports discovery and filtering, provides access to verification information and tracks relevant loan-lifecycle information exposed by compatible lending implementations.
+    The Discovery Engine will be independently operable so that third-party builders are not required to depend on Fairway or a single hosted service.
 
-The objective is not to prescribe a single market structure from the outset, but to determine which levels of granularity create the most efficient and scalable credit market while remaining practical for participating institutions.
+4. **Filtering and Query Capabilities.**
+   Open filtering capabilities based on published metadata schemas and query specifications. Compatible applications and capital providers will be able to identify opportunities according to criteria such as jurisdiction, duration, asset, ticket size, verification requirements and other standardized attributes supported by the applicable schema.
 
-## Process Flow
+5. **Open APIs.**
+   Public interfaces for querying Aurora-compatible credit opportunities, associated metadata, verification information and relevant lifecycle information.
+   The APIs are intended to reduce protocol-specific integration work and enable wallets, lending applications, analytics services and other ecosystem participants to build against common market infrastructure.
 
-1. **Loan Request.** A participating SACCO publishes a Loan Request UTxO through Pogun's credit market contracts (or similar) with verification metadata attached.
+6. **Developer Tooling and Reference Implementation.**
+    Open tooling and reference code demonstrating how developers can create Aurora-compatible metadata, identify and index Loan Request UTxOs, query the Discovery Engine, apply filtering criteria and evaluate verification references.
 
-2. **Verification.** The off-chain indexer verifies the SACCO's attached proof and exposes the lending opportunity through the discovery interface.
+    The reference implementation will demonstrate the complete infrastructure flow without requiring adoption of any single lending protocol or commercial deployment model.
 
-3. **Funding.** Following conversion into USDM, pilot capital is deployed into eligible lending opportunities through the credit market infrastructure.
+7. **Documentation.**
+    Technical documentation covering the Metadata Standard, Verification Framework, Discovery Engine, APIs, filtering model and reference implementation.
 
-4. **Settlement.** Encryptus initially supports conversion between USDM (or another approved Cardano-native USD-denominated stable asset) and locally accessible fiat currency. Pilot capital is transferred from funded Loan Request UTxOs to the designated settlement address, converted and paid to participating SACCOs through their existing banking relationships. Loan repayments follow the reverse settlement path and return to the credit market infrastructure for capital recycling. The consortium may utilize equivalent regulated settlement providers where operational, regulatory or technical considerations make this appropriate.
+    Documentation will include sufficient integration and operating guidance for third-party developers to adopt the standards and operate the relevant infrastructure independently.
 
-5. **Servicing.** SACCOs remain responsible for:
+## Capital Discovery & Allocation Layer
+Aurora includes selected technical contributions from Sundial relating to capital-provider requirements, discovery, filtering and interoperability within the broader Aurora implementation.
 
-   - Borrower onboarding.
-   - Underwriting decisions.
-   - Local compliance.
-   - Repayment collection.
-   - Recovery processes where required.
-   - Exchange rate risk between USDM and the local fiat currency.
+These contributions include:
 
-   Repayment events are recorded on-chain and contribute to the development of verifiable credit histories and future reputation systems.
+**Capital Provider Profile Standard.**
+ An open schema for representing requirements such as jurisdiction, ticket size, duration, asset, verification requirements and risk preferences.
 
-6. **Capital Recycling.** As loans are repaid, Treasury capital becomes available for redeployment into new lending opportunities. Subsequent deployment rounds may incorporate additional institutions and alternative Loan Request UTxO structures based on operational feedback and pilot outcomes.
+**Discovery and Filtering Specification.**
+ A published specification describing how capital-provider requirements can be translated into discovery and filtering criteria against Aurora-compatible credit opportunities.
 
-## Why This Model Scales
+**Reference Query Library.**
+ Open examples demonstrating how prospective capital providers and compatible applications can query and filter opportunities using the published standards.
 
-The long-term opportunity extends far beyond the initial pilot. Cooperative financial institutions already operate at significant scale across emerging markets, creating one of the largest and most scalable distribution channels for productive credit. Rather than building a lending network borrower by borrower, Cardano-native capital can reach thousands of existing financial institutions that already understand their local markets.
+**Market Discovery API Contribution.**
+ API definitions and related implementation contributions required to expose capital-provider-relevant discovery and filtering capabilities through the Aurora infrastructure.
 
-Rather than originating and servicing thousands of individual SME loans directly, the proposed model connects global digital capital with regulated financial institutions that already possess borrower relationships, underwriting expertise, repayment infrastructure and regulatory standing. Every new institutional relationship immediately expands lending capacity without requiring new borrower acquisition or operational infrastructure.
+**Lightweight Integration Artifacts.**
+ Reference examples or lightweight SDK components demonstrating how external applications can integrate the Capital Provider Profile Standard and query specifications.
 
-This creates a highly scalable distribution model. Each new institutional relationship immediately provides access to an established lending operation rather than requiring the ecosystem to build new borrower acquisition, underwriting and servicing capabilities from scratch.
+**Documentation.**
+ Technical documentation sufficient for third parties to use, implement and extend the relevant standards and interfaces without dependence on Sundial.
 
-Each participating SACCO establishes a portable, verifiable on-chain credit history through its repayment performance. As more institutions participate, capital providers can allocate funds based on transparent on-chain performance rather than building separate due diligence processes for every institution.
+These components form part of Aurora’s common open-source infrastructure rather than a separate Sundial product or independently funded workstream. Sundial contributes technical expertise where relevant, while Fairway remains responsible for integrated delivery of the proposal as lead implementer.
 
-Because the infrastructure is open and jurisdiction agnostic, the same institutional onboarding framework can be reused to connect thousands of regulated financial institutions across different jurisdictions using a common metadata standard, verification framework and indexing infrastructure. This reduces duplicated effort while increasing interoperability across future Cardano credit market implementations.
+The Capital Discovery & Allocation Layer does not allocate Treasury capital, make lending decisions or create a proprietary capital-allocation product. It provides open standards and reference tooling that future market participants may use according to their own requirements.
 
-## How Risk Is Contained
+## Technical Demonstration
+The project will include a testnet technical demonstration showing that the core infrastructure operates together as intended.
 
-The pilot launches with participating SACCOs that have already executed Memorandums of Understanding with the consortium and already perform lending as their core business.
+The demonstration will show that a compatible Loan Request UTxO can be:
 
-Rather than replacing existing financial institutions, Cardano supplies capital and infrastructure to organizations that already possess local expertise, borrower relationships and servicing capabilities.
+1. created through compatible lending infrastructure;
+2. enriched with standardized metadata;
+3. identified and indexed by the Aurora Discovery Engine;
+4. discovered through an open API;
+5. filtered according to published criteria;
+6. associated with verification information that can be evaluated through the Verification Framework; and
+7. consumed by a compatible reference application or query workflow.
 
-Treasury capital is deployed progressively across multiple participating institutions. Subsequent capital deployments occur only after satisfactory repayment performance, operational compliance and successful completion of earlier deployment rounds have been demonstrated.
+The technical demonstration validates the infrastructure rather than commercial lending performance. It does not require Treasury-funded loan capital, fiat settlement, borrower disbursement or live SACCO lending.
 
-Typical SACCO loans in Ethiopia are relatively small and short-duration, allowing meaningful lending activity across multiple institutions while validating repeated repayment and capital recycling during the pilot.
+## Security and Legal Review
+The funded scope includes independent review appropriate to the infrastructure being delivered.
 
-Targeting regulated financial institutions rather than individual borrowers also reduces operational and currency risk. Loans are denominated in USDM (or another approved Cardano-native USD-denominated stable asset) but disbursed in Ethiopian Birr. Participating institutions, with diversified loan portfolios, established underwriting practices and operational reserves, are significantly better positioned to manage this exposure than individual SME borrowers.
+The security review will assess the Treasury-funded software and relevant technical interfaces before final release.
 
-Because all loans exist on-chain as UTxOs, Treasury-funded activity remains independently auditable. The indexer API and dRep monitoring dashboard enable transparent verification of capital deployment, repayments and loan performance without relying solely on off-chain reporting.
+The legal review will assess the open infrastructure, standards and intended operating model within the scope of this proposal. It does not constitute legal approval of future lending activity or commercial deployments, which remain the responsibility of the relevant participants.
 
-The phased deployment model validates operational processes before expanding participation or increasing capital deployment.
+## Open-Source Release and Public Documentation
+All Treasury-funded software, standards and reference implementations will be released under the **Apache License 2.0**.
 
-## What the Pilot Proves
+Public repositories will contain the applicable source code, specifications, documentation and implementation materials required for third parties to inspect, operate, modify and extend the infrastructure.
 
-The pilot validates the complete lifecycle of a Cardano-native institutional credit market:
+The project will also publish public progress reporting against the approved milestones and deliverables.
 
-* Metadata attachment
-* Zero-knowledge proof verification
-* Indexed loan discovery
-* On-chain capital participation
-* Stablecoin settlement
-* Real-world loan disbursement
-* Repayment tracking
-* Capital recycling
-* Institutional credit history formation
+The resulting infrastructure remains available to the Cardano ecosystem regardless of whether future builders use Fairway, Sundial or any particular lending implementation.
 
-The primary objective of the pilot is to validate Cardano's novel technical approach to programmable credit markets. The resulting economic impact, expanding lending capacity for regulated financial institutions and improving access to affordable capital, is the real-world validation of that infrastructure rather than the primary deliverable itself.
+# 5. Budget and Resource Allocation
+The Treasury withdrawal requests **1,000,000 ADA** for the 5-month delivery of Aurora's open credit-market infrastructure.
 
-More broadly, the pilot evaluates whether Cardano's eUTxO architecture can support programmable institutional credit markets at scale.
+The revised budget funds software development, technical standards, testing, documentation, independent review, hosting and public project delivery. It does not include lending liquidity, commercial pilot execution, SACCO onboarding, stablecoin conversion or settlement operations.
 
-The pilot also validates whether the metadata standard, indexer and reporting infrastructure satisfy the requirements of prospective capital providers evaluating future participation.
+Treasury funding is allocated according to the work required to deliver the approved public infrastructure rather than according to how consortium members divide implementation resources internally.
 
-Beyond the technology itself, the pilot validates a repeatable institutional onboarding model capable of scaling from an initial cohort of participating financial institutions to thousands of regulated lenders using the same open infrastructure.
-
-The long-term objective is to establish the foundations for open, jurisdiction-agnostic credit market infrastructure capable of supporting institutional, stablecoin, ADA and Bitcoin-backed capital participation across multiple jurisdictions and lending models.
-
-# 5. Treasury Participation Model
-
-The Treasury withdrawal consists of two components:
-
-## ADA Allocation
-
-The 2,200,000 ADA allocation covers all development and operational costs associated with the project, including the transaction metadata standard, off-chain indexer, developer tooling, documentation, pilot execution, ecosystem coordination and public reporting.
-
-## Pilot Liquidity
-
-In addition to the operating budget, the proposal allocates 700,000 ADA exclusively for pilot lending liquidity. This allocation targets approximately USD 100,000 of lending capital based on market conditions at the time of withdrawal and remains separate from the operating budget.
-
-The pilot liquidity allocation is administered independently from the project operating budget. Prior to deployment of any pilot liquidity, the Independent Treasury Trustees must be publicly identified together with the custody wallet addresses, multisignature policy, governance procedures and operating framework. These requirements must be independently verified before the first pilot deployment is authorized.
-
-The Independent Treasury Trustees are responsible for receiving the Treasury ADA allocation, converting it into USDM (or another approved Cardano-native USD-denominated stable asset) as soon as practicable to minimize market exposure, holding the revolving pilot liquidity, authorizing deployments according to the approved pilot funding and repayment model, receiving repaid capital, and returning the remaining Treasury principal together with Treasury-entitled proceeds at the conclusion of the pilot.
-
-**Stablecoin Conversion Policy.** The Pilot Liquidity allocation will be converted into USDM where practicable. If USDM is unavailable or operationally unsuitable, the Independent Treasury Trustees may approve another reputable Cardano-native USD-denominated stable asset that provides equivalent functionality for the pilot. Conversion will be executed as soon as reasonably practicable following receipt of Treasury funds through an approved regulated OTC or liquidity provider under commercially reasonable market conditions, with the objective of minimizing market exposure and unnecessary execution costs.
-
-If market conditions are judged to be materially unfavorable, including severe liquidity constraints, excessive slippage, or a material loss of the selected stable asset's USD peg, the Trustees may delay conversion or suspend further pilot deployments until conditions have normalized or an alternative approved stable asset has been selected. Any ADA or stable assets not yet deployed remain under the custody of the Independent Treasury Trustees and continue to be governed under the approved Treasury custody framework.
-
-The stablecoin liquidity is not spent; it is lent. Capital is deployed into loan contracts originated by verified SACCOs through the credit market infrastructure. As participating SACCOs repay their loans, the capital is recycled into subsequent lending rounds, allowing the same pilot allocation to support multiple deployment cycles.
-
-Capital is deployed progressively across three pilot rounds rather than all at once, limiting Treasury exposure while the infrastructure, operational processes and market assumptions are validated. This separation of responsibilities ensures that project implementation and Treasury liquidity administration remain operationally independent, transparent and fully auditable.
-
-Participating SACCOs receive an agreed portion of lending income in exchange for originating, underwriting, servicing and collecting loans under the executed pilot participation agreements. Only participation agreements approved by the Independent Treasury Trustees are eligible to receive Treasury-funded pilot liquidity. These agreements define the allocation of lending income between participating SACCOs and Treasury-funded capital before any pilot deployment occurs.
-
-Treasury-entitled proceeds comprise the remaining Treasury principal together with any amounts allocated to the Treasury under those agreements after deduction of approved settlement costs, independent audit costs, pilot administration costs and approved loss allocations.
-
-Approved pilot administration costs are limited to operational expenses directly attributable to administering the Treasury-funded pilot liquidity and do not include consortium operating expenses funded through the Development Budget. Approved loss allocations are limited to realized losses arising from participating SACCO defaults, settlement failures or other approved pilot credit events, and do not include consortium operating costs, budget overruns or unrelated liabilities.
-
-## Transparency and Audit
-
-Throughout the pilot, Treasury-funded pilot liquidity will remain fully transparent and independently auditable. The Independent Treasury Trustees will publish the Treasury custody wallet addresses before the first pilot deployment. Capital conversions, deployments, repayments, remaining pilot liquidity and Treasury returns will be publicly verifiable through on-chain transactions, the project indexer and periodic public reports, enabling the community and dReps to independently monitor the flow of Treasury funds throughout the pilot.
-
-An independent financial auditor or suitably qualified independent reviewer will be appointed before the first pilot liquidity deployment. Funding for this review is included within the Shared Resources allocation.
-
-Independent financial reconciliation and audit activities will be performed at each project milestone. The review will cover, where applicable:
-
-* Treasury custody balances and wallet reconciliation.
-* Development fund disbursements and milestone spending.
-* ADA-to-stablecoin conversion records and custody.
-* Pilot liquidity deployments and repayments.
-* Capital recycling and remaining Treasury principal.
-* Treasury-entitled proceeds and approved cost allocations.
-* Compliance with the approved governance framework and milestone release conditions.
-
-A summary of the auditor's findings, together with the corresponding financial reconciliation, will be published alongside each milestone report. Any material discrepancies identified during the review will be disclosed together with the corrective actions taken before subsequent Treasury funds or pilot liquidity are released.
-
-## After the pilot
-
-The Treasury is not intended to become a permanent liquidity provider. The purpose of the pilot is to establish the on-chain transaction history, repayment records and institutional track record required to attract future participation from stablecoin providers, institutional allocators, ADA holders and other capital sources.
-
-Throughout the pilot, Sundial will engage prospective capital providers to validate the operational, compliance and reporting requirements necessary for future market participation.
-
-By the end of the pilot, participating SACCOs will have verifiable on-chain lending histories that support future capital formation. Once that portable institutional credit history exists, participating institutions can continue attracting capital from future market participants without additional Treasury funding. Future capital providers can evaluate lending opportunities based on transparent repayment history and demonstrated performance rather than relying on Treasury participation.
-
-The Pilot Liquidity allocation is intended to revolve throughout the pilot rather than fund ongoing operations. Treasury-funded capital will be progressively deployed, repaid and recycled across multiple lending rounds in accordance with the approved pilot governance framework.
-
-At the conclusion of the pilot, the remaining Treasury principal together with any Treasury-entitled proceeds will be returned to the Cardano Treasury in accordance with the approved pilot participation framework.
-
-Treasury-entitled proceeds consist of any amounts allocated to the Treasury under the approved pilot participation framework, including applicable lending returns, recoveries and other Treasury-entitled distributions, after deduction of pre-approved pilot administration costs, regulated settlement costs, independent audit costs and approved loss allocations. No consortium member may retain Treasury-entitled proceeds except for costs explicitly approved within the project budget or the approved participation framework.
-
-Any Treasury principal or Treasury-entitled proceeds not required to satisfy approved pilot obligations shall remain under the custody of the Independent Treasury Trustees until returned to the Cardano Treasury. Upon completion of the pilot, the Treasury-funded liquidity is fully unwound and no continuing claim on Treasury capital remains.
-
-## Operational Risk Management
-
-The pilot is designed to limit Treasury exposure through progressive capital deployment and clearly defined risk allocation.
-
-* **Borrower defaults.** Treasury capital is deployed to participating SACCOs rather than individual borrowers. SACCOs remain responsible for underwriting, servicing and absorbing losses arising from SME or individual borrower defaults under their existing lending operations.
-* **SACCO performance.** Continued participation and larger capital allocations depend upon successful repayment performance. A SACCO that fails to meet its repayment obligations, materially breaches the participation agreement or no longer satisfies the pilot eligibility requirements may be suspended or permanently excluded from future participation. Repayment performance contributes to the institution's on-chain credit history and informs future capital allocation decisions.
-* **Pilot eligibility.** Participating SACCOs must be legally operating financial institutions, execute the required pilot participation agreements, complete the consortium's onboarding and verification process, and maintain the operational capabilities necessary to participate in the pilot.
-* **Exposure limits**. Treasury exposure is limited through progressive deployment. Initial pilot allocations are distributed across multiple participating SACCOs, with subsequent capital deployments contingent upon satisfactory repayment performance, operational compliance and successful completion of earlier deployment rounds. Initial deployments will prioritize shorter-duration lending facilities where practical, enabling multiple repayment and capital recycling cycles during the pilot while preserving flexibility for participating SACCOs to originate loans appropriate to their local markets.
-* **Stablecoin and conversion risk.** Pilot liquidity will be converted into a reputable Cardano-native USD-denominated stable asset as soon as practicable following withdrawal to minimize market exposure. If conversion cannot be completed under acceptable market conditions, or if the selected stable asset becomes operationally unsuitable, deployment of the affected tranche may be delayed until the issue is resolved.
-* **Settlement risk**. The pilot initially utilizes Encryptus as its regulated settlement provider. Should operational, regulatory or jurisdictional requirements change, the consortium may transition to an equivalent regulated settlement provider without affecting the metadata standard, indexer or credit market architecture.
-
-* **Anti-gaming.** Participating SACCOs must certify that pilot funds are not knowingly lent to related parties of the consortium, Treasury Trustees or Development Fund signers except where fully disclosed and independently approved. Circular lending, artificial repayment activity, self-funding designed to inflate pilot metrics and other arrangements intended primarily to manipulate reported outcomes are prohibited. The dRep dashboard will distinguish deployed capital, repayments, recoveries and outstanding balances using objective on-chain metrics. Treasury Trustees may suspend or reject deployments where material evidence of prohibited activity exists.
-
-* **Jurisdictional flexibility.** Ethiopia has been selected as the initial pilot jurisdiction due to Fairway's existing institutional relationships and signed participation agreements. However, **the metadata standard, indexer and pilot operating model are jurisdiction agnostic**. Should regulatory, settlement or currency restrictions materially delay pilot execution in Ethiopia, the consortium may deploy the pilot through equivalent regulated financial institutions in other supported jurisdictions. Through Encryptus' existing settlement network and institutional relationships, including established SACCO partnerships in Kenya, the consortium has an operational pathway to continue validating the infrastructure while preserving the objectives of the Treasury-funded pilot.
-
-# 6. Deliverables
-
-## Phase 1: Infrastructure
-
-1. **Tx metadata standard.** A versioned, open-source schema for attaching identity proofs, verification status, and compliance information to credit market UTxOs. Designed to be extensible beyond KYC and support future trust, reputation and verification use cases.
-2. **Off-chain indexer.** An open-source service that monitors the chain for credit market UTxOs, verifies attached ZK proofs, tracks loan lifecycles, and exposes a query API for filtered loan discovery.
-3. **Documentation.** Integration guides for originators, capital providers, and developers who want to build on the metadata standard or operate their own indexer infrastructure.
-4. **Institutional Credit Market Framework.** Documentation of lessons learned regarding different Loan Request UTxO models, including SACCO-level, program-level and more granular lending structures evaluated during the pilot.
-
-## Phase 2: Pilot
-
-1. **Lending**. Live lending activity using the 700,000 ADA pilot liquidity allocation, targeting approximately USD 100,000 of lending capital following conversion into an approved Cardano-native USD-denominated stable asset.
-
-2. **Pilot case study.** A public report covering operational outcomes, repayment performance, capital recycling metrics, and infrastructure performance under real-world conditions.
-3. **SACCO feedback.** Documented feedback from participating SACCOs on the onboarding process, operational friction, and what would need to change for them to scale their participation.
-4. **Reputation and Credit History Framework.** Documentation of how repayment history can be associated with lending entities and used to support future reputation and trust systems.
-
-5. **dRep monitoring dashboard.** A lightweight tool allowing dReps to track the status and health of Treasury-funded loans in real time.
-6. **Sundial Capital Provider Readiness Framework.** Documentation produced through engagement with prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants. The framework documents compliance requirements, reporting expectations, workflow integration, operational requirements and recommended infrastructure improvements required for broader participation in Cardano-native credit markets.
-
-All infrastructure is open-source and available for the broader Cardano ecosystem to adopt or extend.
-
-# 7. Budget and Resource Allocation
-
-The Treasury withdrawal consists of two components.
-
-| Component | ADA | Approx. USD\* | Delivery Scope | Purpose |
-| ----- | ----- | ----- | ----- | ----- |
-| Operating Budget | 2,200,000 | $352,000 | 12-month multidisciplinary delivery | Infrastructure development, pilot execution and ecosystem delivery |
-| Pilot Liquidity | 700,000 | $112,000 | Treasury-managed revolving pilot liquidity | Revolving lending capital administered independently by Treasury Trustees |
-| **Total** | **2,900,000** | **$464,000** | — |  |
-
-\*Illustrative values calculated using a reference ADA price of **US$0.16**.
-
-The USD values above are provided solely to assist reviewers in understanding the approximate scale of the proposal. Treasury funding is requested in ADA. Deliverables are fixed by scope rather than USD expenditure and remain unchanged regardless of subsequent ADA price movements. Any increase in ADA purchasing power during the delivery period increases implementation capacity or reduces the Treasury's effective USD cost without reducing the committed project scope.
-
-## Operating Budget Allocation
-
-The operating budget reflects responsibility for producing project deliverables rather than compensation of individual contributors. Activities include engineering, architecture, ecosystem development, project management, testing, documentation, governance, pilot execution and external professional services delivered throughout the 12-month implementation period.
-
-| Partner | ADA | Approx. USD\* | Primary Responsibilities |
+| Allocation | ADA | Approx. USD\* | Primary Scope |
 | ----- | ----- | ----- | ----- |
-| Fairway | **1,200,000** | **$192,000** | Metadata standard, off-chain indexer, verification infrastructure, SACCO onboarding, pilot execution, reporting and ecosystem coordination |
-| Sundial | **450,000** | **$72,000** | Deliverables include documented engagement with prospective capital providers, completed requirements assessments covering operational, compliance and reporting readiness, publication of a Capital Provider Readiness Framework, and recommendations for future participation by stablecoin providers, institutional allocators, ADA holders and Bitcoin-backed capital sources. These outputs provide reusable guidance for future Cardano credit market participants beyond the scope of this pilot. |
-| Fallen Icarus | **250,000** | **$40,000** | Credit market architecture, UTxO lending design review, metadata framework review and technical oversight |
-| Shared Resources | **300,000** | **$48,000** | Independent security audits, external technical reviews, independent legal and regulatory review covering cross-border lending, stablecoin settlement, custody arrangements and applicable regulatory considerations, infrastructure hosting, and project contingency. |
-| **Operating Budget Total** | **2,200,000** | **$352,000** |  |
+| Core Infrastructure Development | **800,000** | **$152,000** | Metadata and verification standards, Aurora Discovery Engine, APIs, filtering capabilities, developer tooling, reference implementation, Capital Discovery & Allocation components, technical demonstration, documentation and project delivery |
+| Shared Review, Hosting & Technical Contingency | **200,000** | **$38,000** | Covers approximately **80,000 ADA** for independent security and legal review, **30,000 ADA** for independent Treasury-use audit and oversight, **40,000 ADA** for infrastructure hosting and technical operations, and **50,000 ADA** for technical contingency within the approved Aurora scope. |
+| **Total** | **1,000,000** | **$190,000** |  |
 
-## Pilot Liquidity (Separate Treasury Allocation)
+\*Illustrative values calculated using a reference ADA price of **US$0.19**.
 
-| Allocation | ADA | Approx. USD\* | Administration |
+The USD values are provided solely to assist reviewers in understanding the approximate scale of the proposal. Treasury funding is requested in ADA. The deliverables described in this proposal are defined by scope and milestone completion rather than by subsequent movements in the ADA/USD exchange rate.
+
+The budget reflects responsibility for producing public deliverables rather than compensation of individual contributors or consortium members. Internal allocation of implementation resources is managed by the lead implementer and does not alter the Treasury-funded scope, milestone requirements or public deliverables.
+
+All Treasury-funded software, standards and reference implementations will be released under Apache License 2.0.
+
+## Core Infrastructure Development
+The **800,000 ADA** Core Infrastructure Development allocation funds implementation of the public infrastructure defined in Section 4.
+
+This includes:
+
+* Metadata Standard development.
+* Verification Framework implementation.
+* Aurora Discovery Engine development.
+* Indexing, discovery and filtering capabilities.
+* Open APIs.
+* Developer tooling.
+* Reference implementation.
+* Capital Provider Profile Standard.
+* Discovery and Filtering Specification.
+* Reference Query Library.
+* Market Discovery API design and implementation contributions.
+* Lightweight Capital Discovery SDK components or reference integration examples.
+* Technical documentation and integration guidance.
+* Testnet technical demonstration.
+* Open-source repository preparation and release.
+* Project coordination and public progress reporting.
+
+These deliverables belong to the proposal rather than to individual consortium members. They are developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
+
+The allocation does not fund commercial lending activity, SACCO onboarding, loan capital, settlement operations, private capital formation, institutional fundraising or revenue-generating deployment.
+
+## Implementation Responsibility
+Fairway acts as lead implementer and is responsible for overall delivery of the Treasury-funded work.
+
+This includes coordinating engineering, standards development, technical integration, documentation, testing, external reviews, milestone delivery and public reporting. Fairway may coordinate technical contributions from consortium collaborators and other approved contributors where appropriate, while remaining accountable for delivery of the funded scope as a whole.
+
+This structure does not imply that every individual deliverable must be implemented exclusively by Fairway personnel. Treasury funds the completed public infrastructure and associated milestones rather than a prescribed division of labour between contributors.
+
+## Consortium Technical Collaboration
+Sundial acts as a strategic technical collaborator within the unified Aurora implementation.
+
+Its contribution focuses on selected open-source components relating to the interaction between capital-provider requirements and Aurora-compatible market information, including:
+
+* Capital Provider Profile Standard.
+* Discovery and Filtering Specification.
+* Reference Query Library.
+* Market Discovery API design.
+* Lightweight integration examples and related technical artifacts.
+* Review of capital-provider interoperability across the relevant standards and interfaces.
+
+These contributions are developed as part of the proposal's shared technical deliverables and remain available to the ecosystem under the same open-source commitments as the rest of the Treasury-funded infrastructure.
+
+Sundial's role does not include Treasury-funded fundraising, business development, institutional relationship management, commercial onboarding or capital allocation.
+
+## Shared Review, Hosting & Technical Contingency
+The **200,000 ADA** Shared Review, Hosting & Technical Contingency allocation covers external and project-wide requirements necessary to deliver the infrastructure responsibly.
+
+These resources include:
+
+* Independent security review of the Treasury-funded software and relevant technical interfaces.
+* Independent legal review of the open infrastructure, standards and intended operating model within the scope of this proposal.
+* Infrastructure hosting required for development, testing and the technical demonstration.
+* Technical contingency for unforeseen implementation requirements within the approved infrastructure scope.
+* **Independent Treasury-use audit and oversight**, including reconciliation of Treasury transactions against reported expenditure, approved budget categories and milestone expenditure ceilings.
+
+These resources do not fund commercial lending operations, regulatory work for a live lending pilot, stablecoin settlement, custody of lending capital or activities outside the Treasury-funded deliverables.
+
+Any use of technical contingency remains limited to delivery of the approved proposal scope and does not authorize additional products, commercial activities or material changes to the funded deliverables.
+
+## Resource Allocation Principles
+The revised allocation follows four principles.
+
+First, Treasury funds are allocated according to the infrastructure and supporting work required to deliver the approved public outputs rather than according to the internal compensation arrangements of consortium members.
+
+Second, Fairway remains responsible for overall delivery while technical contributions from consortium partners are incorporated into the same implementation programme where appropriate.
+
+Third, external expenditure is limited to review, hosting and technical contingency directly related to delivery of the public infrastructure.
+
+Fourth, no portion of the Treasury withdrawal is reserved for lending capital or commercial deployment.
+
+Internal allocation of implementation resources may be adjusted by the lead implementer as required to complete the approved work, provided that the total Treasury request, funded scope, milestone requirements and public deliverables remain unchanged.
+
+The resulting budget therefore maps directly to the public outputs defined in Section 4 and limits Treasury expenditure to infrastructure that remains available to Cardano after the funded delivery period ends.
+
+# 6. Consortium and Relevant Experience
+Aurora is delivered through an integrated implementation led by Fairway, with technical contributions from Sundial and advisory input from domain experts where appropriate.
+
+Fairway is responsible for overall project delivery, coordination and integration of the funded work. Sundial contributes complementary technical expertise to selected open-source standards, interoperability requirements and reference implementations. Fallen Icarus (Rusty) supports the project as a technical advisor and reviewer on the underlying transaction-based credit-market architecture.
+
+Treasury funds the resulting Aurora infrastructure and public deliverables rather than separate organizational work packages.
+
+The implementation brings together experience in Cardano and Midnight infrastructure, verification systems, eUTxO-based credit markets, institutional finance and open technical standards. This allows Aurora to address both sides of the market-infrastructure problem: representing and exposing credit opportunities consistently on-chain, and ensuring that the resulting information can be discovered, filtered and evaluated through interfaces useful to future applications and capital providers.
+
+## Fairway
+Fairway is the lead implementer and project coordinator for Aurora.
+
+Its relevance to the proposal comes from prior work across identity, verification and standards-based infrastructure on Cardano and Midnight, together with experience integrating institutional systems with blockchain-based infrastructure. This background is directly applicable to the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, developer tooling and reference implementation that form the core of Aurora.
+
+Relevant prior delivery includes Catalyst-funded identity initiatives, work integrating Ethiopia's Fayda National ID system with Cardano-based verifiable credential infrastructure, and issuance of proof-of-graduation verifiable credentials with Ethiopian higher education institutions. Project Catalyst records document Fairway's earlier completed identity work and subsequent Fayda-focused implementation, while Fairway's Fund 12 proposal records prior partnerships with two Ethiopian higher education institutions and the issuance of 50 proof-of-graduation verifiable credentials.
+ Evidence: [Recruitment Utilizing Atala PRISM — Project Catalyst](https://projectcatalyst.io/funds/8/accelerate-decentralized-identity/recruitment-utilizing-atala-prism); [Leveraging National ID system in Ethiopia — Project Catalyst](https://projectcatalyst.io/funds/12/cardano-use-cases-concept/leveraging-national-id-system-in-ethiopia-for-more-scalable-adoption-of-cardano-in-identity-solutions); [Fund 12 milestone record](https://milestones.projectcatalyst.io/projects/1200143/milestones).
+
+These projects required coordination across credential infrastructure, blockchain integrations and institutional participants rather than development of isolated smart contracts alone.
+
+Within Aurora, Fairway is responsible for coordinating the implementation as a whole, integrating technical contributions from consortium partners and advisors where appropriate and ensuring that the funded standards, software, documentation, reviews and technical demonstration are delivered as one coherent public-infrastructure project.
+
+Fairway's role as lead implementer does not create exclusive rights over the resulting infrastructure. Treasury-funded software, standards and reference implementations remain open for independent use, operation, modification and extension under Apache License 2.0.
+
+## Sundial
+Sundial is a technical consortium collaborator contributing complementary expertise at the intersection of institutional credit infrastructure, Bitcoin-native finance and capital-provider interoperability.
+
+Sundial Protocol develops Bitcoin-oriented financial infrastructure on Cardano. The team has operated a live testnet, completed a third-party security audit with Hacken and placed first in the Institutional Track at Paris Blockchain Week.
+
+Within the Aurora implementation, Sundial contributes technical input to selected open-source components where its expertise is directly relevant, including:
+
+* Capital Provider Profile Standard.
+* Discovery and Filtering Specification.
+* Reference Query Library.
+* Market Discovery API design.
+* Lightweight integration examples and related technical artifacts.
+* Review of capital-provider interoperability across the relevant standards and interfaces.
+
+These contributions are incorporated into Aurora's common technical outputs rather than treated as a separate platform or independently funded product.
+
+Sundial's role is technical and standards-focused. It does not depend on Treasury-funded fundraising, business development, institutional relationship management or commercial capital allocation.
+
+As with the rest of the Aurora implementation, technical contributions developed through the proposal remain available to future Cardano builders and compatible lending implementations on equal terms under the project's open-source commitments.
+
+## Technical Advisor — Fallen Icarus (Rusty)
+Fallen Icarus (Rusty) serves as a technical advisor to Aurora, providing architectural review and domain expertise relating to Cardano's transaction-based credit-market model and Loan Request UTxO design.
+
+Rusty is a principal contributor to the open-source **cardano-loans** protocol and related Cardano peer-to-peer DeFi architecture using UTxO-based state and beacon-token discovery. The cardano-loans repository documents a peer-to-peer lending model in which loan requests, offers and active loans exist as distinct UTxOs and are made discoverable through beacon tokens, providing directly relevant architectural experience for Aurora's treatment of independently discoverable credit opportunities.
+
+Evidence: [fallen-icarus/cardano-loans](https://github.com/fallen-icarus/cardano-loans); [cardano-loans releases](https://github.com/fallen-icarus/cardano-loans/releases).
+
+His advisory contribution may include:
+
+* Review of credit-market architecture.
+* Loan Request UTxO design considerations.
+* eUTxO-specific implementation considerations.
+* Review of standards and technical interfaces where relevant.
+* Architectural consistency between Aurora's discovery, metadata and verification infrastructure and the underlying transaction-based credit-market model.
+
+His involvement strengthens technical continuity between the underlying credit architecture and the open market infrastructure developed through Aurora.
+
+The advisory role does not constitute a separately funded organizational work package, does not create separate ownership of Treasury-funded deliverables and does not make Aurora operationally dependent on Fallen Icarus.
+
+## Combined Delivery Capability
+The implementation structure is intended to combine complementary capabilities without creating dependencies on any one proprietary workflow or individual contributor.
+
+Fairway provides lead implementation, system integration, verification and market-infrastructure development capability. Sundial contributes specialized technical perspective on how capital-provider requirements should be represented, queried and integrated with open credit-market infrastructure. Rusty contributes architectural continuity and technical review relating to the underlying transaction-based credit-market model.
+
+Together, these capabilities support an implementation that must work both from the perspective of Cardano builders publishing and indexing Loan Request UTxOs and from the perspective of future applications and capital providers that need to discover, filter and evaluate those opportunities.
+
+The resulting standards and software are designed to remain independently operable. Adoption of Aurora does not require continued involvement from Fairway, Sundial or any individual advisor, and no participant receives exclusive rights to operate, commercialize or extend Treasury-funded outputs.
+
+## Previous Delivery
+Participants contributing to the Aurora implementation have previously delivered Catalyst-funded initiatives, open-source infrastructure, blockchain integrations, audited technical systems and ecosystem projects relevant to verification, lending infrastructure and institutional adoption.
+
+The proposal therefore builds upon existing technical experience and delivered infrastructure rather than beginning from a greenfield position.
+
+The purpose of that experience within this proposal is to support delivery of Aurora's public outputs. Prior commercial relationships, advisory activities or organizational initiatives do not form part of the Treasury-funded scope unless expressly included in the proposal deliverables.
+
+# 7. Milestones and Success Criteria
+Aurora is delivered through four milestones over approximately five months.
+
+Each milestone is tied to concrete public outputs that can be independently reviewed. Fairway remains responsible for integrated delivery of the proposal, with technical contributions from consortium partners and advisors incorporated where appropriate.
+
+| Milestone | Timeline | ADA Allocation | Primary Outcome |
 | ----- | ----- | ----- | ----- |
-| Pilot Liquidity | **700,000** | **$112,000** | Administered independently by the Independent Treasury Trustees (2-of-3 multisig) and deployed through progressive lending rounds under the approved pilot governance framework |
+| M1: Specifications & Architecture | Month 1 | **150,000** | Core standards and implementation architecture finalized |
+| M2: Core Build | Months 2–3 | **350,000** | Discovery, verification, indexing, filtering and API infrastructure operational on testnet |
+| M3: Integration & Technical Demonstration | Month 4 | **300,000** | Reference implementation, developer tooling and complete testnet workflow demonstrated |
+| M4: Independent Review & Public Release | Month 5 | **200,000** | Independent review completed and final open-source infrastructure released |
+| **Total** | **Approximately 5 months** | **1,000,000** |  |
+
+## M1: Specifications & Architecture
+**Timeline:** Month 1
+ **ADA Allocation:** **150,000 ADA**
+
+### Key Outputs
+* Metadata Standard.
+* Verification Framework specification.
+* Aurora Discovery Engine architecture.
+* Discovery and Filtering Specification.
+* Capital Provider Profile Standard.
+* Initial API, query and implementation architecture.
+
+Technical review may include contributions from Sundial and architectural input from Fallen Icarus where relevant to capital-provider interoperability, Loan Request UTxO design and eUTxO-specific credit-market architecture.
 
-## Team Responsibilities
+### Completion Criteria
+* Core specifications and architecture documents are published in public repositories.
+* The architecture defines how compatible Loan Request UTxOs are indexed, discovered, filtered and associated with verification information.
+* The specifications remain protocol independent and do not require a single verification provider, lending implementation or hosted Aurora operator.
+* Public milestone report published with links to the completed outputs.
 
-### Fairway
+## M2: Core Build
+**Timeline:** Months 2–3
+ **ADA Allocation:** **350,000 ADA**
 
-Fairway leads implementation and pilot execution, including:
+### Key Outputs
+* Operational Aurora Discovery Engine on testnet.
+* Verification Framework implementation.
+* Indexing, discovery and filtering functionality.
+* Open API implementation.
+* Initial developer tooling and technical documentation.
 
-* Tx metadata standard development.
-* Off-chain indexer implementation.
-* Verification framework integrations.
-* Developer tooling and documentation.
-* SACCO onboarding and relationship management.
-* Integration with Encryptus and other compatible regulated settlement providers.
-* Pilot operations and reporting.
+### Completion Criteria
+* Aurora can identify and index compatible Loan Request UTxOs and associated metadata on testnet.
+* The public API can retrieve and filter indexed opportunities using published metadata criteria.
+* Verification information can be exposed and evaluated through the Verification Framework.
+* The Discovery Engine can be deployed in a test environment without dependence on a Fairway-hosted API.
+* Source code and milestone documentation are publicly available.
 
-### Sundial (Ecosystem & Capital Provider Readiness)
+## M3: Integration & Technical Demonstration
+**Timeline:** Month 4
+ **ADA Allocation:** **300,000 ADA**
 
-Sundial contributes institutional market expertise and ecosystem relationships to help validate that the infrastructure developed through this proposal supports future participation by professional capital providers.
+### Key Outputs
+* Reference implementation.
+* Reference Query Library.
+* Capital-provider filtering integration.
+* Market Discovery API integration.
+* Lightweight integration examples and developer tooling.
+* Developer and integration documentation.
+* End-to-end testnet technical demonstration.
 
-**Activities include:**
+### Completion Criteria
+* The reference implementation demonstrates a compatible Loan Request UTxO being enriched with standardized metadata, indexed, discovered, filtered and associated with verification information.
+* Published reference queries demonstrate how capital-provider requirements can be translated into discovery and filtering criteria.
+* A technically capable third party can use the published APIs, tooling and documentation to reproduce the principal workflow.
+* The technical demonstration requires no Treasury-funded lending capital, borrower deployment, fiat settlement or commercial loan execution.
+* Public milestone report published.
 
-* Engaging prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital providers.
-* Documenting operational, compliance and reporting requirements for future participation.
-* Validating integration of the metadata standard and indexer within institutional workflows.
-* Gathering ecosystem feedback to improve interoperability and market readiness.
-* Producing the Capital Provider Readiness Framework, including documented requirements, implementation priorities and recommendations for broader Cardano ecosystem adoption.
+## M4: Independent Review & Public Release
+**Timeline:** Month 5
+**ADA Allocation:** **200,000 ADA**
 
-### Fallen Icarus
+Independent review preparation may begin during the preceding implementation milestone so that security, legal and documentation work does not unnecessarily extend the project timeline.
 
-Fallen Icarus provides credit market architecture guidance, including:
+### Key Outputs
+* Independent security review of the Treasury-funded software and relevant interfaces.
+* Independent Treasury-use audit and oversight report covering Treasury expenditure and reconciliation against the approved scope and milestone ceilings.
+* Independent legal review within the infrastructure-only scope of the proposal.
+* Resolution or documented remediation of material findings.
+* Final specifications, software, APIs, tooling, reference implementation and documentation.
+* Public repositories, build instructions and operating documentation.
+* Final project report.
 
-* UTxO-based credit market architecture and lending model design.
-* Review of the transaction metadata standard and indexer architecture.
-* Technical guidance ensuring compatibility with Pogun and other compatible Cardano credit market implementations while preserving protocol independence.
-* Ongoing consultation on credit market design, loan lifecycle models, reputation systems and future protocol evolution.
+### Completion Criteria
+* Required independent reviews are completed and material findings affecting release are addressed or transparently documented.
+* Independent Treasury-use audit and oversight has been completed and included in the final project reporting.
+* All Treasury-funded software, standards and reference implementations are publicly released under **Apache License 2.0**.
+* Public repositories contain sufficient source code, specifications, documentation and deployment instructions for independent inspection and operation.
+* A technically capable third party can operate the relevant Aurora infrastructure without dependence on Fairway, Sundial or any individual advisor.
+* Final report maps the completed public outputs against the proposal deliverables and milestone requirements.
 
-### Shared Resources
+## Milestone Expenditure Principles
+The milestone allocations define the maximum cumulative Treasury expenditure authorized as implementation progresses. At project commencement, expenditure of up to **150,000 ADA** is authorized for M1. Following approval of M1, the cumulative expenditure ceiling increases to **500,000 ADA**; following approval of M2, to **800,000 ADA**; and following approval of M3, to the full **1,000,000 ADA**. Completion of M4 triggers final project reconciliation and reporting.
 
-Shared resources cover:
+Fairway remains responsible for integrated delivery of Aurora, while the Aurora Treasury Administrators review the public milestone evidence before authorizing progression to the next expenditure ceiling.
 
-* Independent security audits.
-* External technical reviews.
-* Independent legal and regulatory review covering cross-border lending, stablecoin settlement, custody arrangements and applicable regulatory considerations for pilot deployment.
-* Infrastructure hosting.
-* Project contingency.
+# 8. Risks and Mitigation
+Aurora's infrastructure-only scope limits Treasury risk primarily to technical delivery, interoperability, security and long-term usability of the resulting public infrastructure.
 
-## Pilot Capital
+The remaining risks relate primarily to technical delivery, interoperability, security and long-term usability of the public infrastructure.
 
-The pilot capital consists of a dedicated 700,000 ADA allocation. Following withdrawal, the allocation is converted into USDM (or another approved Cardano-native USD-denominated stable asset), targeting approximately USD 100,000 of revolving lending capital based on market conditions at the time of conversion.
+**Underlying credit-market implementation dependency.** Aurora operates around compatible lending infrastructure rather than replacing the underlying lending contracts. Differences in Loan Request UTxO structures or delays in individual lending implementations could therefore affect integration testing.
 
-Pilot capital is deployed progressively across multiple lending rounds into eligible lending opportunities originated by participating SACCOs. As loans are repaid, the capital is recycled into subsequent deployment rounds through the credit market infrastructure.
+Aurora mitigates this risk by defining its metadata, discovery and verification infrastructure through open interfaces rather than depending on one exclusive lending protocol. The reference implementation and testnet demonstration are intended to validate compatibility against representative Loan Request UTxO structures while preserving protocol independence.
 
-At the conclusion of the pilot, the remaining Treasury principal together with any Treasury-entitled proceeds is returned according to the approved participation framework.
+**Interoperability and specification risk.** Different lending implementations, capital-provider requirements and future use cases may require metadata or query structures that are not known at the time of the initial release.
 
-# 8. Consortium and Relevant Experience
+The Metadata Standard, Verification Framework and filtering specifications are therefore designed to be versioned, extensible and modular. Published schemas and open APIs allow future implementations to extend the infrastructure without requiring changes to the underlying lending protocol or dependence on proprietary rules.
 
-### Fairway
+**Verification-system dependency.** Institutional verification requirements may rely on different credential systems, proof systems or verification providers.
 
-Fairway builds decentralized compliance infrastructure connecting institutions to DeFi protocols through identity proofs, zero-knowledge verification, and standards-based integrations across Cardano and Midnight. They bring three things this proposal needs: experience building identity, verification and institutional infrastructure on Cardano and Midnight to build the metadata and indexer infrastructure, operational relationships with Ethiopian SACCOs, and prior experience navigating Ethiopian institutional partnerships.
+Aurora does not require a single verification technology. The Verification Framework separates verification references and policies from the underlying lending contracts so that multiple verification systems can coexist and evolve independently.
 
-Relevant delivery includes multiple Catalyst-funded identity initiatives, a pilot integrating Ethiopia's Fayda National ID system with Cardano verifiable credentials, and issuance of proof-of-graduation VCs with Ethiopian higher education institutions.
+**Security and implementation risk.** Defects in the Discovery Engine, APIs, verification logic or developer tooling could produce incorrect indexing, filtering or verification results.
 
-### Fallen Icarus
+The project includes independent security review of the Treasury-funded software and relevant interfaces. Material findings affecting the funded release must be addressed or transparently documented before final completion. The architecture also keeps Aurora separate from custody and lending-contract execution, limiting the consequences of defects in the market-information layer.
 
-Fallen Icarus (Rusty Shapiro) is the architect behind Cardano's p2p DeFi protocol family. He designed CIP-89 (Beacon Tokens), the standard that enables distributed dApps where every user gets their own smart contract address, maintaining full custody and delegation control. CIP-89 underpins the indexer's ability to discover and filter loan UTxOs without centralized infrastructure.
+**Independent operability risk.** Open-source code provides limited public value if the infrastructure can only be operated through Fairway-hosted services or undocumented internal dependencies.
 
-He authored cardano-loans, the p2p lending protocol with trustlessly negotiable loan terms, built-in credit histories, and endogenous interest rate discovery that Pogun's credit market is built on. IOG's own description of Pogun credits his work on non-margin lending mechanics as shaping the credit market's design. He also contributed to the metadata-based verification approach implemented by this proposal. His role in the consortium is architectural: ensuring the metadata standard and indexer align with the credit market's design and Cardano's eUTxO strengths.
+Aurora mitigates this through public repositories, Apache License 2.0, build and deployment instructions, developer documentation and final completion criteria requiring a technically capable third party to operate the relevant infrastructure without dependence on Fairway, Sundial or any individual advisor.
 
-### Sundial
+**Adoption risk.** Open standards do not guarantee adoption by future lending protocols, applications or capital providers.
 
-Sundial Protocol is a Bitcoin-native finance layer on Cardano focused on institutional Bitcoin yield and credit infrastructure. Led by founder and CEO Sheldon Hunt, the team placed 1st in the Institutional Track at Paris Blockchain Week (3rd overall out of 1,000+ entrants), completed a third-party security audit with Hacken, and operates a live testnet.
+The proposal mitigates this risk by keeping the infrastructure optional, protocol independent and reusable. Aurora does not require existing lending implementations to change their core contracts, and its APIs, reference implementation and query standards are intended to reduce the integration work required for third-party adoption. Treasury delivery is measured by completion and usability of the public infrastructure rather than by speculative adoption targets.
 
-Within this consortium, Sundial contributes institutional market expertise, capital-provider relationships and ecosystem partnerships to help validate that the open infrastructure developed through this proposal aligns with the operational, compliance and reporting requirements of future private capital providers. Sundial's role is to support ecosystem readiness and institutional adoption rather than develop protocol-specific functionality, and the resulting infrastructure remains open for adoption by any compatible Cardano credit market implementation.
+**Delivery schedule risk.** The approximately five-month implementation period is intentionally focused but requires standards development, implementation, integration, review and documentation to progress in parallel where appropriate.
 
-Sundial is an ecosystem implementation partner rather than the beneficiary of exclusive rights. The infrastructure developed through this proposal is open source and may be adopted by Sundial, Pogun, Fairway or any future Cardano credit market implementation on equal terms.
+Fairway remains responsible for coordinating the integrated delivery. The four milestone structure provides intermediate verification of specifications, core functionality and the end-to-end technical demonstration before final release. Independent review preparation may begin before implementation is fully complete so that review does not unnecessarily delay the final milestone.
 
-### Previous Delivery
+**Legal and regulatory interpretation.** Aurora provides open market infrastructure rather than regulatory enforcement, custody or lending services. Nevertheless, standards and interfaces intended for institutional use may raise legal questions about how the infrastructure should be described or operated.
 
-Members of the consortium have previously delivered Catalyst-funded initiatives, open-source infrastructure and ecosystem integrations relevant to identity, lending and institutional adoption.
+The funded scope therefore includes independent legal review of the open infrastructure and intended operating model. Future lending activity, jurisdiction-specific compliance and commercial deployment remain outside the Treasury proposal and remain the responsibility of the relevant market participants.
 
-The proposal builds upon existing relationships, infrastructure and operational experience rather than beginning from a greenfield position.
+# 9. Governance and Oversight
+Aurora uses a single, independently controlled Treasury custody structure designed for a focused infrastructure implementation.
 
-# 9. Milestones and Success Criteria
+The full **1,000,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled entirely by independent Cardano ecosystem representatives. Fairway leads delivery of the project but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
-The project is delivered through five milestones across two phases. ADA funds development and execution activities. Pilot Liquidity is released separately and only after the infrastructure is operational.
+Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five independent signers.
 
-## Milestone Schedule
+## Aurora Treasury Multisig
+The Aurora Treasury multisignature is the sole custody wallet for the Treasury allocation.
 
-| Milestone | Timeline | ADA Release | Pilot Liquidity Release |
-| ----- | ----- | ----- | ----- |
-| M1: Specification and Design | Month 1 | 300,000 | — |
-| M2: Infrastructure Delivery | Months 2-3 | 500,000 | — |
-| M3: Pilot Round 1 | Months 4-5 | 400,000 | Approximately 30% of the pilot liquidity allocation |
-| M4: Pilot Round 2 and Market Validation | Months 6-8 | 500,000 | Approximately additional 30% of the pilot liquidity allocation |
-| M5: Pilot Round 3, Capital Readiness and Ecosystem Handover | Months 9-12 | 500,000 | Approximately additional 40% of the pilot liquidity allocation |
+All Treasury funds remain under independent **3-of-5 multisignature control** until used for approved project expenditure.
 
-**Total Treasury Withdrawal: 2,900,000 ADA**
-
-## Phase 1: Infrastructure
-
-### M1: Specification and Design
-
-#### Deliverables
-
-* Tx metadata standard specification for identity proofs, verification status and compliance information.
-* Indexer architecture document.
-* Confirmed SACCO cohort with executed Memorandums of Understanding and a framework for pilot participation agreements prior to the first pilot liquidity deployment.
-* Pilot operating model covering participant roles, settlement flow and risk parameters.
-
-#### Success Criteria
-
-* Metadata specification published and open for community review.
-
-* Indexer design reviewed by Fallen Icarus for alignment with Cardano credit market architecture, CIP-89, and compatibility with Pogun's implementation.
-
-* At least three SACCOs confirmed for pilot participation. Three Ethiopian SACCOs have already executed Memorandums of Understanding with the consortium, with additional institutions progressing through onboarding. Prior to the first pilot liquidity deployment, each participating institution will execute the required pilot participation agreement governing capital deployment, repayment obligations, operational responsibilities and reporting requirements. Where confidentiality permits, redacted copies of these agreements will be published. Where publication is not possible, their execution will be independently verified before pilot liquidity is released.
-
-* Pilot operating model approved by project partners.
-
-**ADA Release:** 300,000
-
-### M2: Infrastructure Delivery
-
-#### Deliverables
-
-* Working off-chain indexer deployed to testnet.
-* Metadata standard implemented and validated against Pogun's credit market architecture, with compatibility for alternative Cardano credit market implementations.
-* Developer documentation and integration guides.
-* Settlement workflow validated end-to-end on testnet.
-
-#### Success Criteria
-
-* A Loan Request UTxO containing verification metadata can be created, indexed, verified, queried and filtered through the API.
-* Documentation is sufficient for a third-party developer to integrate with the metadata standard and indexer.
-* Settlement workflow confirmed operational.
-* Testnet demonstration completed.
-
-**ADA Release:** 500,000
-
-## Phase 2: Pilot
-
-### M3: Pilot Round 1
-
-#### Deliverables
-
-* First pilot liquidity deployment into live loan contracts with verified SACCOs.
-* Infrastructure deployed to mainnet.
-* dRep monitoring dashboard operational.
-* First public progress report.
-
-#### Success Criteria
-
-* Up to 30,000 USDM deployed across at least two SACCOs.
-* End-to-end flow validated on mainnet:
-  * metadata attachment,
-  * proof verification,
-  * indexed discovery,
-  * on-chain funding,
-  * settlement into ETB,
-  * loan servicing underway.
-* dRep dashboard displaying live loan status and deployment metrics.
-* Public progress report published.
-
-**ADA Release:** 400,000
-
-**Pilot Liquidity Release**: approximately 30,000 USDM equivalent
-
-### M4: Pilot Round 2 and Market Validation
-
-#### Deliverables
-
-* Second USDM deployment incorporating recycled capital from Round 1 repayments together with an additional ≈ 30,000 USDM Treasury allocation.
-* Infrastructure improvements based on operational feedback.
-* Additional SACCOs onboarded where appropriate.
-* Assessment of more granular lending models, including lending-program and borrower-level Loan Request UTxOs.
-* Sundial-led engagement with prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants.
-* Validation of compliance, reporting, discovery, custody and operational requirements for future capital providers.
-
-#### Success Criteria
-
-* Repayment activity recorded on-chain from Round 1 loans.
-* Additional ≈ 30,000 USDM deployed, plus any recycled capital.
-* Public progress report published.
-* Documented engagement completed with **at least five** prospective capital providers representing stablecoin issuers, institutional allocators and Bitcoin-backed capital sources.
-* Operational, reporting and compliance requirements from participating capital providers documented and prioritized.
-* Capital Provider Readiness Framework published, including documented institutional requirements, identified implementation priorities, and recommendations for future Cardano credit market infrastructure adoption.
-
-**ADA Release:** 500,000
-
-**Pilot Liquidity Release:** approximately 30,000 USDM equivalent (contingent on demonstrated repayment activity from Round 1)
-
-### M5: Pilot Round 3, Capital Readiness and Ecosystem Handover
-
-#### Deliverables
-
-* Final USDM deployment incorporating recycled capital from previous lending rounds together with the final ≈ 40,000 USDM Treasury allocation, completing the ≈ 100,000 USDM pilot.
-* Pilot case study covering operational outcomes, repayment performance, capital recycling and infrastructure performance.
-* Documented SACCO feedback on onboarding, operational friction and scalability.
-* Capital Provider Readiness Framework (developed with Sundial) documenting requirements gathered from prospective stablecoin providers, institutional allocators, market makers and Bitcoin-backed capital participants.
-* Final infrastructure refinements based on pilot and capital-provider feedback, including recommendations for metadata, indexer and institutional workflow integration.
-* Documentation of participation models for future stablecoin, ADA and Bitcoin-backed capital providers.
-* Final public documentation, open-source release and ecosystem handover.
-* Return of remaining Treasury principal and Treasury-entitled proceeds.
-
-#### Success Criteria
-
-* Approximately 100,000 USDM cumulatively deployed across three Treasury deployment rounds.
-* Multiple lending and repayment cycles completed with on-chain repayment history.
-* Treasury capital recycling successfully demonstrated.
-* SACCO feedback collected and published.
-* Capital Provider Readiness Framework completed and published.
-* Infrastructure recommendations finalized based on institutional validation.
-* Final documentation and open-source deliverables published.
-* Treasury principal and Treasury-entitled proceeds returned according to the approved pilot participation framework.
-
-**ADA Release:** 500,000
-
-**Pilot Liquidity Release:** ≈ 40,000 USDM equivalent (contingent on demonstrated repayment activity from Round 2)
-
-## Pilot Liquidity Release Principles
-
-USDM is released in three tranches. Each tranche after the first requires evidence that previously deployed capital has been successfully utilized and that repayment activity is occurring on-chain.
-
-Progress can be independently verified through the indexer API and dRep monitoring dashboard without relying solely on off-chain reporting.
-
-If a deployment round materially underperforms, Treasury retains the ability to withhold subsequent USDM tranches.
-
-At the conclusion of the pilot, remaining Treasury principal and Treasury-entitled proceeds are returned according to the approved participation framework.
-
-# 10. Risks and Mitigation
-
-**Pogun implementation timing.** The pilot is designed for compatibility with Pogun's credit market architecture, which remains the preferred implementation. However, deployment is not dependent on Pogun's production launch. During the infrastructure phase (M1-M2), development and testing proceed against Fallen Icarus' cardano-loans architecture and other compatible development environments. If Pogun's mainnet deployment is delayed, the pilot may instead utilize an alternative audited Cardano credit market infrastructure implementation that preserves compatibility with the metadata standard and underlying credit market architecture. Pilot liquidity will not be deployed until an approved audited implementation is available, and any necessary milestone adjustments will be coordinated with the Treasury administrator.
-
-**Repayment risk.** Treasury capital is deployed to participating SACCOs rather than individual borrowers. SACCOs remain responsible for underwriting, monitoring, collections and absorbing losses arising from SME or individual borrower defaults under their existing lending operations.
-
-The pilot uses a progressive funding model, with capital released across three deployment rounds. Continued participation and larger allocations depend on successful repayment performance during earlier rounds. A SACCO that fails to meet its repayment obligations may be suspended or permanently excluded from future participation, with repayment history forming the basis of its on-chain institutional credit record.
-
-The purpose of the pilot is not to eliminate credit risk, but to transparently measure repayment performance, validate risk-management approaches and establish the institutional reputation required for sustainable, market-driven capital formation after the pilot concludes.
-
-**SACCO adoption.** SACCOs may need more time to adopt new processes than anticipated. The pilot starts with the simplest model (one loan per SACCO) and only moves to more granular structures when institutions are operationally ready. Fairway's existing relationships with the initial SACCO cohort reduce onboarding friction, but expansion to additional institutions may take longer than planned.
-
-**Exchange rate exposure.** Loans are denominated in USDM but disbursed in Ethiopian Birr. Currency movements during the loan term create risk. SACCOs, as institutions with diversified portfolios, are better positioned to absorb this than individual borrowers, which is one reason the pilot targets SACCOs rather than end-borrowers directly.
-
-**Settlement delays**. The pilot initially utilizes Encryptus for cross-border settlement. Operational or regulatory delays may affect individual deployments. Capital is deployed incrementally, allowing settlement workflows to be validated at small scale before subsequent deployment rounds. Equivalent regulated settlement providers may be adopted if required.
-
-**Infrastructure iteration.** The metadata standard and indexer are new and will need refinement based on real-world usage.
-
-# 11. Governance and Oversight
-
-The Independent Treasury Trustees provide independent custody and governance over the full Treasury allocation throughout the project. Operational fund distribution is delegated to separate multisignature wallets, ensuring that no consortium member can unilaterally control Treasury funds.
-
-## Independent Treasury Trustees
-
-All Treasury funds received under this proposal are initially held in a dedicated **2-of-3 Treasury multisignature wallet** administered by the Independent Treasury Trustees. This wallet serves as the sole Treasury custody account for the full **2,900,000 ADA** allocation and remains independent of the proposing consortium.
-
-Development funding and pilot liquidity follow separate operational workflows while remaining under the governance of the Independent Treasury Trustees.
-
-## Proposed Independent Treasury Trustees
-
-| Representative | X |
-| ----- | ----- |
-| James "Blockjock" Meidinger | @blockjock2017 |
-| Christian Taylor | @DeOpenSourceGuy |
-| Elder Millennial | @TheElderMillenial |
-
-The Independent Treasury Trustees are well-established Cardano ecosystem contributors selected based on their governance experience, longstanding participation in the Cardano ecosystem and reputation within the community. They serve in their individual capacity and are independent of the proposing consortium. Trustees receive no performance-based compensation tied to pilot lending outcomes or deployment volume.
-
-The Independent Treasury Trustees:
-
-* receive the full Treasury allocation;
-* maintain custody of all Treasury funds throughout the project;
-* review and approve development milestone completion;
-* release approved Development Fund milestone allocations to the Development Fund multisignature;
-* co-sign the conversion of the Pilot Liquidity allocation into the approved Cardano-native USD-denominated stable asset through an approved regulated OTC or liquidity provider;
-* ensure the converted stable asset returns to the same Treasury multisignature wallet;
-* approve pilot capital deployments under the approved 30% / 30% / 40% deployment framework;
-* approve repayment transactions; and
-* return the remaining Treasury principal together with Treasury-entitled proceeds at the conclusion of the pilot.
-
-The Independent Treasury Trustees do **not**:
-
-* develop project deliverables;
-* operate the pilot;
-* select borrowers;
-* make lending decisions; or
-* authorize Treasury funds for any purpose outside this proposal.
-
-Following conversion, the approved Cardano-native USD-denominated stable asset remains in the same 2-of-3 Treasury multisignature wallet under the custody of the Independent Treasury Trustees. The funds leave the wallet only when deployed into approved lending agreements in accordance with the approved pilot framework and return to the same multisignature wallet as repayments are received before being redeployed or returned to the Treasury at the conclusion of the pilot.
-
-If one Trustee becomes unavailable, the remaining two continue operating under the **2-of-3 multisignature policy**.
-
-## Development Fund Custody
-
-Infrastructure development is administered through a separate **3-of-5 Development Fund multisignature**.
-
-The Development Fund multisignature does not receive Treasury funds directly. Instead, following approval of each development milestone by the Independent Treasury Trustees, the corresponding milestone allocation is released from the Treasury multisignature to the Development Fund multisignature for operational distribution in accordance with the approved budget.
-
-## Proposed Development Fund Signers
-
+### Proposed Independent Signers
 | Role | Representative | X |
 | ----- | ----- | ----- |
-| Independent Governance Representative | James "Blockjock" Meidinger | @blockjock2017 |
-| Independent Governance Representative | Christian Taylor | @DeOpenSourceGuy |
-| Independent Technical Reviewer | Adrian | @PurritoGeneral |
-| Consortium Representative (Fairway) | Henrik Metsämäki | @Henrik_met |
-| Consortium Representative (Sundial) | Sheldon Hunt | @_MrHunt_ |
+| Independent Governance Signer | James "Blockjock" Meidinger | @blockjock2017 |
+| Independent Governance Signer | Christian Taylor | @DeOpenSourceGuy |
+| Independent Governance Signer | Elder Millennial | @TheElderMillenial |
+| Independent Technical Signer | Adrian / PurritoGeneral | @PurritoGeneral |
+| Independent Signer | **TBA** | — |
 
-The consortium collectively controls only **two of the five signing keys**, ensuring that operational payments cannot be authorized without approval from independent signers.
+No implementation consortium member holds a signing key.
 
-The independent signers were selected based on their longstanding participation in the Cardano ecosystem, governance experience and reputation within the community. They serve in their individual capacity, not as representatives of any consortium member, providing independent oversight throughout project execution.
+For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five independent signers who control the 3-of-5 Aurora Treasury multisignature.
 
-## Milestone Approval
+The Aurora Treasury Administrators are responsible for:
 
-Development milestones are reviewed and approved by the Independent Treasury Trustees following publication of the required deliverables and supporting documentation.
+* custody of Treasury funds;
+* reviewing milestone evidence;
+* authorizing expenditure within the approved project scope and milestone limits;
+* monitoring use of Treasury funds and progress against the approved deliverables;
+* suspending further expenditure where material delivery problems arise;
+* maintaining public transparency over Treasury balances and transactions; and
+* returning unspent Treasury funds if the project terminates.
 
-Approval requires agreement from **any two of the three Independent Treasury Trustees**.
+The Aurora Treasury Administrators do not manage engineering, determine Aurora's technical architecture, choose implementation contributors, divide work between consortium participants or acquire ownership or control over Treasury-funded outputs.
 
-Upon milestone approval, the corresponding development allocation is released to the Development Fund multisignature for operational distribution in accordance with the approved budget.
+Any material conflict of interest relating to a proposed transaction or milestone decision must be disclosed. A conflicted Administrator must abstain from the relevant approval, and the transaction must still satisfy the required 3-of-5 multisignature threshold using non-conflicted signers.
 
-## Pilot Liquidity Oversight
+If an Administrator resigns, loses access to a signing key or becomes permanently unavailable, the remaining Administrators may, **where the existing multisignature remains capable of satisfying its 3-of-5 authorization threshold**, authorize replacement with another independent Cardano ecosystem representative. Where replacement requires creation of a new multisignature credential, the unspent Treasury balance may be migrated to a replacement 3-of-5 Aurora Treasury multisignature preserving the same independence and signing threshold. Any signer replacement and resulting custody address will be publicly disclosed before funds are moved.
 
-The Pilot Liquidity allocation remains under the custody of the Independent Treasury Trustees throughout the pilot.
+## Milestone Oversight
+The milestone schedule controls the maximum cumulative Treasury expenditure authorized as implementation progresses. The full Treasury allocation remains in the same Aurora Treasury multisignature throughout the project; milestone progression does not involve transfers between separate project wallets.
 
-Pilot liquidity deployments are independently auditable through published custody wallet addresses, on-chain transactions, the project indexer and the dRep monitoring dashboard.
+| Milestone | ADA Allocation |
+| ----- | ----- |
+| M1: Specifications & Architecture | **150,000** |
+| M2: Core Build | **350,000** |
+| M3: Integration & Technical Demonstration | **300,000** |
+| M4: Independent Review & Public Release | **200,000** |
+| **Total** | **1,000,000** |
 
-Capital is deployed progressively according to the approved **30% / 30% / 40%** deployment framework and only after the governance requirements described in Section 5 have been satisfied.
+At project commencement, expenditure of up to 150,000 ADA is authorized for M1. Following approval of M1, the cumulative expenditure ceiling increases to 500,000 ADA. Following approval of M2, it increases to 800,000 ADA. Following approval of M3, the full 1,000,000 ADA becomes available for completion of M4. M4 completion triggers final reconciliation and reporting.
 
-Treasury ADA held by both the Treasury multisignature and the Development Fund multisignature prior to approved disbursement will be maintained in separate auditable accounts, will not be delegated to any stake pool operator, and will remain delegated to the predefined **Abstain** voting option in accordance with Article II Section 7 of the Cardano Constitution.
+Before expenditure may progress to the next cumulative milestone ceiling:
 
-## Operational Responsibilities
+1. Fairway publishes the milestone evidence required under Section 7.
+2. The Aurora Treasury Administrators review the published outputs against the approved completion criteria.
+3. Progression to the next cumulative expenditure ceiling requires authorization through the 3-of-5 Aurora Treasury multisignature.
 
-Fairway coordinates project execution, institutional onboarding and operational delivery.
+Milestone review is evidence-based and practical. Signers confirm that the relevant specifications, repositories, software, documentation, demonstrations or independent-review outputs have been published and reasonably satisfy the approved criteria.
 
-Fairway may recommend development releases and pilot capital deployments based on milestone completion, repayment activity and operational readiness. Treasury funds, however, remain exclusively under the custody of the Independent Treasury Trustees, who independently confirm that each proposed transaction complies with the approved governance framework before authorizing the corresponding multisignature transaction.
+They are not expected to reproduce the engineering work or independently reimplement Aurora.
 
-## Refund Conditions
+Treasury funds may be used only for the approved Aurora infrastructure scope and may not be used for lending capital, commercial lending activity, borrower funding, stablecoin settlement or unrelated company expenditure.
 
-If a development milestone is not completed within 90 days of its target date and no remediation plan is agreed with the Independent Treasury Trustees, the corresponding development allocation is not released.
+## Operational Responsibility
+Fairway remains responsible as lead implementer and project coordinator for delivery of Aurora.
 
-If the project terminates before completion, any undistributed development funds remaining in the Treasury multisignature are returned to the Treasury within 30 days.
+Fairway coordinates implementation planning, consortium contributions, external technical and professional services, milestone evidence, public reporting and overall delivery of the approved scope.
 
-Pilot liquidity that has not yet been deployed is returned immediately upon project termination. Liquidity already deployed into active lending agreements remains subject to the applicable participation and loan agreements and is returned to the Treasury as repayments are received. The maximum Treasury loss is limited to the amount of pilot liquidity actively deployed at any point in time and, through the staged 30% / 30% / 40% release model, cannot exceed the amount approved for the current deployment round.
+Sundial contributes technical implementation input where relevant to the common Aurora outputs. Fallen Icarus may provide architectural review and advisory input where relevant to the underlying credit-market architecture and Loan Request UTxO model.
 
-Participating SACCOs remain responsible for originating, underwriting, servicing and collecting loans in accordance with the executed pilot participation agreements. Realized losses arising from approved lending activities are limited to the deployed Treasury pilot capital and do not create additional financial obligations for the consortium, the Independent Treasury Trustees or the Cardano Treasury beyond the deployed pilot allocation.
+These contributions remain part of one integrated Aurora implementation and do not create separate Treasury budgets, custody arrangements or governance tracks.
 
-## Reporting
+The Aurora Treasury Administrators oversee Treasury custody, expenditure and milestone accountability but do not direct day-to-day implementation.
 
-The consortium publishes a public progress report at each milestone.
+## Transparency and Reporting
+The Aurora Treasury multisignature address will be published before project expenditure begins.
 
-Development progress, pilot deployments, repayments and Treasury-funded liquidity remain independently verifiable through the published wallet addresses, the indexer API and the dRep monitoring dashboard.
+All Treasury transactions remain publicly auditable on-chain.
 
-Each approved development milestone includes a public milestone approval statement issued by the Independent Treasury Trustees before the corresponding development allocation is released.
+Fairway will publish one public progress report for each milestone. Each report will:
 
-# 12. Conclusion
+* link to the relevant public specifications, repositories, software, documentation or review materials;
+* summarize completion against the applicable milestone criteria;
+* state Treasury expenditure to date; and
+* identify any material delivery issues or remediation items.
 
-This proposal funds two things: infrastructure that lets institutions participate in Cardano's credit markets without compromising their permissionless core, and a pilot that puts that infrastructure to work supplying capital to Ethiopian SACCOs that need it.
+The final report will map the completed Treasury-funded outputs against the approved proposal deliverables and provide links to the final open-source repositories and documentation.
 
-The metadata standard and off-chain indexer are open-source public goods. The pilot generates real lending activity, on-chain repayment history, and the first verifiable on-chain institutional credit histories. The pilot liquidity is converted into a Cardano-native USD-denominated stable asset, lent and recycled throughout the pilot and remaining Treasury principal together with Treasury-entitled proceeds returned.
+Treasury ADA held in the Aurora Treasury multisignature prior to approved project expenditure will not be delegated to a stake pool operator and will remain delegated to the predefined Abstain voting option in accordance with the applicable Cardano Treasury governance requirements.
 
-If it works, Cardano has a replicable model for connecting on-chain capital with productive real-world lending, and SACCOs leave with the on-chain reputations they need to keep attracting capital long after the pilot ends.
+## Refund and Remediation
+If a milestone is materially incomplete, the Aurora Treasury Administrators may suspend further Treasury expenditure while Fairway addresses the identified deficiencies.
 
-Because all deliverables are open source, protocol independent and jurisdiction agnostic, the resulting infrastructure can be adopted by Pogun and future Cardano credit market infrastructure implementations without further Treasury funding or dependence on the consortium.
+If the milestone remains incomplete **60 days after its target date** and no satisfactory remediation plan has been agreed with the independent signers, further expenditure may remain suspended and the project may proceed to termination under the conditions below.
 
-#
+If the project terminates before completion, all unspent ADA remaining in the Aurora Treasury multisignature will be returned to the Cardano Treasury using the applicable Treasury return mechanism.
 
-# 13. Governance Submission Requirements
+Legitimately incurred expenditure against approved project work remains project expenditure and is accounted for through public milestone reporting and financial reconciliation.
+
+Changes to individual contributors do not change the approved Aurora deliverables or Fairway's responsibility for overall project delivery.
+
+# 10. Conclusion
+Aurora establishes shared market infrastructure for Cardano credit markets.
+
+The proposal funds the open standards, software and developer infrastructure required to make independent Loan Request UTxOs discoverable, filterable, verifiable and easier to evaluate through common interfaces rather than isolated protocol-specific integrations.
+
+The funded outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering capabilities, developer tooling, reference implementation, technical documentation and related capital-provider discovery standards. Together, these components provide a reusable market layer around compatible lending implementations without replacing their underlying lending logic.
+
+Aurora does not custody lending capital, originate loans, make credit decisions or require one lending protocol, verification provider, settlement provider or commercial deployment model. Treasury funding is limited to development and technical validation of the public infrastructure. Commercial lending, borrower deployment and the generation of real repayment, default and underwriting evidence remain outside the funded scope.
+
+Fairway leads delivery of the integrated implementation, with technical contributions from Sundial and advisory input from Fallen Icarus where relevant. These roles support delivery of a common set of Aurora outputs rather than separate Treasury-funded organizational work packages.
+
+The project is delivered through four milestone-gated stages over approximately five months. Treasury funds remain under independent 3-of-5 multisignature control throughout implementation, with no implementation participant holding a Treasury signing key.
+
+All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**, with public repositories, documentation and operating instructions designed to allow technically capable third parties to inspect, operate, modify and extend the infrastructure without dependence on Fairway, Sundial or any individual contributor.
+
+The lasting value of Aurora is therefore not a single lending deployment or proprietary platform. It is a common set of standards and open infrastructure that future Cardano builders, lending implementations, verification providers and capital providers can adopt independently.
+
+By establishing that shared layer now, Cardano gains reusable infrastructure for credit-market discovery, filtering and verification before incompatible proprietary approaches become the default.
+
+Treasury funds the infrastructure once. The ecosystem can continue building on it thereafter.
+
+# 11. Governance Submission Requirements
+This section records the procedural and governance information required to align the final Aurora Treasury Withdrawal action with the proposal approved by the community.
 
 ## Canonical Proposal Reference
+The final Treasury Withdrawal governance action will reference an immutable canonical version of this proposal hosted through IPFS or an equivalent content-addressed storage system.
 
-The final on-chain governance action will reference an immutable canonical version of this proposal hosted via IPFS or an equivalent immutable content-addressed storage system. The corresponding governance metadata will include the document hash (BLAKE2b-256), proposal hash, recipient address and immutable content address. The on-chain governance action shall reference only this canonical version, ensuring that the proposal reviewed by the community is identical to the proposal submitted for governance.
+The governance action metadata will reference the canonical document through the applicable URI and cryptographic hash so that the proposal submitted on-chain can be verified against the version reviewed by the community. The final governance action will reference only the completed canonical version of the proposal.
 
-## Net Change Limit (NCL)
+The final immutable reference, governance metadata and Treasury recipient credential will be generated only after the proposal text, five independent Aurora Treasury Administrators and 3-of-5 Aurora Treasury multisignature have been finalized.
 
-This Treasury Withdrawal shall only be submitted and enacted if the requested withdrawal amount is within the applicable Net Change Limit (NCL) established through Cardano on-chain governance.
+Any on-chain and off-chain proposal metadata will be prepared so that the scope, requested amount and referenced proposal remain consistent with the final canonical document.
 
-If the applicable NCL is insufficient to permit the requested withdrawal, this proposal will not be submitted or enacted until an appropriate NCL has been approved through the Cardano governance process.
+## Treasury Recipient and Administrators
+The Treasury Withdrawal recipient will be the dedicated **3-of-5 Aurora Treasury multisignature**, not Fairway or another implementation contributor.
+
+The five independent signers of that multisignature collectively serve as the **Aurora Treasury Administrators** for Treasury-governance purposes.
+
+The final five Administrators and resulting Treasury recipient credential will be confirmed before submission of the Treasury Withdrawal governance action.
+
+Fairway remains the **Lead Implementer and project coordinator** but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no Treasury signing authority.
+
+The Aurora Treasury Administrators are responsible for monitoring Treasury expenditure, reviewing milestone evidence, authorizing transactions within the approved scope and expenditure ceilings, maintaining public custody transparency and returning unspent funds if the project terminates.
+
+Their designation does not give them responsibility for engineering, technical architecture or day-to-day project management.
+
+## Net Change Limit
+This Treasury Withdrawal will only be submitted and enacted where the requested **1,000,000 ADA** withdrawal is within the applicable Net Change Limit established through Cardano governance.
+
+Compliance will be assessed against the available Net Change Limit at the time the governance action is submitted, taking account of any Treasury Withdrawals already counted against the same applicable period.
+
+If sufficient Net Change Limit is not available, the Treasury Withdrawal will not be submitted or enacted until the applicable governance conditions permit the requested withdrawal.
+
+This commitment reflects the constitutional requirement that Treasury Withdrawals must not exceed the Net Change Limit applicable to the relevant period.
 
 ## Prior Treasury Funding Disclosure
+Aurora has not previously received funding through a Cardano **Treasury Withdrawal governance action** for this project or substantially similar Treasury-funded scope during the preceding 24 months.
 
-None of the consortium members has received Cardano Treasury Withdrawal funding for this project or substantially similar scope during the previous 24 months. Individual consortium members have participated in Catalyst and other ecosystem initiatives, which are separate funding mechanisms and are unrelated to this Treasury Withdrawal.
+Fairway and other contributors may have participated in Project Catalyst, commercial projects or other Cardano ecosystem initiatives. These are separate funding mechanisms and do not constitute prior Treasury Withdrawal funding for Aurora.
+
+Before submission, this disclosure will be confirmed against the final Treasury recipient and the entities materially participating in the proposal so that the statement accurately reflects the constitutional 24-month disclosure requirement.
+
+## Treasury Audit and Oversight
+The proposal includes funding within the **Shared Review, Hosting & Technical Contingency** allocation for independent Treasury-use audit and oversight.
+
+Oversight will include reconciliation of Treasury transactions and reported project expenditure, review of expenditure against the approved scope and milestone ceilings, and reporting of material deviations or unresolved issues.
+
+This is separate from the independent software security review and legal review included in the technical delivery scope.
+
+The audit and oversight commitment is intended to satisfy the constitutional requirement for Treasury Withdrawals to provide for independent review and oversight of the use of Treasury ADA.
+
+## Treasury ADA Treatment
+Treasury ADA held in the Aurora Treasury multisignature before approved project expenditure will remain in the dedicated auditable Aurora Treasury custody structure.
+
+While held by the Aurora Treasury Administrators, that ADA will **not be delegated to a stake pool operator** and will remain delegated to the predefined **Abstain** voting option in accordance with the applicable Cardano Treasury-governance requirements.
+
+All Treasury wallet balances and transactions will remain publicly auditable.
 
 ## Conflicts and Related Parties
+Fairway is the Lead Implementer.
 
-* Fairway, Sundial and Fallen Icarus are consortium members.
-* Encryptus is an external service provider. Encryptus is not a recipient of Treasury operating funds.
-* Trustees are independent.
-* Development Fund signers will publicly disclose any material relationships with consortium members relevant to their governance responsibilities.
-* Any Trustee or Development Fund signer with a material conflict of interest relating to a proposed transaction shall disclose that conflict and abstain from approving the relevant transaction. Remaining authorized signers may continue operating under the applicable multisignature policy where quorum requirements are satisfied.
+Sundial is a technical consortium collaborator.
 
-# Appendix A: Verification & Trust Framework
+Fallen Icarus / Rusty serves as a technical advisor and architectural reviewer.
 
-The Credit Market framework supports optional verification and trust mechanisms that enable participants to evaluate lending opportunities based on information beyond financial terms alone.
+None of these implementation participants holds a signing key to the Aurora Treasury multisignature.
+
+The Aurora Treasury Administrators are independent from the implementation consortium.
+
+Any material conflict of interest relating to a Treasury transaction, milestone review or other governance decision must be disclosed. An Administrator with a material conflict must not participate in the relevant approval, and the transaction must still satisfy the required **3-of-5 multisignature threshold using non-conflicted Administrators**.
+
+Changes to individual contributors or Administrators do not alter the approved Treasury amount, funded scope, milestone structure or Fairway's responsibility for overall project delivery.
+
+# Appendix A: Verification Framework
+Aurora's Verification Framework provides an open and extensible way for credit opportunities to reference institutional, eligibility, compliance and other proof-based information without making any single verification system a requirement of the underlying lending protocol.
+
+Verification is one component of Aurora's broader market infrastructure. It supports discovery, filtering and evaluation by allowing compatible applications and capital providers to determine whether attached evidence satisfies their own requirements.
+
+The framework does not determine who should receive capital, perform regulatory enforcement or create a universal participation policy.
 
 ## Framework Principles
-
 ### Technology Agnostic
+Aurora does not require a specific identity provider, credential issuer, proof system or verification technology.
 
-The framework does not require a specific identity provider, credential issuer or verification technology. Multiple verification systems may coexist within the same market infrastructure.
+Different verification mechanisms may coexist within the same market infrastructure. The Metadata Standard and Verification Framework are designed so that additional credential types, proof systems and verification providers can be supported without requiring changes to the underlying lending protocol.
+
+This allows Aurora to evolve as verification technologies and institutional requirements change.
 
 ### Proof-Based
+Aurora-compatible Loan Request UTxOs may reference verifiable information that can be evaluated against an applicable schema or policy.
 
-Participants evaluate lending opportunities based on attached proofs and trust signals rather than relying on a centralized intermediary.
+Depending on the use case, this may include institutional status, eligibility information, compliance-related evidence or other proof-based attributes relevant to a capital provider or application.
 
-### Privacy-Preserving
+Aurora exposes the relevant verification references and provides infrastructure for evaluating them. Individual participants remain responsible for determining which evidence they require and how that evidence affects their own decisions.
 
-Sensitive information remains with credential issuers and participants. The Credit Market Infrastructure only references proofs and metadata necessary for market coordination.
+### Privacy Compatible
+The Verification Framework is designed to support privacy-preserving verification.
 
-### Open Participation
+Sensitive underlying information does not need to be published directly on Cardano simply because a participant requires additional assurance. Where supported by the relevant verification system, applications may rely on proofs, attestations, selective disclosure or other verification references instead of exposing the underlying data.
 
-The Credit Market remains open infrastructure. Verification frameworks provide additional trust signals and eligibility criteria but do not replace permissionless participation.
+Aurora therefore standardizes how verification information can be associated with market opportunities without prescribing where sensitive information must be stored or how every proof must be generated.
 
-Different lending opportunities may support different participation requirements, allowing open, verified and institution-specific markets to coexist.
+### Optional Participation
+Aurora metadata and verification are optional market infrastructure.
 
-## Midnight and Future Trust Infrastructure
+The underlying lending implementation remains independently usable without Aurora metadata. Participants that require additional information may use Aurora-compatible metadata, filtering and verification capabilities, while participants that do not require those capabilities may interact directly with the underlying lending infrastructure.
 
-The pilot utilizes a flexible verification framework designed to evolve over time.
+Different credit opportunities may therefore support different verification or eligibility requirements without imposing one global participation standard across Cardano credit markets.
 
-Future implementations may incorporate privacy-preserving technologies, including Midnight-based verification systems, selective disclosure and verifiable repayment histories.
+### Extensibility
+Verification requirements vary across jurisdictions, applications and capital providers and may change over time.
 
-Future implementations may also incorporate institution-level reputation systems derived from verifiable on-chain repayment history.
+The framework is therefore designed around versioned schemas and extensible verification references rather than fixed assumptions about one identity system or compliance model.
 
-The objective is to enable participants to establish trust while maintaining privacy and preserving open market access.
+Future verification mechanisms can be incorporated where they are compatible with the published interfaces without requiring Aurora to become the issuer, custodian or central authority for the underlying information.
 
-## Compliance Responsibilities
+## Verification in the Aurora Architecture
+Verification operates alongside, rather than in place of, Aurora's other market-infrastructure functions.
 
-The Credit Market provides infrastructure rather than regulatory enforcement.
+A compatible Loan Request UTxO may be enriched with standardized metadata containing or referencing relevant verification information. The Aurora Discovery Engine indexes that opportunity and exposes its standardized market information through open APIs.
 
-Participants remain responsible for their own compliance obligations:
+Applications and capital providers can then:
 
-* Capital providers determine which verification standards they require.
-* Verification providers determine what information they verify.
-* Lending institutions determine their onboarding requirements.
-* Borrowers choose which credentials and proofs they present.
+1. discover compatible credit opportunities;
+2. filter them according to relevant metadata and requirements;
+3. identify associated verification information; and
+4. evaluate that information against the applicable schema or policy.
 
-The framework enables compliance and trust models to be implemented without imposing a single global standard on all participants.
+The result of verification becomes one input into evaluation by the relevant participant. Aurora does not itself make the lending, underwriting or capital-allocation decision.
 
-# Appendix B: Progressive Pilot Deployment Model
+This separation allows the same underlying opportunity to be evaluated according to different policies without requiring the lending protocol to enforce one universal institutional standard.
 
-The pilot validates the Credit Market through three progressive deployment rounds. The objective is to begin with the simplest operational model, validate the infrastructure under real-world conditions, and gradually evaluate more advanced credit market structures as participating institutions, infrastructure and capital providers mature.
+## Verification Providers and Future Systems
+The funded framework is not dependent on any particular identity or privacy infrastructure.
 
-## Deployment Round 1
+Compatible implementations may use verifiable credentials, zero-knowledge proofs, attestations, selective-disclosure systems or other verification mechanisms supported by the relevant schemas and interfaces.
 
-**Pilot Capital**
+Privacy-preserving systems such as Midnight may therefore be integrated where technically appropriate, but Aurora does not depend on Midnight for operation and Treasury funding does not establish a proprietary identity or credential system.
 
-**Approximately 30% of the pilot liquidity allocation (targeting approximately USD 30,000 equivalent)**
+Similarly, future applications may associate repayment history, institutional performance or other verifiable information with compatible credit-market entities. Aurora provides the shared infrastructure through which such information can be referenced, indexed and exposed; the commercial activity that generates real repayment or performance evidence remains outside the Treasury-funded scope.
 
-**Structure**
+## Participant Responsibilities
+Aurora provides verification infrastructure rather than regulatory enforcement.
 
-Each participating SACCO publishes a funding request as a Loan Request UTxO representing a single institutional lending facility.
+Participants remain responsible for their own legal, regulatory, risk and operational requirements.
 
-**Objectives**
+In particular:
 
-Validate:
+* capital providers determine which evidence and verification standards they require;
+* verification providers determine what information they verify and how they substantiate it;
+* lending implementations determine the requirements imposed by their own contracts or applications; and
+* originators and other participants determine which credentials, proofs or supporting evidence they make available.
 
-* End-to-end funding and settlement.
-* Metadata attachment and proof verification.
-* Capital deployment and repayment.
-* Operational workflows with participating SACCOs.
-* Treasury governance and capital administration.
+The Verification Framework allows these different requirements to coexist through open standards rather than imposing a single global compliance model on all Aurora-compatible activity.
 
-## Deployment Round 2
+All Treasury-funded Verification Framework specifications, reference implementations and related software are released under **Apache License 2.0** and remain available for independent implementation and extension.
 
-**Pilot Capital**
+**AURORA:**
 
-An additional **30% of the pilot liquidity allocation (targeting approximately USD 30,000 equivalent)**
+Open Infrastructure for Institutional Credit Markets on Cardano
 
-**Structure**
+Sundial Protocol  ·  Fairway Oy  ·  Fallen Icarus
 
-Additional SACCOs may be onboarded and more granular Credit Market models evaluated, including lending-program UTxOs and other intermediate structures where operationally appropriate.
-
-**Objectives**
-
-Validate:
-
-* Capital recycling.
-* Expanded market participation.
-* Alternative Loan Request UTxO models.
-* Infrastructure improvements based on operational feedback.
-* Institutional reporting, compliance and operational requirements identified through engagement with prospective capital providers.
-
-## Deployment Round 3
-
-**Pilot Capital**
-
-Deployment toward the full 100% of the pilot liquidity allocation equivalent to approximately **USD 100,000**. The USD equivalent is illustrative and depends on the ADA/USD exchange rate at the time of conversion.
-
-**Structure**
-
-Subject to operational readiness, progressively more granular lending opportunities may be evaluated, including individual business lending opportunities represented as Loan Request UTxOs.
-
-The final structure will be determined based on lessons learned throughout the pilot.
-
-**Objectives**
-
-Validate:
-
-* Mature Credit Market operations.
-* Institution-level on-chain reputation.
-* Future capital participation models.
-* Infrastructure readiness for stablecoin, ADA and Bitcoin-backed capital providers.
-* Long-term ecosystem scalability.
-
-## Pilot Capital Flow
-
-```mermaid
-flowchart TD
-    A[Cardano Treasury] --> B[Independent Treasury Trustees]
-    B --> C[ADA to approved Cardano-native USD-denominated stable asset]
-    C --> D[2-of-3 multisig custody]
-    D --> E[Loan Request UTxOs]
-    E --> F[Initial regulated settlement partner: Encryptus]
-    F --> G[Participating SACCOs]
-    G --> H[Local borrowers]
-    H --> I[Repayments]
-    I --> J[Stable asset]
-    J --> K[Treasury capital recycling]
-```
-
-The pilot is designed to identify the Credit Market structures that provide the best balance between operational simplicity, market efficiency and long-term scalability.
-
-Rather than prescribing a single market structure from the outset, the framework evolves through real-world deployment, participant feedback and repayment performance. The long-term objective is to validate reusable Cardano-native credit market infrastructure capable of supporting sustainable participation from private capital providers beyond the Treasury-funded pilot.
+Cardano Treasury Proposal  ·  2026

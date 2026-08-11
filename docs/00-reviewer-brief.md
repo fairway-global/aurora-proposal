@@ -1,40 +1,27 @@
 # Reviewer Brief
 
-Aurora asks the Cardano Treasury to fund open infrastructure for institutional credit markets: a metadata standard, an off-chain verification indexer, developer documentation, and a real-world pilot that validates the infrastructure through regulated Ethiopian SACCOs.
+Aurora requests **1,000,000 ADA** to deliver open infrastructure for institutional credit markets on Cardano over approximately **five months** and **four implementation milestones**.
 
-## Why It Matters
+## What Treasury Funds
 
-Cardano already has the architectural ingredients for loan-first credit markets: eUTxO state, programmable loan objects, and discovery through beacon-style patterns. The missing layer is institutional trust infrastructure. Professional capital providers need to know who they are funding, what compliance checks apply, how repayment performance is tracked, and how risk is reported without turning the base lending protocol into a permissioned system.
+Treasury funding is limited to reusable public infrastructure: the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query tooling, Capital Provider Profile Standard, Reference Query Library, developer tooling, a reference implementation, documentation, a testnet technical demonstration, and independent security, legal, and Treasury-use review.
 
-Aurora keeps those concerns outside the core contracts. Identity, verification, compliance references, and repayment reputation are attached as optional metadata and verified by open indexer infrastructure. That makes the work reusable by Pogun and by future Cardano credit market implementations.
+The implementation is infrastructure-only. It does **not** fund lending capital, commercial lending pilots, borrower deployment, SACCO onboarding, stablecoin conversion, fiat settlement, or live loan execution.
 
-## Funding Request
+## Delivery and Governance
 
-| Component | ADA | Purpose |
-| --- | ---: | --- |
-| Operating Budget | 2,200,000 | Metadata standard, indexer, tooling, documentation, pilot execution, reporting, audits, and ecosystem coordination |
-| Pilot Liquidity | 700,000 | Independently administered revolving lending capital, converted into an approved Cardano-native USD-denominated stable asset |
-| **Total** | **2,900,000** | **12-month delivery and pilot validation** |
+Fairway is lead implementer and project coordinator. Sundial contributes selected technical input, and Fallen Icarus (Rusty) serves as technical advisor and reviewer. The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** whose five keys are held independently of all implementation participants. Milestone evidence must be published before further expenditure is authorized, transactions remain publicly auditable, and unspent funds are returned if the project terminates under Section 9.
 
-## Reviewer Signals
+## Reviewer Path
 
-| Question | Where to Review |
-| --- | --- |
-| What public good is funded? | [Proposed Solution](./03-proposed-solution.md), [Deliverables](./06-deliverables.md) |
-| How are Treasury funds protected? | [Treasury Participation Model](./05-treasury-participation-model.md), [Governance and Oversight](./11-governance-and-oversight.md) |
-| How is pilot risk contained? | [Pilot Implementation](./04-pilot-implementation.md), [Risks and Mitigation](./10-risks-and-mitigation.md) |
-| What gets delivered at each milestone? | [Milestones and Success Criteria](./09-milestones-and-success-criteria.md) |
-| What happens after the pilot? | [Treasury Participation Model](./05-treasury-participation-model.md), [Conclusion](./12-conclusion.md) |
-
-## Core Safeguards
-
-- Independent 2-of-3 Treasury Trustee custody for the full Treasury allocation.
-- Separate 3-of-5 Development Fund multisignature with independent signer majority.
-- Pilot liquidity released progressively across 30% / 30% / 40% deployment rounds.
-- Public milestone reports, published wallet addresses, indexer visibility, and dRep monitoring dashboard.
-- Remaining Treasury principal and Treasury-entitled proceeds returned at pilot conclusion.
-- Open-source release under Apache License 2.0 no later than M2.
+- [Summary](01-summary.md)
+- [Deliverables](04-deliverables.md)
+- [Budget and Resource Allocation](05-budget-and-resource-allocation.md)
+- [Milestones and Success Criteria](07-milestones-and-success-criteria.md)
+- [Risks and Mitigation](08-risks-and-mitigation.md)
+- [Governance and Oversight](09-governance-and-oversight.md)
+- [Governance Submission Requirements](11-governance-submission-requirements.md)
 
 ---
 
-[Proposal Home](../README.md) · [Full proposal](../proposal.md)
+[Home](../README.md) · [Full Proposal](../proposal.md) · [Next](01-summary.md)

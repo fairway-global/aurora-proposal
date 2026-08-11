@@ -1,41 +1,45 @@
 # 2. Motivation
+In traditional lending, every loan begins as an individual agreement between specific parties with its own terms, risk profile, repayment schedule and settlement conditions. Much like a transaction, each loan exists as a discrete financial object that can be originated, funded, serviced, transferred and settled independently. Only after loans are created do financial institutions aggregate them into portfolios, funds or securitized products.
 
-In traditional lending, every loan begins as an individual agreement between specific parties with its own terms, risk profile, repayment schedule, and settlement conditions. Much like a transaction, each loan exists as a discrete financial object that can be originated, funded, serviced, transferred, and settled independently. Only after loans are created do financial institutions aggregate them into portfolios, funds, or securitized products.
+Most DeFi lending protocols reverse this process. Capital is first deposited into a shared pool, and borrowers draw from that pool according to predefined rules. While effective for certain use cases, this model does not reflect how many real-world credit markets operate.
 
-Most DeFi lending protocols reverse this process. Capital is first deposited into a shared pool, and borrowers draw from that pool according to predefined rules. While effective for certain use cases, this model does not reflect how most real-world credit markets operate.
+Cardano's eUTxO architecture is well suited to the loan-first model. Its transaction-based architecture can represent individual financial relationships as distinct on-chain objects rather than requiring every lending opportunity to be organized through a shared liquidity pool.
 
-Cardano's eUTxO architecture is uniquely suited to the loan-first model. Unlike account-based DeFi, where lending is typically organized around shared liquidity pools, Cardano's transaction-based architecture naturally represents individual financial relationships as distinct on-chain objects. This makes it well suited for programmable institutional credit markets built around discrete lending agreements.
+Individual lending opportunities can therefore exist as separate Loan Request UTxOs with their own terms, state and lifecycle. They can be independently published, funded and settled through compatible lending infrastructure before being aggregated into larger credit portfolios.
 
-Individual loans can exist as distinct on-chain UTxOs with their own state and logic, allowing them to be independently discovered, funded, and settled before being aggregated into larger credit portfolios. This creates a shared institutional credit market where thousands of regulated financial institutions can independently access digital capital through common open infrastructure rather than fragmented bilateral relationships.
+This creates the technical foundation for open credit markets built around individual financial agreements. It does not, by itself, create the shared market infrastructure required for institutions and other capital providers to discover, compare and evaluate those agreements across independent implementations.
 
-Two problems block real-world credit activity on Cardano today.
+Two problems currently prevent individual Cardano credit opportunities from functioning as a coherent and institutionally usable market.
 
-## Institutions need KYC, but on-chain lending is pseudonymous.
+## Institutions need shared market infrastructure, not just permissionless settlement.
+Cardano credit market implementations can enable parties to negotiate and settle individual lending agreements on-chain. Institutional lenders, regulated financial institutions and professional capital providers, however, require more than settlement. They need standardized ways to discover lending opportunities, evaluate relevant information, apply their own eligibility and compliance requirements and monitor performance over time before allocating capital.
 
-Pogun's credit market already lets any two parties negotiate and fund a loan on-chain. But institutional lenders, regulated entities, and professional capital allocators operate under compliance frameworks that require verifiable identity and eligibility checks.
+Without standardized metadata, discovery, filtering and verification infrastructure, each participant must interpret lending opportunities through protocol-specific integrations and independently reconstruct the information required for evaluation.
 
-Without a way to attach those assurances to on-chain activity, these participants simply cannot use the market.
+Advances in verifiable credentials, zero-knowledge proofs and other proof systems make it possible to associate institutional, eligibility, compliance and other verification information with an opportunity without requiring sensitive underlying data to be published on-chain. Implemented through optional transaction metadata and open verification references rather than changes to lending protocols, this infrastructure can support participants that require additional assurance while preserving permissionless use of the underlying market.
 
-Advances in zero-knowledge technologies make it possible to verify that a counterparty satisfies specific requirements without exposing sensitive personal data. Implemented as optional transaction metadata rather than changes to the core contracts, this compliance layer can be added without compromising the permissionless nature of the underlying protocol.
+Verification is therefore one component of the required market layer. Institutions must also be able to index opportunities, filter them according to published attributes, compare relevant information and monitor their lifecycle through consistent interfaces.
 
-## SACCOs need capital, but traditional finance rails are too expensive.
+## Independent credit markets need shared standards, not isolated integrations.
+Without common standards, each lending protocol, application and capital provider must develop its own metadata format, indexing logic, discovery interface, verification workflow and reporting model.
 
-Savings and Credit Cooperative Organizations (SACCOs) are regulated, member-owned financial institutions that provide savings and lending services to their local communities. In many emerging markets they form the primary source of credit for individuals and SMEs underserved by commercial banks. Rather than creating new lending institutions, this proposal connects digital capital with trusted financial institutions that already understand their borrowers, operate within local regulatory frameworks and have established loan servicing capabilities.
+This creates fragmented market information and repeated integration work. Lending opportunities may exist on-chain but remain difficult to discover or compare across implementations. Capital providers must conduct similar technical integration and due-diligence work separately for each protocol, while builders must recreate infrastructure that provides substantially the same market functions.
 
-Ethiopia was selected as the initial pilot jurisdiction because of established consortium relationships, experienced local partners and a mature cooperative financial sector. The infrastructure itself remains **jurisdiction agnostic** and is designed to support institutional credit markets wherever compatible financial institutions and regulated settlement providers exist.
+This fragmentation becomes more costly as additional lending models, jurisdictions, verification systems and capital-provider requirements emerge. Proprietary discovery systems may solve the immediate needs of individual applications, but they do not establish common infrastructure that future Cardano builders can adopt and operate independently.
 
-Demand for lending capacity far exceeds what they can fund internally, and the cost of capital through conventional channels is prohibitive. Through Fairway's local partnerships, the consortium has already secured pilot participation from Ethiopian SACCOs and continues expanding its institutional network.
+Open standards provide a different path. A common Metadata Standard can describe lending opportunities consistently. Shared indexing and discovery infrastructure can expose those opportunities through open APIs. Published filtering and verification specifications can allow capital providers and compatible applications to evaluate opportunities according to their own requirements without depending on one proprietary marketplace or exclusive lending protocol.
 
-The opportunity extends far beyond a small pilot cohort. Cooperative financial institutions are among the most scalable channels for deploying productive capital. Rather than onboarding thousands of individual businesses one by one, a single institutional relationship immediately provides access to an established lending operation with existing borrowers, underwriting processes, repayment collection and local regulatory compliance.
-
-This allows Cardano-native capital to scale through existing financial infrastructure rather than replacing it. This institutional-first approach enables ecosystem builders to scale credit markets by onboarding financial institutions rather than thousands of individual borrowers, dramatically reducing the cost and complexity of market expansion.
+The result is reusable market infrastructure rather than a collection of isolated integrations.
 
 ## Bringing the Two Together
+This proposal addresses both problems through a shared market layer around independent Loan Request UTxOs.
 
-This proposal addresses both problems together: build the metadata and verification infrastructure that lets institutions participate, then validate it through a Treasury-backed pilot that puts real capital to work for SACCOs that need it.
+Standardized metadata enriches each opportunity with machine-readable market information and verification references. Open discovery and indexing infrastructure then makes those opportunities searchable across compatible implementations. Capital providers and applications can discover, filter and evaluate opportunities according to their own requirements while funding and settlement continue through the underlying lending infrastructure.
 
-The result is not simply a lending pilot, but a practical test of whether Cardano can support a new category of programmable credit markets built around open Credit Markets, optional verification, and real-world capital formation.
+Aurora does not replace lending protocols or determine which opportunities should receive capital. It establishes the open standards, verification framework, discovery infrastructure, APIs and developer tooling required for independent Cardano credit opportunities to function as a coherent market.
+
+Treasury funding builds and demonstrates this reusable infrastructure. Live lending, commercial onboarding and the generation of real repayment and underwriting evidence remain activities for separately funded commercial deployment.
 
 ---
 
-[← 1. Summary](./01-summary.md) · [Proposal Home](../README.md) · [Full proposal](../proposal.md) · [3. Proposed Solution →](./03-proposed-solution.md)
+[Previous](01-summary.md) · [Home](../README.md) · [Full Proposal](../proposal.md) · [Next](03-proposed-solution.md)
