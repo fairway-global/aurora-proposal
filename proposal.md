@@ -83,7 +83,7 @@ The full **1,000,000 ADA** Treasury allocation is held in one dedicated **3-of-5
 
 Fairway, Sundial, Fallen Icarus and other implementation contributors hold no Treasury signing keys. Every Treasury transaction requires approval from at least three of the five independent signers.
 
-Delivery progresses through the four milestones defined in this proposal. Fairway publishes the required milestone evidence before further expenditure is authorized, while the independent signers review that evidence against the approved completion criteria. The Treasury wallet and transactions remain publicly auditable throughout implementation, and unspent Treasury funds are returned if the project terminates under the conditions defined in Section 9.
+Delivery progresses through the four milestones defined in this proposal. Fairway publishes the required milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, while the Aurora Treasury Administrators review that evidence against the approved completion criteria. The Treasury wallet and transactions remain publicly auditable throughout implementation, and unspent Treasury funds are returned if the project terminates under the conditions defined in Section 9.
 
 ## Open Ecosystem Commitment
 Aurora complements existing and future Cardano lending implementations rather than replacing them.
@@ -105,7 +105,7 @@ Individual lending opportunities can therefore exist as separate Loan Request UT
 
 This creates the technical foundation for open credit markets built around individual financial agreements. It does not, by itself, create the shared market infrastructure required for institutions and other capital providers to discover, compare and evaluate those agreements across independent implementations.
 
-Two problems currently prevent individual Cardano credit opportunities from functioning as a coherent and institutionally usable market.
+Two problems currently prevent individual Cardano credit opportunities from functioning coherently and being usable in institutional and professional capital-provider workflows.
 
 ## Institutions need shared market infrastructure, not just permissionless settlement.
 Cardano credit market implementations can enable parties to negotiate and settle individual lending agreements on-chain. Institutional lenders, regulated financial institutions and professional capital providers, however, require more than settlement. They need standardized ways to discover lending opportunities, evaluate relevant information, apply their own eligibility and compliance requirements and monitor performance over time before allocating capital.
@@ -225,7 +225,7 @@ Open developer tooling, documentation and a reference implementation demonstrati
 A Treasury-funded technical demonstration will validate this lifecycle on testnet without requiring live lending or Treasury-funded loan capital.
 
 ### Capital Discovery & Allocation Layer
-Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial
+Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial.
 
 Its outputs include the Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution, lightweight integration artifacts and supporting documentation.
 
@@ -236,7 +236,7 @@ All Treasury-funded software, standards and reference implementations will be re
 # 4. Deliverables
 The project delivers open-source market infrastructure that can be adopted, extended and operated independently by future Cardano credit market implementations.
 
-Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and institutionally usable. It does not fund lending capital, commercial onboarding or live loan execution.
+Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and usable in institutional and professional capital-provider workflows. It does not fund lending capital, commercial onboarding or live loan execution.
 
 ## Core Infrastructure Deliverables
 1. **Metadata Standard.**
@@ -369,6 +369,8 @@ This includes:
 
 These deliverables belong to the proposal rather than to individual consortium members. They are developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
 
+The Core Infrastructure Development allocation is monitored against the deliverables and milestone outputs defined in Sections 4 and 7. Material changes in how the allocation is used across those approved delivery areas will be disclosed through milestone reporting.
+
 The allocation does not fund commercial lending activity, SACCO onboarding, loan capital, settlement operations, private capital formation, institutional fundraising or revenue-generating deployment.
 
 ## Implementation Responsibility
@@ -407,7 +409,7 @@ These resources include:
 
 These resources do not fund commercial lending operations, regulatory work for a live lending pilot, stablecoin settlement, custody of lending capital or activities outside the Treasury-funded deliverables.
 
-Any use of technical contingency remains limited to delivery of the approved proposal scope and does not authorize additional products, commercial activities or material changes to the funded deliverables.
+Any use of technical contingency remains limited to delivery of the approved proposal scope, requires written justification and authorization by the Aurora Treasury Administrators, and will be disclosed in the next public milestone report. Unused contingency remains unspent Treasury ADA and is subject to the proposal's normal reconciliation and refund provisions.
 
 ## Resource Allocation Principles
 The revised allocation follows four principles.
@@ -416,7 +418,7 @@ First, Treasury funds are allocated according to the infrastructure and supporti
 
 Second, Fairway remains responsible for overall delivery while technical contributions from consortium partners are incorporated into the same implementation programme where appropriate.
 
-Third, external expenditure is limited to review, hosting and technical contingency directly related to delivery of the public infrastructure.
+Third, external expenditure is limited to independent review, Treasury-use audit and oversight, hosting and technical contingency directly related to delivery of the public infrastructure.
 
 Fourth, no portion of the Treasury withdrawal is reserved for lending capital or commercial deployment.
 
@@ -552,6 +554,7 @@ Technical review may include contributions from Sundial and architectural input 
 * Verification information can be exposed and evaluated through the Verification Framework.
 * The Discovery Engine can be deployed in a test environment without dependence on a Fairway-hosted API.
 * Source code and milestone documentation are publicly available.
+* Interim independent Treasury-use expenditure and reconciliation review completed and published.
 
 ## M3: Integration & Technical Demonstration
 **Timeline:** Month 4
@@ -604,8 +607,6 @@ Fairway remains responsible for integrated delivery of Aurora, while the Aurora 
 # 8. Risks and Mitigation
 Aurora's infrastructure-only scope limits Treasury risk primarily to technical delivery, interoperability, security and long-term usability of the resulting public infrastructure.
 
-The remaining risks relate primarily to technical delivery, interoperability, security and long-term usability of the public infrastructure.
-
 **Underlying credit-market implementation dependency.** Aurora operates around compatible lending infrastructure rather than replacing the underlying lending contracts. Differences in Loan Request UTxO structures or delays in individual lending implementations could therefore affect integration testing.
 
 Aurora mitigates this risk by defining its metadata, discovery and verification infrastructure through open interfaces rather than depending on one exclusive lending protocol. The reference implementation and testnet demonstration are intended to validate compatibility against representative Loan Request UTxO structures while preserving protocol independence.
@@ -643,25 +644,25 @@ Aurora uses a single, independently controlled Treasury custody structure design
 
 The full **1,000,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled entirely by independent Cardano ecosystem representatives. Fairway leads delivery of the project but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
-Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five independent signers.
+Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
 
 ## Aurora Treasury Multisig
 The Aurora Treasury multisignature is the sole custody wallet for the Treasury allocation.
 
 All Treasury funds remain under independent **3-of-5 multisignature control** until used for approved project expenditure.
 
-### Proposed Independent Signers
+### Proposed Aurora Treasury Administrators
 | Role | Representative | X |
 | ----- | ----- | ----- |
 | Independent Governance Signer | James "Blockjock" Meidinger | @blockjock2017 |
 | Independent Governance Signer | Christian Taylor | @DeOpenSourceGuy |
 | Independent Governance Signer | Elder Millennial | @TheElderMillenial |
-| Independent Technical Signer | Adrian / PurritoGeneral | @PurritoGeneral |
-| Independent Signer | **TBA** | — |
+| Independent Technical Signer | Wilco USDM | @iamwilco |
+| Independent Signer | Kriss Baird | @krissbaird |
 
 No implementation consortium member holds a signing key.
 
-For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five independent signers who control the 3-of-5 Aurora Treasury multisignature.
+For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five individuals who control the 3-of-5 Aurora Treasury multisignature.
 
 The Aurora Treasury Administrators are responsible for:
 
@@ -676,6 +677,8 @@ The Aurora Treasury Administrators are responsible for:
 The Aurora Treasury Administrators do not manage engineering, determine Aurora's technical architecture, choose implementation contributors, divide work between consortium participants or acquire ownership or control over Treasury-funded outputs.
 
 Any material conflict of interest relating to a proposed transaction or milestone decision must be disclosed. A conflicted Administrator must abstain from the relevant approval, and the transaction must still satisfy the required 3-of-5 multisignature threshold using non-conflicted signers.
+
+A material conflict includes a direct financial interest, or a material indirect financial interest through an employer, controlled entity or close commercial affiliate, in a proposed Treasury payment or paid project engagement.
 
 If an Administrator resigns, loses access to a signing key or becomes permanently unavailable, the remaining Administrators may, **where the existing multisignature remains capable of satisfying its 3-of-5 authorization threshold**, authorize replacement with another independent Cardano ecosystem representative. Where replacement requires creation of a new multisignature credential, the unspent Treasury balance may be migrated to a replacement 3-of-5 Aurora Treasury multisignature preserving the same independence and signing threshold. Any signer replacement and resulting custody address will be publicly disclosed before funds are moved.
 
@@ -734,7 +737,7 @@ Treasury ADA held in the Aurora Treasury multisignature prior to approved projec
 ## Refund and Remediation
 If a milestone is materially incomplete, the Aurora Treasury Administrators may suspend further Treasury expenditure while Fairway addresses the identified deficiencies.
 
-If the milestone remains incomplete **60 days after its target date** and no satisfactory remediation plan has been agreed with the independent signers, further expenditure may remain suspended and the project may proceed to termination under the conditions below.
+If the milestone remains incomplete **60 days after its target date** and no satisfactory remediation plan has been agreed with the Aurora Treasury Administrators, further expenditure may remain suspended and the project may proceed to termination under the conditions below.
 
 If the project terminates before completion, all unspent ADA remaining in the Aurora Treasury multisignature will be returned to the Cardano Treasury using the applicable Treasury return mechanism.
 
@@ -776,17 +779,17 @@ The final immutable reference, governance metadata and Treasury recipient creden
 Any on-chain and off-chain proposal metadata will be prepared so that the scope, requested amount and referenced proposal remain consistent with the final canonical document.
 
 ## Treasury Recipient and Administrators
-The Treasury Withdrawal recipient will be the dedicated **3-of-5 Aurora Treasury multisignature**, not Fairway or another implementation contributor.
+The on-chain Treasury Withdrawal destination and Treasury custody structure for Aurora will be the dedicated 3-of-5 Aurora Treasury multisignature. Fairway and other implementation contributors do not directly control the Treasury withdrawal credential or hold signing authority over that multisignature.
 
 The five independent signers of that multisignature collectively serve as the **Aurora Treasury Administrators** for Treasury-governance purposes.
-
-The final five Administrators and resulting Treasury recipient credential will be confirmed before submission of the Treasury Withdrawal governance action.
 
 Fairway remains the **Lead Implementer and project coordinator** but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no Treasury signing authority.
 
 The Aurora Treasury Administrators are responsible for monitoring Treasury expenditure, reviewing milestone evidence, authorizing transactions within the approved scope and expenditure ceilings, maintaining public custody transparency and returning unspent funds if the project terminates.
 
 Their designation does not give them responsibility for engineering, technical architecture or day-to-day project management.
+
+Independent Treasury-use oversight will include an interim expenditure and reconciliation review following M2 and a final independent Treasury-use audit following M4. The reviews will assess Treasury transactions against reported expenditure, approved budget categories and applicable cumulative milestone ceilings. The reviewer will be independent of Fairway, Sundial, Fallen Icarus and the Aurora Treasury Administrators.
 
 ## Net Change Limit
 This Treasury Withdrawal will only be submitted and enacted where the requested **1,000,000 ADA** withdrawal is within the applicable Net Change Limit established through Cardano governance.
@@ -812,6 +815,8 @@ Oversight will include reconciliation of Treasury transactions and reported proj
 This is separate from the independent software security review and legal review included in the technical delivery scope.
 
 The audit and oversight commitment is intended to satisfy the constitutional requirement for Treasury Withdrawals to provide for independent review and oversight of the use of Treasury ADA.
+
+Treasury oversight reporting will track cumulative ADA expenditure against the applicable milestone ceiling, expenditure by approved budget category, milestone completion status, use of contingency, material unresolved review findings and any material variance from the approved delivery schedule.
 
 ## Treasury ADA Treatment
 Treasury ADA held in the Aurora Treasury multisignature before approved project expenditure will remain in the dedicated auditable Aurora Treasury custody structure.

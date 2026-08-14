@@ -9,7 +9,7 @@ Individual lending opportunities can therefore exist as separate Loan Request UT
 
 This creates the technical foundation for open credit markets built around individual financial agreements. It does not, by itself, create the shared market infrastructure required for institutions and other capital providers to discover, compare and evaluate those agreements across independent implementations.
 
-Two problems currently prevent individual Cardano credit opportunities from functioning as a coherent and institutionally usable market.
+Two problems currently prevent individual Cardano credit opportunities from functioning coherently and being usable in institutional and professional capital-provider workflows.
 
 ## Institutions need shared market infrastructure, not just permissionless settlement.
 Cardano credit market implementations can enable parties to negotiate and settle individual lending agreements on-chain. Institutional lenders, regulated financial institutions and professional capital providers, however, require more than settlement. They need standardized ways to discover lending opportunities, evaluate relevant information, apply their own eligibility and compliance requirements and monitor performance over time before allocating capital.

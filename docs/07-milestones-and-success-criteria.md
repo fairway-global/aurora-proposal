@@ -48,6 +48,7 @@ Technical review may include contributions from Sundial and architectural input 
 * Verification information can be exposed and evaluated through the Verification Framework.
 * The Discovery Engine can be deployed in a test environment without dependence on a Fairway-hosted API.
 * Source code and milestone documentation are publicly available.
+* Interim independent Treasury-use expenditure and reconciliation review completed and published.
 
 ## M3: Integration & Technical Demonstration
 **Timeline:** Month 4

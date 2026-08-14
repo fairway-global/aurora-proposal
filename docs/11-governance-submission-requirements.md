@@ -11,17 +11,17 @@ The final immutable reference, governance metadata and Treasury recipient creden
 Any on-chain and off-chain proposal metadata will be prepared so that the scope, requested amount and referenced proposal remain consistent with the final canonical document.
 
 ## Treasury Recipient and Administrators
-The Treasury Withdrawal recipient will be the dedicated **3-of-5 Aurora Treasury multisignature**, not Fairway or another implementation contributor.
+The on-chain Treasury Withdrawal destination and Treasury custody structure for Aurora will be the dedicated 3-of-5 Aurora Treasury multisignature. Fairway and other implementation contributors do not directly control the Treasury withdrawal credential or hold signing authority over that multisignature.
 
 The five independent signers of that multisignature collectively serve as the **Aurora Treasury Administrators** for Treasury-governance purposes.
-
-The final five Administrators and resulting Treasury recipient credential will be confirmed before submission of the Treasury Withdrawal governance action.
 
 Fairway remains the **Lead Implementer and project coordinator** but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no Treasury signing authority.
 
 The Aurora Treasury Administrators are responsible for monitoring Treasury expenditure, reviewing milestone evidence, authorizing transactions within the approved scope and expenditure ceilings, maintaining public custody transparency and returning unspent funds if the project terminates.
 
 Their designation does not give them responsibility for engineering, technical architecture or day-to-day project management.
+
+Independent Treasury-use oversight will include an interim expenditure and reconciliation review following M2 and a final independent Treasury-use audit following M4. The reviews will assess Treasury transactions against reported expenditure, approved budget categories and applicable cumulative milestone ceilings. The reviewer will be independent of Fairway, Sundial, Fallen Icarus and the Aurora Treasury Administrators.
 
 ## Net Change Limit
 This Treasury Withdrawal will only be submitted and enacted where the requested **1,000,000 ADA** withdrawal is within the applicable Net Change Limit established through Cardano governance.
@@ -47,6 +47,8 @@ Oversight will include reconciliation of Treasury transactions and reported proj
 This is separate from the independent software security review and legal review included in the technical delivery scope.
 
 The audit and oversight commitment is intended to satisfy the constitutional requirement for Treasury Withdrawals to provide for independent review and oversight of the use of Treasury ADA.
+
+Treasury oversight reporting will track cumulative ADA expenditure against the applicable milestone ceiling, expenditure by approved budget category, milestone completion status, use of contingency, material unresolved review findings and any material variance from the approved delivery schedule.
 
 ## Treasury ADA Treatment
 Treasury ADA held in the Aurora Treasury multisignature before approved project expenditure will remain in the dedicated auditable Aurora Treasury custody structure.

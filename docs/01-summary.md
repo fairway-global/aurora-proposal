@@ -56,7 +56,7 @@ The full **1,000,000 ADA** Treasury allocation is held in one dedicated **3-of-5
 
 Fairway, Sundial, Fallen Icarus and other implementation contributors hold no Treasury signing keys. Every Treasury transaction requires approval from at least three of the five independent signers.
 
-Delivery progresses through the four milestones defined in this proposal. Fairway publishes the required milestone evidence before further expenditure is authorized, while the independent signers review that evidence against the approved completion criteria. The Treasury wallet and transactions remain publicly auditable throughout implementation, and unspent Treasury funds are returned if the project terminates under the conditions defined in Section 9.
+Delivery progresses through the four milestones defined in this proposal. Fairway publishes the required milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, while the Aurora Treasury Administrators review that evidence against the approved completion criteria. The Treasury wallet and transactions remain publicly auditable throughout implementation, and unspent Treasury funds are returned if the project terminates under the conditions defined in Section 9.
 
 ## Open Ecosystem Commitment
 Aurora complements existing and future Cardano lending implementations rather than replacing them.

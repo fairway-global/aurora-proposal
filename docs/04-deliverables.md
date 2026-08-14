@@ -1,7 +1,7 @@
 # 4. Deliverables
 The project delivers open-source market infrastructure that can be adopted, extended and operated independently by future Cardano credit market implementations.
 
-Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and institutionally usable. It does not fund lending capital, commercial onboarding or live loan execution.
+Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and usable in institutional and professional capital-provider workflows. It does not fund lending capital, commercial onboarding or live loan execution.
 
 ## Core Infrastructure Deliverables
 1. **Metadata Standard.**

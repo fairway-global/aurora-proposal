@@ -3,25 +3,25 @@ Aurora uses a single, independently controlled Treasury custody structure design
 
 The full **1,000,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled entirely by independent Cardano ecosystem representatives. Fairway leads delivery of the project but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
-Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five independent signers.
+Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
 
 ## Aurora Treasury Multisig
 The Aurora Treasury multisignature is the sole custody wallet for the Treasury allocation.
 
 All Treasury funds remain under independent **3-of-5 multisignature control** until used for approved project expenditure.
 
-### Proposed Independent Signers
+### Proposed Aurora Treasury Administrators
 | Role | Representative | X |
 | ----- | ----- | ----- |
 | Independent Governance Signer | James "Blockjock" Meidinger | @blockjock2017 |
 | Independent Governance Signer | Christian Taylor | @DeOpenSourceGuy |
 | Independent Governance Signer | Elder Millennial | @TheElderMillenial |
-| Independent Technical Signer | Adrian / PurritoGeneral | @PurritoGeneral |
-| Independent Signer | **TBA** | — |
+| Independent Technical Signer | Wilco USDM | @iamwilco |
+| Independent Signer | Kriss Baird | @krissbaird |
 
 No implementation consortium member holds a signing key.
 
-For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five independent signers who control the 3-of-5 Aurora Treasury multisignature.
+For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five individuals who control the 3-of-5 Aurora Treasury multisignature.
 
 The Aurora Treasury Administrators are responsible for:
 
@@ -36,6 +36,8 @@ The Aurora Treasury Administrators are responsible for:
 The Aurora Treasury Administrators do not manage engineering, determine Aurora's technical architecture, choose implementation contributors, divide work between consortium participants or acquire ownership or control over Treasury-funded outputs.
 
 Any material conflict of interest relating to a proposed transaction or milestone decision must be disclosed. A conflicted Administrator must abstain from the relevant approval, and the transaction must still satisfy the required 3-of-5 multisignature threshold using non-conflicted signers.
+
+A material conflict includes a direct financial interest, or a material indirect financial interest through an employer, controlled entity or close commercial affiliate, in a proposed Treasury payment or paid project engagement.
 
 If an Administrator resigns, loses access to a signing key or becomes permanently unavailable, the remaining Administrators may, **where the existing multisignature remains capable of satisfying its 3-of-5 authorization threshold**, authorize replacement with another independent Cardano ecosystem representative. Where replacement requires creation of a new multisignature credential, the unspent Treasury balance may be migrated to a replacement 3-of-5 Aurora Treasury multisignature preserving the same independence and signing threshold. Any signer replacement and resulting custody address will be publicly disclosed before funds are moved.
 
@@ -94,7 +96,7 @@ Treasury ADA held in the Aurora Treasury multisignature prior to approved projec
 ## Refund and Remediation
 If a milestone is materially incomplete, the Aurora Treasury Administrators may suspend further Treasury expenditure while Fairway addresses the identified deficiencies.
 
-If the milestone remains incomplete **60 days after its target date** and no satisfactory remediation plan has been agreed with the independent signers, further expenditure may remain suspended and the project may proceed to termination under the conditions below.
+If the milestone remains incomplete **60 days after its target date** and no satisfactory remediation plan has been agreed with the Aurora Treasury Administrators, further expenditure may remain suspended and the project may proceed to termination under the conditions below.
 
 If the project terminates before completion, all unspent ADA remaining in the Aurora Treasury multisignature will be returned to the Cardano Treasury using the applicable Treasury return mechanism.
 

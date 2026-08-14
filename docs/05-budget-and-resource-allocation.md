@@ -43,6 +43,8 @@ This includes:
 
 These deliverables belong to the proposal rather than to individual consortium members. They are developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
 
+The Core Infrastructure Development allocation is monitored against the deliverables and milestone outputs defined in Sections 4 and 7. Material changes in how the allocation is used across those approved delivery areas will be disclosed through milestone reporting.
+
 The allocation does not fund commercial lending activity, SACCO onboarding, loan capital, settlement operations, private capital formation, institutional fundraising or revenue-generating deployment.
 
 ## Implementation Responsibility
@@ -81,7 +83,7 @@ These resources include:
 
 These resources do not fund commercial lending operations, regulatory work for a live lending pilot, stablecoin settlement, custody of lending capital or activities outside the Treasury-funded deliverables.
 
-Any use of technical contingency remains limited to delivery of the approved proposal scope and does not authorize additional products, commercial activities or material changes to the funded deliverables.
+Any use of technical contingency remains limited to delivery of the approved proposal scope, requires written justification and authorization by the Aurora Treasury Administrators, and will be disclosed in the next public milestone report. Unused contingency remains unspent Treasury ADA and is subject to the proposal's normal reconciliation and refund provisions.
 
 ## Resource Allocation Principles
 The revised allocation follows four principles.
@@ -90,7 +92,7 @@ First, Treasury funds are allocated according to the infrastructure and supporti
 
 Second, Fairway remains responsible for overall delivery while technical contributions from consortium partners are incorporated into the same implementation programme where appropriate.
 
-Third, external expenditure is limited to review, hosting and technical contingency directly related to delivery of the public infrastructure.
+Third, external expenditure is limited to independent review, Treasury-use audit and oversight, hosting and technical contingency directly related to delivery of the public infrastructure.
 
 Fourth, no portion of the Treasury withdrawal is reserved for lending capital or commercial deployment.
 

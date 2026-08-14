@@ -15,6 +15,7 @@ The Treasury-funded implementation is infrastructure-only. It does not fund lend
 | Technical Collaborator | **Sundial** |
 | Technical Advisor | **Fallen Icarus (Rusty)** |
 | Treasury Custody | Independent **3-of-5 Aurora Treasury multisignature** |
+| Treasury Administrators | **James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Kriss Baird** |
 | License | **Apache License 2.0** for Treasury-funded software, standards, and reference implementations |
 
 ## Start Here
@@ -52,7 +53,7 @@ Aurora does not replace lending protocols, originate loans, custody lending capi
 
 ## Governance Positioning
 
-The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature**, with all five keys held independently of implementation participants. Further expenditure is conditioned on published milestone evidence and review against the approved completion criteria. Treasury balances and transactions remain publicly auditable, and unspent funds are returned if the project terminates under the proposal's conditions.
+The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature**, with all five keys held independently of implementation participants. Expenditure may progress only within the applicable cumulative milestone ceiling after evidence is published and reviewed by the Aurora Treasury Administrators. Independent oversight includes an interim expenditure and reconciliation review after M2 and a final Treasury-use audit after M4. Treasury balances and transactions remain publicly auditable, and unspent funds are returned if the project terminates under the proposal's conditions.
 
 ---
 

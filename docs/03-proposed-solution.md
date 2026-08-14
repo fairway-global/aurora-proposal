@@ -87,7 +87,7 @@ Open developer tooling, documentation and a reference implementation demonstrati
 A Treasury-funded technical demonstration will validate this lifecycle on testnet without requiring live lending or Treasury-funded loan capital.
 
 ### Capital Discovery & Allocation Layer
-Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial
+Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial.
 
 Its outputs include the Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution, lightweight integration artifacts and supporting documentation.
 

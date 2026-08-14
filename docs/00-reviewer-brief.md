@@ -10,7 +10,7 @@ The implementation is infrastructure-only. It does **not** fund lending capital,
 
 ## Delivery and Governance
 
-Fairway is lead implementer and project coordinator. Sundial contributes selected technical input, and Fallen Icarus (Rusty) serves as technical advisor and reviewer. The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** whose five keys are held independently of all implementation participants. Milestone evidence must be published before further expenditure is authorized, transactions remain publicly auditable, and unspent funds are returned if the project terminates under Section 9.
+Fairway is lead implementer and project coordinator. Sundial contributes selected technical input, and Fallen Icarus (Rusty) serves as technical advisor and reviewer. The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** administered by James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Kriss Baird, all of whom are independent of the implementation participants. Expenditure may progress only within the applicable cumulative milestone ceiling after evidence is published and reviewed. Independent oversight includes an interim expenditure and reconciliation review after M2 and a final Treasury-use audit after M4. Transactions remain publicly auditable, and unspent funds are returned if the project terminates under Section 9.
 
 ## Reviewer Path
 
