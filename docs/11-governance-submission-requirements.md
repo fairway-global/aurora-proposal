@@ -24,7 +24,7 @@ Their designation does not give them responsibility for engineering, technical a
 Independent Treasury-use oversight will include an interim expenditure and reconciliation review following M2 and a final independent Treasury-use audit following M4. The reviews will assess Treasury transactions against reported expenditure, approved budget categories and applicable cumulative milestone ceilings. The reviewer will be independent of Fairway, Sundial, Fallen Icarus and the Aurora Treasury Administrators.
 
 ## Net Change Limit
-This Treasury Withdrawal will only be submitted and enacted where the requested **1,000,000 ADA** withdrawal is within the applicable Net Change Limit established through Cardano governance.
+This Treasury Withdrawal will only be submitted and enacted where the requested **940,000 ADA** withdrawal is within the applicable Net Change Limit established through Cardano governance.
 
 Compliance will be assessed against the available Net Change Limit at the time the governance action is submitted, taking account of any Treasury Withdrawals already counted against the same applicable period.
 
@@ -40,7 +40,7 @@ Fairway and other contributors may have participated in Project Catalyst, commer
 Before submission, this disclosure will be confirmed against the final Treasury recipient and the entities materially participating in the proposal so that the statement accurately reflects the constitutional 24-month disclosure requirement.
 
 ## Treasury Audit and Oversight
-The proposal includes funding within the **Shared Review, Hosting & Technical Contingency** allocation for independent Treasury-use audit and oversight.
+The proposal includes funding within the **Review, Hosting & Technical Contingency** allocation for independent Treasury-use audit and oversight.
 
 Oversight will include reconciliation of Treasury transactions and reported project expenditure, review of expenditure against the approved scope and milestone ceilings, and reporting of material deviations or unresolved issues.
 

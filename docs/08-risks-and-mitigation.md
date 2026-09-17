@@ -1,37 +1,45 @@
 # 8. Risks and Mitigation
 Aurora's infrastructure-only scope limits Treasury risk primarily to technical delivery, interoperability, security and long-term usability of the resulting public infrastructure.
 
-**Underlying credit-market implementation dependency.** Aurora operates around compatible lending infrastructure rather than replacing the underlying lending contracts. Differences in Loan Request UTxO structures or delays in individual lending implementations could therefore affect integration testing.
+**Compatibility with underlying lending infrastructure.**
+Aurora operates alongside compatible lending implementations rather than replacing the underlying lending contracts. Differences in Loan Request UTxO structures may therefore affect integration and testing.
 
-Aurora mitigates this risk by defining its metadata, discovery and verification infrastructure through open interfaces rather than depending on one exclusive lending protocol. The reference implementation and testnet demonstration are intended to validate compatibility against representative Loan Request UTxO structures while preserving protocol independence.
+Aurora mitigates this risk through open interfaces and clearly defined metadata, discovery and verification specifications. The reference implementation and testnet demonstration will validate compatibility against representative Loan Request UTxO structures while preserving flexibility across different implementations.
 
-**Interoperability and specification risk.** Different lending implementations, capital-provider requirements and future use cases may require metadata or query structures that are not known at the time of the initial release.
+**Interoperability and specification risk.**
+Different lending implementations, capital-provider requirements and future use cases may require metadata or query structures that are not known at the time of the initial release.
 
-The Metadata Standard, Verification Framework and filtering specifications are therefore designed to be versioned, extensible and modular. Published schemas and open APIs allow future implementations to extend the infrastructure without requiring changes to the underlying lending protocol or dependence on proprietary rules.
+The Metadata Standard, Verification Framework and filtering specifications are therefore designed to be **versioned, extensible and modular**. Published schemas and open APIs allow the infrastructure to evolve as new requirements emerge without forcing changes to the underlying lending protocols.
 
-**Verification-system dependency.** Institutional verification requirements may rely on different credential systems, proof systems or verification providers.
+**Verification-system dependency.**
+Verification requirements may rely on different credential systems, proof systems or verification providers.
 
-Aurora does not require a single verification technology. The Verification Framework separates verification references and policies from the underlying lending contracts so that multiple verification systems can coexist and evolve independently.
+Aurora does not depend on a single verification technology. The Verification Framework separates verification references and policies from the underlying lending contracts, allowing multiple verification systems to coexist and evolve independently.
 
-**Security and implementation risk.** Defects in the Discovery Engine, APIs, verification logic or developer tooling could produce incorrect indexing, filtering or verification results.
+**Security and implementation risk.**
+Defects in the Discovery Engine, APIs, verification logic or developer tooling could produce incorrect indexing, filtering or verification results.
 
-The project includes independent security review of the Treasury-funded software and relevant interfaces. Material findings affecting the funded release must be addressed or transparently documented before final completion. The architecture also keeps Aurora separate from custody and lending-contract execution, limiting the consequences of defects in the market-information layer.
+The project includes independent security review of the Treasury-funded software and relevant interfaces. Material findings affecting the funded release must be addressed or clearly documented before final completion. Aurora is also designed as a market-information and discovery layer rather than a custody or transaction-execution layer, which limits the impact of defects within the infrastructure itself.
 
-**Independent operability risk.** Open-source code provides limited public value if the infrastructure can only be operated through Fairway-hosted services or undocumented internal dependencies.
+**Operational usability risk.**
+Open-source infrastructure provides limited value if it is difficult for third parties to deploy, integrate or maintain.
 
-Aurora mitigates this through public repositories, Apache License 2.0, build and deployment instructions, developer documentation and final completion criteria requiring a technically capable third party to operate the relevant infrastructure without dependence on Fairway, Sundial or any individual advisor.
+Aurora mitigates this through public repositories, Apache License 2.0, deployment instructions, developer documentation, open APIs and reference implementations. Final completion criteria include demonstrating that the infrastructure can be deployed and operated by a technically capable third party using the published materials.
 
-**Adoption risk.** Open standards do not guarantee adoption by future lending protocols, applications or capital providers.
+**Adoption risk.**
+Open standards do not guarantee adoption by future lending protocols, applications or capital providers.
 
-The proposal mitigates this risk by keeping the infrastructure optional, protocol independent and reusable. Aurora does not require existing lending implementations to change their core contracts, and its APIs, reference implementation and query standards are intended to reduce the integration work required for third-party adoption. Treasury delivery is measured by completion and usability of the public infrastructure rather than by speculative adoption targets.
+Aurora mitigates this by keeping the infrastructure optional, protocol-independent and reusable. Existing lending implementations do not need to replace their core contracts, while the APIs, reference implementation and query standards are intended to reduce the work required to integrate with the shared market layer. Treasury delivery is measured by the completion and usability of the public infrastructure rather than by speculative adoption targets.
 
-**Delivery schedule risk.** The approximately five-month implementation period is intentionally focused but requires standards development, implementation, integration, review and documentation to progress in parallel where appropriate.
+**Delivery schedule risk.**
+The approximately five-month implementation period requires standards development, implementation, integration, review and documentation to progress in parallel where appropriate.
 
-Fairway remains responsible for coordinating the integrated delivery. The four milestone structure provides intermediate verification of specifications, core functionality and the end-to-end technical demonstration before final release. Independent review preparation may begin before implementation is fully complete so that review does not unnecessarily delay the final milestone.
+Fairway is responsible for coordinating the integrated delivery. The four-milestone structure provides intermediate verification of specifications, core functionality and the end-to-end technical demonstration before final release. Independent review preparation may begin before implementation is fully complete to reduce delays at the final milestone.
 
-**Legal and regulatory interpretation.** Aurora provides open market infrastructure rather than regulatory enforcement, custody or lending services. Nevertheless, standards and interfaces intended for institutional use may raise legal questions about how the infrastructure should be described or operated.
+**Legal and regulatory interpretation.**
+Open infrastructure intended for institutional credit markets may raise questions about how standards, verification references and interfaces are described or used in different contexts.
 
-The funded scope therefore includes independent legal review of the open infrastructure and intended operating model. Future lending activity, jurisdiction-specific compliance and commercial deployment remain outside the Treasury proposal and remain the responsibility of the relevant market participants.
+The funded scope therefore includes independent legal review of the infrastructure, documentation and intended operating model, with any material findings incorporated into the final release.
 
 ---
 

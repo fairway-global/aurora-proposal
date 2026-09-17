@@ -2,20 +2,20 @@
 
 Open Infrastructure for Institutional Credit Markets on Cardano
 
-Aurora is a Cardano Treasury proposal requesting **1,000,000 ADA** to build reusable public infrastructure for credit-market discovery, filtering, verification, and evaluation. Delivery is planned over approximately **five months** through **four implementation milestones**.
+Aurora Treasury Proposal Version 3 requests **940,000 ADA** to establish shared open-source market infrastructure for Cardano credit markets, supporting discovery, filtering, verification, and evaluation across compatible lending implementations. Delivery is planned over approximately **five months** through **four implementation milestones**.
 
-The Treasury-funded implementation is infrastructure-only. It does not fund lending capital, commercial lending pilots, borrower deployment, SACCO onboarding, stablecoin conversion, fiat settlement, or live loan execution.
+The Treasury-funded implementation focuses on building and validating the shared technical infrastructure described in the proposal. The request comprises **800,000 ADA** for Core Infrastructure Development and **140,000 ADA** for Review, Hosting & Technical Contingency.
 
 | Field | Detail |
 | --- | --- |
-| Treasury Request | **1,000,000 ADA** |
+| Treasury Request | **940,000 ADA** |
 | Delivery Period | Approximately **5 months** |
 | Milestones | **4 implementation milestones** |
 | Lead Implementer | **Fairway** |
 | Technical Collaborator | **Sundial** |
 | Technical Advisor | **Fallen Icarus (Rusty)** |
 | Treasury Custody | Independent **3-of-5 Aurora Treasury multisignature** |
-| Treasury Administrators | **James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Kriss Baird** |
+| Proposed Treasury Administrators | **James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Kriss Baird** |
 | License | **Apache License 2.0** for Treasury-funded software, standards, and reference implementations |
 
 ## Start Here
@@ -24,7 +24,7 @@ The Treasury-funded implementation is infrastructure-only. It does not fund lend
 - [Reviewer Brief](docs/00-reviewer-brief.md) — concise funding, scope, delivery, and governance overview.
 - [Full Proposal](proposal.md) — complete polished edition of the canonical source.
 - [Deliverables](docs/04-deliverables.md) — public infrastructure outputs and technical demonstration.
-- [Budget and Resource Allocation](docs/05-budget-and-resource-allocation.md) — allocation of the 1,000,000 ADA request.
+- [Budget and Resource Allocation](docs/05-budget-and-resource-allocation.md) — allocation of the 940,000 ADA request.
 - [Milestones and Success Criteria](docs/07-milestones-and-success-criteria.md) — four-stage delivery plan and completion evidence.
 - [Governance and Oversight](docs/09-governance-and-oversight.md) — independent custody, expenditure controls, reporting, and remediation.
 
@@ -34,7 +34,7 @@ The Treasury-funded implementation is infrastructure-only. It does not fund lend
 | --- | --- |
 | [1. Summary](docs/01-summary.md) | Request, public outputs, delivery roles, safeguards, and ecosystem commitment |
 | [2. Motivation](docs/02-motivation.md) | Need for common market infrastructure around independent credit opportunities |
-| [3. Proposed Solution](docs/03-proposed-solution.md) | Metadata, verification, discovery, APIs, and developer tooling |
+| [3. Proposed Solution](docs/03-proposed-solution.md) | Metadata, verification, discovery, APIs, developer tooling, and the Capital Discovery Layer |
 | [4. Deliverables](docs/04-deliverables.md) | Infrastructure outputs, testnet demonstration, reviews, and release |
 | [5. Budget and Resource Allocation](docs/05-budget-and-resource-allocation.md) | Core development, review, hosting, audit, and technical contingency |
 | [6. Consortium and Relevant Experience](docs/06-consortium-and-relevant-experience.md) | Fairway, Sundial, Fallen Icarus, and combined delivery capability |
@@ -47,9 +47,9 @@ The Treasury-funded implementation is infrastructure-only. It does not fund lend
 
 ## What Treasury Funds
 
-The funded public outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query capabilities, Capital Provider Profile Standard, Reference Query Library, developer tooling, a reference implementation, technical documentation, a testnet technical demonstration, and independent review.
+The funded public outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query capabilities, Capital Provider Profile Standard, Reference Query Library, developer tooling, a reference implementation, technical documentation, a testnet technical demonstration, and independent review. Their implementation home is the [Aurora metadata and Discovery Engine repository](https://github.com/fairway-global/aurora-metadata-standard-and-indexer); this repository maintains the Treasury proposal and its translations.
 
-Aurora does not replace lending protocols, originate loans, custody lending capital, decide which opportunities receive funding, or perform settlement. Commercial lending, lending liquidity, borrower operations, and related settlement activity remain outside the Treasury-funded scope.
+Aurora does not replace lending protocols, originate loans, custody lending capital, or decide which opportunities receive funding. Funding and settlement remain functions of the compatible lending infrastructure underlying each opportunity.
 
 ## Governance Positioning
 

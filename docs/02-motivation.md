@@ -32,13 +32,13 @@ Open standards provide a different path. A common Metadata Standard can describe
 The result is reusable market infrastructure rather than a collection of isolated integrations.
 
 ## Bringing the Two Together
-This proposal addresses both problems through a shared market layer around independent Loan Request UTxOs.
+Aurora addresses both problems by establishing a shared market layer around independent Loan Request UTxOs.
 
 Standardized metadata enriches each opportunity with machine-readable market information and verification references. Open discovery and indexing infrastructure then makes those opportunities searchable across compatible implementations. Capital providers and applications can discover, filter and evaluate opportunities according to their own requirements while funding and settlement continue through the underlying lending infrastructure.
 
 Aurora does not replace lending protocols or determine which opportunities should receive capital. It establishes the open standards, verification framework, discovery infrastructure, APIs and developer tooling required for independent Cardano credit opportunities to function as a coherent market.
 
-Treasury funding builds and demonstrates this reusable infrastructure. Live lending, commercial onboarding and the generation of real repayment and underwriting evidence remain activities for separately funded commercial deployment.
+Treasury funding builds and demonstrates this reusable infrastructure.
 
 ---
 

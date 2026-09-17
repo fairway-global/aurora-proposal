@@ -64,7 +64,7 @@ Compatible implementations may use verifiable credentials, zero-knowledge proofs
 
 Privacy-preserving systems such as Midnight may therefore be integrated where technically appropriate, but Aurora does not depend on Midnight for operation and Treasury funding does not establish a proprietary identity or credential system.
 
-Similarly, future applications may associate repayment history, institutional performance or other verifiable information with compatible credit-market entities. Aurora provides the shared infrastructure through which such information can be referenced, indexed and exposed; the commercial activity that generates real repayment or performance evidence remains outside the Treasury-funded scope.
+Similarly, future applications may associate repayment history, institutional performance or other verifiable information with compatible credit-market entities. Aurora provides the shared infrastructure through which such information can be referenced, indexed and exposed.
 
 ## Participant Responsibilities
 Aurora provides verification infrastructure rather than regulatory enforcement.
@@ -87,6 +87,8 @@ All Treasury-funded Verification Framework specifications, reference implementat
 Open Infrastructure for Institutional Credit Markets on Cardano
 
 Sundial Protocol  ·  Fairway Oy  ·  Fallen Icarus
+
+Cardano Treasury Proposal  ·  2026
 
 Cardano Treasury Proposal  ·  2026
 

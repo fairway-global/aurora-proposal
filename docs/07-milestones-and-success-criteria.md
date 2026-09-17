@@ -5,15 +5,15 @@ Each milestone is tied to concrete public outputs that can be independently revi
 
 | Milestone | Timeline | ADA Allocation | Primary Outcome |
 | ----- | ----- | ----- | ----- |
-| M1: Specifications & Architecture | Month 1 | **150,000** | Core standards and implementation architecture finalized |
-| M2: Core Build | Months 2–3 | **350,000** | Discovery, verification, indexing, filtering and API infrastructure operational on testnet |
-| M3: Integration & Technical Demonstration | Month 4 | **300,000** | Reference implementation, developer tooling and complete testnet workflow demonstrated |
-| M4: Independent Review & Public Release | Month 5 | **200,000** | Independent review completed and final open-source infrastructure released |
-| **Total** | **Approximately 5 months** | **1,000,000** |  |
+| M1: Specifications & Architecture | Month 1 | **140,000** | Core standards and implementation architecture finalized |
+| M2: Core Build | Months 2–3 | **320,000** | Discovery, verification, indexing, filtering and API infrastructure operational on testnet |
+| M3: Integration & Technical Demonstration | Month 4 | **290,000** | Reference implementation, developer tooling and complete testnet workflow demonstrated |
+| M4: Independent Review & Public Release | Month 5 | **190,000** | Independent review completed and final open-source infrastructure released |
+| **Total** | **Approximately 5 months** | **940,000** |  |
 
 ## M1: Specifications & Architecture
 **Timeline:** Month 1
- **ADA Allocation:** **150,000 ADA**
+ **ADA Allocation:** **140,000 ADA**
 
 ### Key Outputs
 * Metadata Standard.
@@ -33,7 +33,7 @@ Technical review may include contributions from Sundial and architectural input 
 
 ## M2: Core Build
 **Timeline:** Months 2–3
- **ADA Allocation:** **350,000 ADA**
+ **ADA Allocation:** **320,000 ADA**
 
 ### Key Outputs
 * Operational Aurora Discovery Engine on testnet.
@@ -52,7 +52,7 @@ Technical review may include contributions from Sundial and architectural input 
 
 ## M3: Integration & Technical Demonstration
 **Timeline:** Month 4
- **ADA Allocation:** **300,000 ADA**
+ **ADA Allocation:** **290,000 ADA**
 
 ### Key Outputs
 * Reference implementation.
@@ -67,12 +67,11 @@ Technical review may include contributions from Sundial and architectural input 
 * The reference implementation demonstrates a compatible Loan Request UTxO being enriched with standardized metadata, indexed, discovered, filtered and associated with verification information.
 * Published reference queries demonstrate how capital-provider requirements can be translated into discovery and filtering criteria.
 * A technically capable third party can use the published APIs, tooling and documentation to reproduce the principal workflow.
-* The technical demonstration requires no Treasury-funded lending capital, borrower deployment, fiat settlement or commercial loan execution.
 * Public milestone report published.
 
 ## M4: Independent Review & Public Release
 **Timeline:** Month 5
-**ADA Allocation:** **200,000 ADA**
+**ADA Allocation:** **190,000 ADA**
 
 Independent review preparation may begin during the preceding implementation milestone so that security, legal and documentation work does not unnecessarily extend the project timeline.
 
@@ -90,13 +89,13 @@ Independent review preparation may begin during the preceding implementation mil
 * Independent Treasury-use audit and oversight has been completed and included in the final project reporting.
 * All Treasury-funded software, standards and reference implementations are publicly released under **Apache License 2.0**.
 * Public repositories contain sufficient source code, specifications, documentation and deployment instructions for independent inspection and operation.
-* A technically capable third party can operate the relevant Aurora infrastructure without dependence on Fairway, Sundial or any individual advisor.
+* A technically capable third party can deploy and operate the relevant Aurora infrastructure using the published repositories, documentation and deployment instructions.
 * Final report maps the completed public outputs against the proposal deliverables and milestone requirements.
 
 ## Milestone Expenditure Principles
-The milestone allocations define the maximum cumulative Treasury expenditure authorized as implementation progresses. At project commencement, expenditure of up to **150,000 ADA** is authorized for M1. Following approval of M1, the cumulative expenditure ceiling increases to **500,000 ADA**; following approval of M2, to **800,000 ADA**; and following approval of M3, to the full **1,000,000 ADA**. Completion of M4 triggers final project reconciliation and reporting.
+The milestone allocations define the maximum cumulative Treasury expenditure as implementation progresses. At project commencement, up to **140,000 ADA** may be used for M1. Following completion and approval of M1, the cumulative expenditure ceiling increases to **460,000 ADA**; following M2, to **750,000 ADA**; and following M3, to the full **940,000 ADA**. Completion of M4 triggers final reconciliation and reporting.
 
-Fairway remains responsible for integrated delivery of Aurora, while the Aurora Treasury Administrators review the public milestone evidence before authorizing progression to the next expenditure ceiling.
+Fairway is responsible for the integrated delivery of Aurora. The Aurora Treasury Administrators review the published milestone evidence before authorizing progression to each subsequent expenditure ceiling.
 
 ---
 

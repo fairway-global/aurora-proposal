@@ -1,9 +1,9 @@
 # 9. Governance and Oversight
-Aurora uses a single, independently controlled Treasury custody structure designed for a focused infrastructure implementation.
+Aurora uses a single, independently controlled Treasury custody structure for the implementation of the project.
 
-The full **1,000,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled entirely by independent Cardano ecosystem representatives. Fairway leads delivery of the project but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
+The full **940,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled by independent Cardano ecosystem representatives. Fairway is responsible for project delivery but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
-Project expenditure progresses against the four milestones defined in Section 7. Fairway publishes milestone evidence before expenditure may progress beyond the applicable cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
+Expenditure progresses against the four milestones defined in Section 7. Fairway publishes the required milestone evidence before expenditure may progress beyond each cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
 
 ## Aurora Treasury Multisig
 The Aurora Treasury multisignature is the sole custody wallet for the Treasury allocation.
@@ -21,7 +21,7 @@ All Treasury funds remain under independent **3-of-5 multisignature control** un
 
 No implementation consortium member holds a signing key.
 
-For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five individuals who control the 3-of-5 Aurora Treasury multisignature.
+For Treasury-governance purposes, the five independent multisignature signers collectively serve as the **Aurora Treasury Administrators**. This designation does not create a separate governance body or additional custody structure. The Administrators are the same five Aurora Treasury Administrators who control the 3-of-5 Aurora Treasury multisignature.
 
 The Aurora Treasury Administrators are responsible for:
 
@@ -46,13 +46,13 @@ The milestone schedule controls the maximum cumulative Treasury expenditure auth
 
 | Milestone | ADA Allocation |
 | ----- | ----- |
-| M1: Specifications & Architecture | **150,000** |
-| M2: Core Build | **350,000** |
-| M3: Integration & Technical Demonstration | **300,000** |
-| M4: Independent Review & Public Release | **200,000** |
-| **Total** | **1,000,000** |
+| M1: Specifications & Architecture | **140,000** |
+| M2: Core Build | **320,000** |
+| M3: Integration & Technical Demonstration | **290,000** |
+| M4: Independent Review & Public Release | **190,000** |
+| **Total** | **940,000** |
 
-At project commencement, expenditure of up to 150,000 ADA is authorized for M1. Following approval of M1, the cumulative expenditure ceiling increases to 500,000 ADA. Following approval of M2, it increases to 800,000 ADA. Following approval of M3, the full 1,000,000 ADA becomes available for completion of M4. M4 completion triggers final reconciliation and reporting.
+At project commencement, expenditure of up to 140,000 ADA is authorized for M1. Following approval of M1, the cumulative expenditure ceiling increases to 460,000 ADA. Following approval of M2, it increases to 750,000 ADA. Following approval of M3, the full 940,000 ADA becomes available for completion of M4. Completion of M4 triggers final reconciliation and reporting.
 
 Before expenditure may progress to the next cumulative milestone ceiling:
 
@@ -60,11 +60,9 @@ Before expenditure may progress to the next cumulative milestone ceiling:
 2. The Aurora Treasury Administrators review the published outputs against the approved completion criteria.
 3. Progression to the next cumulative expenditure ceiling requires authorization through the 3-of-5 Aurora Treasury multisignature.
 
-Milestone review is evidence-based and practical. Signers confirm that the relevant specifications, repositories, software, documentation, demonstrations or independent-review outputs have been published and reasonably satisfy the approved criteria.
+Milestone review is evidence-based and practical. The Treasury Administrators confirm that the relevant specifications, repositories, software, documentation, demonstrations or independent-review outputs have been published and reasonably satisfy the approved completion criteria. They are not expected to reproduce the engineering work or independently reimplement Aurora.
 
-They are not expected to reproduce the engineering work or independently reimplement Aurora.
-
-Treasury funds may be used only for the approved Aurora infrastructure scope and may not be used for lending capital, commercial lending activity, borrower funding, stablecoin settlement or unrelated company expenditure.
+Treasury funds may be used only for the approved Aurora infrastructure scope and milestone deliverables defined in this proposal.
 
 ## Operational Responsibility
 Fairway remains responsible as lead implementer and project coordinator for delivery of Aurora.

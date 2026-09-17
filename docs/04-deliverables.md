@@ -1,7 +1,7 @@
 # 4. Deliverables
-The project delivers open-source market infrastructure that can be adopted, extended and operated independently by future Cardano credit market implementations.
+The project delivers open-source infrastructure for a shared Cardano credit market.
 
-Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and usable in institutional and professional capital-provider workflows. It does not fund lending capital, commercial onboarding or live loan execution.
+Treasury funding covers the standards, software, reference implementations, documentation and technical validation required to make independent Loan Request UTxOs discoverable, filterable, verifiable and easier to evaluate across compatible credit-market applications.
 
 ## Core Infrastructure Deliverables
 1. **Metadata Standard.**
@@ -11,8 +11,7 @@ Treasury funding covers the standards, software, reference implementations, docu
    An extensible framework for attaching and evaluating institutional, eligibility, compliance and other proof-based information associated with Loan Request UTxOs. The framework supports multiple credential systems, proof systems and verification providers without requiring a single identity or compliance infrastructure.
 
 3. **Aurora Discovery Engine.**
-   An open-source service that indexes compatible Loan Request UTxOs and associated metadata, exposes lending opportunities through open APIs, supports discovery and filtering, provides access to verification information and tracks relevant loan-lifecycle information exposed by compatible lending implementations.
-    The Discovery Engine will be independently operable so that third-party builders are not required to depend on Fairway or a single hosted service.
+   An open-source service that indexes compatible Loan Request UTxOs and associated metadata, exposes lending opportunities through open APIs, supports discovery and filtering, provides access to verification information and tracks relevant loan-lifecycle information exposed by compatible lending implementations. The Discovery Engine will support independent deployment and operation, with published interfaces and operating documentation for third-party builders.
 
 4. **Filtering and Query Capabilities.**
    Open filtering capabilities based on published metadata schemas and query specifications. Compatible applications and capital providers will be able to identify opportunities according to criteria such as jurisdiction, duration, asset, ticket size, verification requirements and other standardized attributes supported by the applicable schema.
@@ -31,7 +30,7 @@ Treasury funding covers the standards, software, reference implementations, docu
 
     Documentation will include sufficient integration and operating guidance for third-party developers to adopt the standards and operate the relevant infrastructure independently.
 
-## Capital Discovery & Allocation Layer
+## Capital Discovery Layer
 Aurora includes selected technical contributions from Sundial relating to capital-provider requirements, discovery, filtering and interoperability within the broader Aurora implementation.
 
 These contributions include:
@@ -52,14 +51,14 @@ These contributions include:
  Reference examples or lightweight SDK components demonstrating how external applications can integrate the Capital Provider Profile Standard and query specifications.
 
 **Documentation.**
- Technical documentation sufficient for third parties to use, implement and extend the relevant standards and interfaces without dependence on Sundial.
+Technical documentation sufficient for third parties to use, implement and extend the relevant standards and interfaces without dependence on Sundial.
 
-These components form part of Aurora’s common open-source infrastructure rather than a separate Sundial product or independently funded workstream. Sundial contributes technical expertise where relevant, while Fairway remains responsible for integrated delivery of the proposal as lead implementer.
+These components form part of Aurora's common open-source infrastructure rather than a separate Sundial product or independently funded workstream. Sundial contributes technical expertise where relevant, while Fairway remains responsible for integrated delivery of the proposal as lead implementer.
 
-The Capital Discovery & Allocation Layer does not allocate Treasury capital, make lending decisions or create a proprietary capital-allocation product. It provides open standards and reference tooling that future market participants may use according to their own requirements.
+The Capital Discovery Layer does not allocate Treasury capital, make lending decisions or create a proprietary capital-allocation product. It provides open standards and reference tooling that future market participants may use according to their own requirements.
 
 ## Technical Demonstration
-The project will include a testnet technical demonstration showing that the core infrastructure operates together as intended.
+The project will include a testnet technical demonstration showing how the core Aurora components operate together.
 
 The demonstration will show that a compatible Loan Request UTxO can be:
 
@@ -71,14 +70,14 @@ The demonstration will show that a compatible Loan Request UTxO can be:
 6. associated with verification information that can be evaluated through the Verification Framework; and
 7. consumed by a compatible reference application or query workflow.
 
-The technical demonstration validates the infrastructure rather than commercial lending performance. It does not require Treasury-funded loan capital, fiat settlement, borrower disbursement or live SACCO lending.
+The demonstration will validate the **end-to-end operation and interoperability of the infrastructure**, from Loan Request UTxO creation and metadata through discovery, filtering, verification and application-level consumption.
 
 ## Security and Legal Review
 The funded scope includes independent review appropriate to the infrastructure being delivered.
 
 The security review will assess the Treasury-funded software and relevant technical interfaces before final release.
 
-The legal review will assess the open infrastructure, standards and intended operating model within the scope of this proposal. It does not constitute legal approval of future lending activity or commercial deployments, which remain the responsibility of the relevant participants.
+The legal review will assess the open infrastructure, standards, documentation and intended operating model within the scope of this proposal.
 
 ## Open-Source Release and Public Documentation
 All Treasury-funded software, standards and reference implementations will be released under the **Apache License 2.0**.

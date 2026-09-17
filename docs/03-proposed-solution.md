@@ -1,9 +1,9 @@
 # 3. Proposed Solution
-This proposal builds shared market infrastructure for Cardano credit markets through open standards, verification infrastructure, discovery and indexing, filtering capabilities and developer interfaces that operate around compatible lending implementations.
+This proposal builds shared market infrastructure for Cardano credit markets through open standards, verification infrastructure, discovery and indexing, filtering capabilities and developer interfaces that operate around compatible lending implementations. The intent is to establish a common Cardano market stack that compatible credit applications can share rather than requiring each team to recreate the same discovery, filtering and verification infrastructure independently.
 
 The broader objective is to establish the shared market infrastructure that allows independent lending opportunities to be published, indexed, discovered, filtered, verified, evaluated and monitored through open standards rather than isolated integrations. The proposal intentionally focuses on shared market infrastructure rather than lending logic. Existing and future Cardano credit market implementations remain free to innovate independently while using common infrastructure for standardized market information, verification and discovery.
 
-The solution does not modify core lending smart contracts. Instead, standardized metadata and verification references can be associated with individual Loan Request UTxOs, while open off-chain infrastructure reads, organizes and exposes that information to compatible applications and capital providers. A Loan Request UTxO enriched with this standardized metadata is referred to here as a “colored” Loan Request UTxO. The term is descriptive and does not represent a new ledger primitive.
+The solution does not modify core lending smart contracts. Instead, standardized metadata and verification references can be associated with individual Loan Request UTxOs, while open off-chain infrastructure reads, organizes and exposes that information to compatible applications and capital providers. A Loan Request UTxO enriched with this standardized metadata is referred to here as a "colored" Loan Request UTxO. The term is descriptive and does not represent a new ledger primitive.
 
 This separation allows Aurora to remain compatible with different lending implementations rather than requiring participants to adopt a single protocol, verification provider or commercial workflow.
 
@@ -33,7 +33,7 @@ Depending on the underlying implementation, a Loan Request UTxO may represent an
 
 The originator may attach standardized metadata or references describing institutionally relevant information associated with that opportunity. This may include verification references, jurisdiction, duration, asset, ticket size, eligibility information or other attributes defined by the applicable metadata schema.
 
-A Loan Request UTxO enriched in this way becomes a “colored” Loan Request UTxO that can be interpreted consistently by Aurora-compatible infrastructure.
+A Loan Request UTxO enriched in this way becomes a "colored" Loan Request UTxO that can be interpreted consistently by Aurora-compatible infrastructure.
 
 ### Indexing and Verification
 The Aurora Discovery Engine reads and organizes compatible Loan Request UTxOs and their associated metadata, transforming otherwise independent on-chain lending opportunities into a searchable market.
@@ -49,51 +49,59 @@ Opportunities can be filtered according to published metadata and query specific
 
 Aurora exposes the information required to discover, filter and evaluate opportunities but does not determine whether an opportunity should receive capital. Individual capital providers remain responsible for applying their own risk, eligibility, compliance and allocation criteria.
 
-Aurora's Capital Discovery & Allocation Layer extends this open infrastructure with selected technical contributions from Sundial through a Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution and lightweight reference integration artifacts. These outputs describe how capital-provider requirements can be represented and translated into queries against Aurora-compatible credit opportunities without creating a proprietary allocation system.
+Aurora's Capital Discovery Layer extends this open infrastructure with selected technical contributions from Sundial through a Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution and lightweight reference integration artifacts. These outputs describe how capital-provider requirements can be represented and translated into queries against Aurora-compatible credit opportunities without creating a proprietary allocation system.
 
 ### Repayment History and Performance
 Aurora is designed to track relevant loan-lifecycle information exposed by compatible lending implementations, including repayment events where those events are available on-chain.
 
 Over time, repayment history can contribute to portable institutional credit histories and broader institutional track records that future capital providers can evaluate through the same open infrastructure. Standardizing and exposing this information reduces the need for each future participant to reconstruct historical performance independently.
 
-Treasury funding establishes the infrastructure required to index and expose this information. The real lending activity that generates repayment, default and underwriting evidence remains outside the Treasury-funded scope.
+Treasury funding establishes the infrastructure required to index and expose this information.
 
 ### Funding and Settlement
-Aurora does not custody capital, fund loans or perform settlement.
-
-Once a capital provider has evaluated an opportunity, funding takes place through the compatible lending infrastructure that created the underlying Loan Request UTxO. Any subsequent fiat conversion, regulated settlement, borrower disbursement, loan servicing or other commercial operation remains the responsibility of the relevant market participants and service providers.
-
-This separation allows Aurora to provide reusable market infrastructure without requiring one lending protocol, settlement provider, jurisdiction or commercial deployment model.
+Funding and settlement remain functions of the compatible lending infrastructure underlying each opportunity. Aurora provides the discovery, market-information and verification layer around those lending agreements rather than replacing their execution logic.
 
 ## What We Build
-### Metadata Standard
-A versioned, open specification describing credit-market opportunities and the metadata references associated with Loan Request UTxOs.
+Aurora delivers a set of open standards, software and developer infrastructure intended to become reusable components of Cardano's credit-market stack. The components are designed to work across compatible lending implementations and support independent operation, integration and extension across the ecosystem.
 
-The standard is designed to support standardized market information while remaining extensible across lending models, jurisdictions, verification systems and future credit-market applications.
+### Metadata Standard
+A versioned, open specification for describing credit-market opportunities and the metadata references associated with Loan Request UTxOs.
+
+The standard provides a common way for compatible lending implementations to expose market information such as jurisdiction, duration, asset, ticket size, verification references and other relevant attributes without requiring changes to their underlying lending logic.
+
+It is designed to remain extensible across lending models, jurisdictions, verification systems and future Cardano credit applications.
 
 ### Verification Framework
-An extensible framework for attaching and evaluating verifiable institutional, eligibility, compliance and other proof-based information associated with Loan Request UTxOs.
+An open and extensible framework for attaching and evaluating institutional, eligibility, compliance and other proof-based information associated with Loan Request UTxOs.
 
-The framework does not require a single identity system, credential issuer, proof system or verification provider. Different verification mechanisms may coexist while participants retain responsibility for determining which evidence they require.
+The framework does not require a single identity system, credential issuer, proof system or verification provider. Different verification mechanisms may coexist, while applications and capital providers remain responsible for determining which evidence and policies they require.
+
+This allows verification to become a shared market capability without introducing a universal participation requirement or making Aurora dependent on one proprietary verification stack.
 
 ### Aurora Discovery Engine
 An open-source service that indexes compatible Loan Request UTxOs and associated metadata, supports discovery and filtering, exposes verification information, tracks relevant loan-lifecycle information and provides open APIs for compatible applications.
 
-The Discovery Engine transforms independent lending opportunities into a searchable market without becoming the underlying lending protocol or a centralized marketplace. It is designed to be independently operable so that builders do not need to depend on Fairway or a single hosted API.
+The Discovery Engine turns otherwise independent credit opportunities into a searchable market layer without becoming the underlying lending protocol or a proprietary marketplace.
+
+It is designed to be independently operable and accessible through open APIs, allowing lending protocols, wallets, analytics providers and other applications to integrate with the same shared market infrastructure.
 
 ### Developer Tooling and Reference Implementation
-Open developer tooling, documentation and a reference implementation demonstrating how compatible applications can attach standardized metadata, index Loan Request UTxOs, query the Discovery Engine, apply published filtering criteria and evaluate verification references.
+Open developer tooling, documentation and a reference implementation demonstrating how compatible applications can create Aurora-compatible metadata, identify and index Loan Request UTxOs, query the Discovery Engine, apply published filtering criteria and evaluate verification references.
 
-A Treasury-funded technical demonstration will validate this lifecycle on testnet without requiring live lending or Treasury-funded loan capital.
+The reference implementation is intended to reduce duplicated integration work across the ecosystem and provide a practical starting point for future Cardano builders adopting the standards.
 
-### Capital Discovery & Allocation Layer
-Aurora includes an open-source Capital Discovery & Allocation Layer developed with selected technical contributions from Sundial.
+A Treasury-funded technical demonstration will validate the end-to-end infrastructure flow on testnet.
+
+### Capital Discovery Layer
+Aurora includes an open-source Capital Discovery Layer developed with selected technical contributions from Sundial.
 
 Its outputs include the Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution, lightweight integration artifacts and supporting documentation.
 
-These components remain open standards and reference tooling rather than a proprietary capital-allocation product.
+These components provide common ways for capital-provider requirements to be represented and translated into queries against Aurora-compatible credit opportunities. They remain open standards and reference tooling rather than a proprietary capital-allocation system.
 
-All Treasury-funded software, standards and reference implementations will be released under Apache License 2.0. The resulting infrastructure is designed for the broader Cardano ecosystem to adopt, extend and operate independently without requiring Fairway, Sundial or any single lending implementation.
+All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**.
+
+The resulting infrastructure is intended to become part of Cardano's shared credit-market stack: initially implemented through Aurora, but available for lending protocols, applications, capital providers and future builders to adopt, operate and extend independently.
 
 ---
 
