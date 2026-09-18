@@ -4,7 +4,7 @@ The Aurora Treasury Proposal requests **940,000 ADA** to establish shared open-s
 
 ## What Treasury Funds
 
-Treasury funding is limited to reusable public infrastructure: the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query tooling, Capital Provider Profile Standard, Reference Query Library, developer tooling, a reference implementation, documentation, a testnet technical demonstration, and independent security, legal, and Treasury-use review.
+Treasury funding is dedicated to eight reusable public outputs: Metadata Standard, Verification Framework, Aurora Discovery Engine, Filtering & Query Tooling, Open APIs, Capital Provider Profile + Reference Query Library, Developer Tooling + Reference Implementation, and Documentation + Independent Review. Delivery culminates in an end-to-end testnet demonstration and public open-source release. Independent Treasury-use audit and oversight are included in the governance arrangements.
 
 The allocation comprises **800,000 ADA** for Core Infrastructure Development and **140,000 ADA** for Review, Hosting & Technical Contingency. At the proposal's illustrative reference price of **US$0.20 per ADA**, the total is approximately **US$188,000**. Aurora provides shared market infrastructure; it does not originate loans, custody lending capital, or make capital-allocation decisions. Funding and settlement remain with the underlying lending infrastructure.
 

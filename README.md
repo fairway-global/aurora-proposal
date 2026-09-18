@@ -2,7 +2,7 @@
 
 Open Infrastructure for Institutional Credit Markets on Cardano
 
-The Aurora Treasury Proposal requests **940,000 ADA** to establish shared open-source market infrastructure for Cardano credit markets, supporting discovery, filtering, verification, and evaluation across compatible lending implementations. Delivery is planned over approximately **five months** through **four implementation milestones**.
+Aurora requests **940,000 ADA** from the Cardano Treasury to establish shared open-source market infrastructure for Cardano credit markets, supporting discovery, filtering, verification and evaluation across compatible lending implementations. Delivery is planned over approximately **five months** through **four implementation milestones**.
 
 The Treasury-funded implementation focuses on building and validating the shared technical infrastructure described in the proposal. The request comprises **800,000 ADA** for Core Infrastructure Development and **140,000 ADA** for Review, Hosting & Technical Contingency.
 
@@ -22,7 +22,7 @@ The Treasury-funded implementation focuses on building and validating the shared
 
 - [日本語版](docs-jp-ドキュメント/README.md) — complete Japanese edition.
 - [Reviewer Brief](docs/00-reviewer-brief.md) — concise funding, scope, delivery, and governance overview.
-- [Full Proposal](proposal.md) — complete polished edition of the canonical source.
+- [Full Proposal](proposal.md) — complete Aurora Treasury proposal.
 - [Deliverables](docs/04-deliverables.md) — public infrastructure outputs and technical demonstration.
 - [Budget and Resource Allocation](docs/05-budget-and-resource-allocation.md) — allocation of the 940,000 ADA request.
 - [Milestones and Success Criteria](docs/07-milestones-and-success-criteria.md) — four-stage delivery plan and completion evidence.
@@ -47,7 +47,7 @@ The Treasury-funded implementation focuses on building and validating the shared
 
 ## What Treasury Funds
 
-The funded public outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query capabilities, Capital Provider Profile Standard, Reference Query Library, developer tooling, a reference implementation, technical documentation, a testnet technical demonstration, and independent review. Their implementation home is the [Aurora implementation repository](https://github.com/fairway-global/cardano-aurora); this repository maintains the Treasury proposal and its translations.
+The funded public outputs are the **Metadata Standard, Verification Framework, Aurora Discovery Engine, Filtering & Query Tooling, Open APIs, Capital Provider Profile + Reference Query Library, Developer Tooling + Reference Implementation, and Documentation + Independent Review**. Delivery culminates in an end-to-end testnet demonstration and public open-source release. Their implementation home is the [Aurora implementation repository](https://github.com/fairway-global/cardano-aurora); this repository maintains the Treasury proposal and its translations.
 
 Aurora does not replace lending protocols, originate loans, custody lending capital, or decide which opportunities receive funding. Funding and settlement remain functions of the compatible lending infrastructure underlying each opportunity.
 

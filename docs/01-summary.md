@@ -5,7 +5,7 @@
 | **Treasury Request** | **940,000 ADA** |
 | **Delivery Period** | Approximately **5 months** |
 | **Purpose** | Establish shared open-source market infrastructure for Cardano credit markets, making credit opportunities discoverable, filterable, verifiable and easier to evaluate across compatible lending implementations |
-| **Primary Deliverables** | Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering and query tooling, Capital Provider Profile Standard, Reference Query Library, developer tooling, reference implementation, documentation and independent review |
+| **Primary Deliverables** | Metadata Standard, Verification Framework, Aurora Discovery Engine, Filtering & Query Tooling, Open APIs, Capital Provider Profile + Reference Query Library, Developer Tooling + Reference Implementation, Documentation + Independent Review |
 | **Milestones** | **4 implementation milestones** |
 | **Lead Implementer** | **Fairway** |
 | **Technical Collaborator** | **Sundial** |
@@ -33,12 +33,12 @@ Treasury funding produces a common set of reusable public outputs:
 
 * **Metadata Standard** for describing Aurora-compatible credit opportunities and associated metadata references.
 * **Verification Framework** for attaching and evaluating institutional, eligibility, compliance and other proof-based information.
-* **Aurora Discovery Engine** for indexing, discovery, filtering, verification-information exposure and relevant lifecycle visibility.
-* **Open APIs and filtering capabilities** for compatible applications and capital providers.
-* **Capital Provider Profile Standard** and **Reference Query Library** for expressing capital-provider requirements and translating them into open discovery and filtering workflows.
-* **Developer tooling and reference implementation** demonstrating how compatible applications can integrate with Aurora.
-* **Technical documentation and operating instructions** supporting independent implementation and operation.
-* **Independent security and legal review** within the funded infrastructure scope.
+* **Aurora Discovery Engine** for indexing compatible Loan Request UTxOs, exposing standardized market information and providing relevant lifecycle visibility.
+* **Filtering & Query Tooling** for identifying opportunities according to standardized attributes and published criteria.
+* **Open APIs** for accessing Aurora-compatible credit opportunities, metadata, verification information and relevant lifecycle information.
+* **Capital Provider Profile + Reference Query Library** for representing capital-provider requirements and translating them into reusable market queries.
+* **Developer Tooling + Reference Implementation** demonstrating how compatible applications can integrate with Aurora.
+* **Documentation + Independent Review** supporting independent implementation and operation, backed by security and legal review within the funded infrastructure scope.
 
 The implementation culminates in an end-to-end technical demonstration and public open-source release.
 

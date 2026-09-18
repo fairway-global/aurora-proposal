@@ -85,19 +85,34 @@ The Discovery Engine turns otherwise independent credit opportunities into a sea
 
 It is designed to be independently operable and accessible through open APIs, allowing lending protocols, wallets, analytics providers and other applications to integrate with the same shared market infrastructure.
 
-### Developer Tooling and Reference Implementation
+### Filtering & Query Tooling
+Open filtering and query capabilities for identifying Aurora-compatible credit opportunities according to published metadata and query specifications.
+
+Compatible applications and capital providers can filter opportunities according to criteria such as jurisdiction, duration, asset, ticket size, verification requirements and other standardized attributes supported by the applicable schema.
+
+### Open APIs
+Public interfaces for querying Aurora-compatible credit opportunities, associated metadata, verification information and relevant lifecycle information.
+
+These interfaces allow wallets, lending applications, analytics services, capital-provider systems and other Cardano applications to build against common market infrastructure rather than creating separate protocol-specific integrations for the same functions.
+
+### Capital Provider Profile + Reference Query Library
+An open Capital Provider Profile Standard for representing requirements such as jurisdiction, ticket size, duration, asset, verification requirements and risk preferences, together with a Reference Query Library demonstrating how those requirements can be translated into reusable queries against Aurora-compatible credit opportunities.
+
+Together with the Discovery and Filtering Specification, Market Discovery API contributions and related integration artifacts, these components form Aurora's **Capital Discovery Layer**. Selected technical contributions to this infrastructure will be developed with Sundial.
+
+These components remain open standards and reference tooling rather than a proprietary capital-allocation system.
+
+### Developer Tooling + Reference Implementation
 Open developer tooling, documentation and a reference implementation demonstrating how compatible applications can create Aurora-compatible metadata, identify and index Loan Request UTxOs, query the Discovery Engine, apply published filtering criteria and evaluate verification references.
 
 The reference implementation is intended to reduce duplicated integration work across the ecosystem and provide a practical starting point for future Cardano builders adopting the standards.
 
 A Treasury-funded technical demonstration will validate the end-to-end infrastructure flow on testnet.
 
-### Capital Discovery Layer
-Aurora includes an open-source Capital Discovery Layer developed with selected technical contributions from Sundial.
+### Documentation + Independent Review
+Technical and operating documentation will support independent implementation and operation of the standards, software and interfaces.
 
-Its outputs include the Capital Provider Profile Standard, Discovery and Filtering Specification, Reference Query Library, Market Discovery API contribution, lightweight integration artifacts and supporting documentation.
-
-These components provide common ways for capital-provider requirements to be represented and translated into queries against Aurora-compatible credit opportunities. They remain open standards and reference tooling rather than a proprietary capital-allocation system.
+Independent security and legal review will assess the Treasury-funded infrastructure within the scope of this proposal, as detailed in Section 4.
 
 All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**.
 

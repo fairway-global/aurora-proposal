@@ -42,7 +42,7 @@ A material conflict includes a direct financial interest, or a material indirect
 If an Administrator resigns, loses access to a signing key or becomes permanently unavailable, the remaining Administrators may, **where the existing multisignature remains capable of satisfying its 3-of-5 authorization threshold**, authorize replacement with another independent Cardano ecosystem representative. Where replacement requires creation of a new multisignature credential, the unspent Treasury balance may be migrated to a replacement 3-of-5 Aurora Treasury multisignature preserving the same independence and signing threshold. Any signer replacement and resulting custody address will be publicly disclosed before funds are moved.
 
 ## Milestone Oversight
-The milestone schedule controls the maximum cumulative Treasury expenditure authorized as implementation progresses. The full Treasury allocation remains in the same Aurora Treasury multisignature throughout the project; milestone progression does not involve transfers between separate project wallets.
+The milestone schedule controls the maximum cumulative Treasury expenditure authorized as implementation progresses. The unspent Treasury balance remains in the same Aurora Treasury multisignature throughout the project; milestone progression does not involve transfers between separate project wallets.
 
 | Milestone | ADA Allocation |
 | ----- | ----- |
