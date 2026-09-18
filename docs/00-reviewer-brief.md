@@ -1,6 +1,6 @@
 # Reviewer Brief
 
-Aurora Treasury Proposal Version 3 requests **940,000 ADA** to establish shared open-source infrastructure for institutional credit markets on Cardano over approximately **five months** and **four implementation milestones**.
+The Aurora Treasury Proposal requests **940,000 ADA** to establish shared open-source infrastructure for institutional credit markets on Cardano over approximately **five months** and **four implementation milestones**.
 
 ## What Treasury Funds
 
