@@ -931,5 +931,3 @@ Open Infrastructure for Institutional Credit Markets on Cardano
 Sundial Protocol  ·  Fairway Oy  ·  Fallen Icarus
 
 Cardano Treasury Proposal  ·  2026
-
-Cardano Treasury Proposal  ·  2026

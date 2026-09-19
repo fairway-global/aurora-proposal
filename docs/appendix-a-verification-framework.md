@@ -90,8 +90,6 @@ Sundial Protocol  ·  Fairway Oy  ·  Fallen Icarus
 
 Cardano Treasury Proposal  ·  2026
 
-Cardano Treasury Proposal  ·  2026
-
 ---
 
 [Previous](11-governance-submission-requirements.md) · [Home](../README.md) · [Full Proposal](../proposal.md)
