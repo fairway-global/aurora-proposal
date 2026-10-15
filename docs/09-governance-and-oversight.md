@@ -17,7 +17,7 @@ All Treasury funds remain under independent **3-of-5 multisignature control** un
 | Independent Governance Signer | Christian Taylor | @DeOpenSourceGuy |
 | Independent Governance Signer | Elder Millennial | @TheElderMillenial |
 | Independent Technical Signer | Wilco USDM | @iamwilco |
-| Independent Signer | Kriss Baird | @krissbaird |
+| Independent Signer | Eddie D | @eddie_d123 |
 
 No implementation consortium member holds a signing key.
 

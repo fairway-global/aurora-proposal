@@ -17,7 +17,7 @@ Auroraは、Cardanoの信用市場に共通のオープンソース基盤を整�
 | 技術協力者 | **Sundial** |
 | 技術アドバイザー | **Fallen Icarus (Rusty)** |
 | 資金保管 | 独立した**3-of-5 Auroraトレジャリー・マルチシグ** |
-| 提案するトレジャリー管理者 | James "Blockjock" Meidinger、Christian Taylor、Elder Millennial、Wilco USDM、Kriss Baird |
+| 提案するトレジャリー管理者 | James "Blockjock" Meidinger、Christian Taylor、Elder Millennial、Wilco USDM、Eddie D |
 | ライセンス | トレジャリー資金で開発するソフトウェア、標準、リファレンス実装を**Apache License 2.0**で公開 |
 
 ## 審査の入口

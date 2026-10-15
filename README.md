@@ -15,7 +15,7 @@ The Treasury-funded implementation focuses on building and validating the shared
 | Technical Collaborator | **Sundial** |
 | Technical Advisor | **Fallen Icarus (Rusty)** |
 | Treasury Custody | Independent **3-of-5 Aurora Treasury multisignature** |
-| Proposed Treasury Administrators | **James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Kriss Baird** |
+| Proposed Treasury Administrators | **James "Blockjock" Meidinger, Christian Taylor, Elder Millennial, Wilco USDM, and Eddie D** |
 | License | **Apache License 2.0** for Treasury-funded software, standards, and reference implementations |
 
 ## Start Here
