@@ -41,6 +41,8 @@ Open Infrastructure for Institutional Credit Markets on Cardano
 | **Open Source** | Treasury-funded software, standards and reference implementations released under **Apache License 2.0** |
 
 ## Proposal Summary
+**Development status:** Aurora is ready to begin the proposed development. Treasury-funded implementation has not started and will begin only after approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
+
 Cardano's eUTxO model allows individual credit opportunities to exist as distinct on-chain financial objects rather than requiring all lending activity to be organized through pooled liquidity. For the purposes of this proposal, a **Loan Request UTxO** refers to a UTxO created by compatible lending infrastructure that represents an individual funding request or credit opportunity.
 
 That transaction-based architecture provides the foundation for open credit markets, but settlement alone does not create a coherent market. Capital providers and applications still need consistent ways to describe opportunities, discover them across implementations, filter them according to relevant criteria, evaluate verification information and monitor the information associated with them.
@@ -70,7 +72,7 @@ Treasury funding produces a common set of reusable public outputs:
 The implementation culminates in an end-to-end technical demonstration and public open-source release.
 
 ## Consortium and Delivery
-Aurora is delivered as one integrated implementation.
+Aurora will be delivered as one integrated implementation.
 
 **Fairway** acts as lead implementer and project coordinator, responsible for overall delivery and integration of the funded work.
 
@@ -81,7 +83,7 @@ Aurora is delivered as one integrated implementation.
 Treasury funds Aurora's common public outputs rather than separate organizational work packages. Contributions from consortium partners and advisors form part of the same implementation and do not create separate Treasury custody or governance tracks.
 
 ## Governance Safeguards
-The full **940,000 ADA** Treasury allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** controlled entirely by independent Cardano ecosystem representatives.
+If the Treasury Withdrawal is approved and enacted, the full **940,000 ADA** allocation will be received into one dedicated **3-of-5 Aurora Treasury multisignature** controlled entirely by independent Cardano ecosystem representatives.
 
 Fairway, Sundial, Fallen Icarus and other implementation contributors hold no Treasury signing keys. Every Treasury transaction requires approval from at least three of the five independent signers.
 
@@ -380,7 +382,7 @@ This includes:
 * Open-source repository preparation and release.
 * Project coordination and public progress reporting.
 
-These deliverables belong to the proposal rather than to individual consortium members. They are developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
+These deliverables belong to the proposal rather than to individual consortium members. They will be developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
 
 The Core Infrastructure Development allocation is monitored against the deliverables and milestone outputs defined in Sections 4 and 7. Material changes in resource allocation across the approved delivery areas will be disclosed through milestone reporting.
 
@@ -403,7 +405,7 @@ Its contribution focuses on selected open-source components relating to the inte
 * Lightweight integration examples and related technical artifacts.
 * Review of capital-provider interoperability across the relevant standards and interfaces.
 
-These contributions are developed as part of the proposal's shared technical deliverables and remain available to the ecosystem under the same open-source commitments as the rest of the Treasury-funded infrastructure.
+These contributions will be developed as part of the proposal's shared technical deliverables and will remain available to the ecosystem under the same open-source commitments as the rest of the Treasury-funded infrastructure.
 
 ## Review, Hosting & Technical Contingency
 The **140,000 ADA** Review, Hosting & Technical Contingency allocation covers external and project-wide requirements necessary to deliver the infrastructure responsibly.
@@ -432,7 +434,7 @@ Internal allocation of implementation resources may be adjusted by the lead impl
 The resulting budget therefore maps directly to the public outputs defined in Section 4 and limits Treasury expenditure to infrastructure that remains available to Cardano after the funded delivery period ends.
 
 # 6. Consortium and Relevant Experience
-Aurora is delivered through an integrated implementation led by Fairway, with technical contributions from Sundial and advisory input from domain experts where appropriate.
+Aurora will be delivered through an integrated implementation led by Fairway, with technical contributions from Sundial and advisory input from domain experts where appropriate.
 
 Fairway is responsible for overall project delivery, coordination and integration of the funded work. Sundial contributes complementary technical expertise to selected open-source standards, interoperability requirements and reference implementations. Fallen Icarus (Rusty) supports the project as a technical advisor and reviewer on the underlying transaction-based credit-market architecture.
 
@@ -506,7 +508,7 @@ Together, these capabilities support an implementation that must work both from 
 The resulting standards and software are designed to remain independently operable.
 
 # 7. Milestones and Success Criteria
-Aurora is delivered through four milestones over approximately five months.
+Aurora will be delivered through four milestones over approximately five months following approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
 
 Each milestone is tied to concrete public outputs that can be independently reviewed. Fairway remains responsible for integrated delivery of the proposal, with technical contributions from consortium partners and advisors incorporated where appropriate.
 
@@ -648,9 +650,9 @@ Open infrastructure intended for institutional credit markets may raise question
 The funded scope therefore includes independent legal review of the infrastructure, documentation and intended operating model, with any material findings incorporated into the final release.
 
 # 9. Governance and Oversight
-Aurora uses a single, independently controlled Treasury custody structure for the implementation of the project.
+Under this proposal, Aurora will use a single, independently controlled Treasury custody structure for the implementation of the project.
 
-The full **940,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled by independent Cardano ecosystem representatives. Fairway is responsible for project delivery but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
+If the Treasury Withdrawal is approved and enacted, the full **940,000 ADA** allocation will be received into a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled by independent Cardano ecosystem representatives. Fairway is responsible for project delivery but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
 Expenditure progresses against the four milestones defined in Section 7. Fairway publishes the required milestone evidence before expenditure may progress beyond each cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
 
@@ -758,7 +760,7 @@ The proposal funds the open standards, software and developer infrastructure req
 
 The funded outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering capabilities, developer tooling, reference implementation, technical documentation and capital-provider discovery standards. Together, these components form reusable infrastructure around compatible lending implementations while leaving the underlying lending logic to those protocols and applications.
 
-Fairway leads the integrated delivery of Aurora, with technical contributions from Sundial and advisory input from Fallen Icarus where relevant. The project is delivered through four milestone-gated stages over approximately five months, with Treasury funds held under independent **3-of-5 multisignature control** throughout implementation.
+Fairway leads the integrated delivery of Aurora, with technical contributions from Sundial and advisory input from Fallen Icarus where relevant. The project will be delivered through four milestone-gated stages over approximately five months, with Treasury funds held under independent **3-of-5 multisignature control** throughout implementation.
 
 All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**, with public repositories, documentation and operating instructions intended to make the infrastructure straightforward for technically capable third parties to inspect, deploy, integrate, modify and extend.
 

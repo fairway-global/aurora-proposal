@@ -5,7 +5,7 @@ The proposal funds the open standards, software and developer infrastructure req
 
 The funded outputs include the Metadata Standard, Verification Framework, Aurora Discovery Engine, open APIs, filtering capabilities, developer tooling, reference implementation, technical documentation and capital-provider discovery standards. Together, these components form reusable infrastructure around compatible lending implementations while leaving the underlying lending logic to those protocols and applications.
 
-Fairway leads the integrated delivery of Aurora, with technical contributions from Sundial and advisory input from Fallen Icarus where relevant. The project is delivered through four milestone-gated stages over approximately five months, with Treasury funds held under independent **3-of-5 multisignature control** throughout implementation.
+Fairway leads the integrated delivery of Aurora, with technical contributions from Sundial and advisory input from Fallen Icarus where relevant. The project will be delivered through four milestone-gated stages over approximately five months, with Treasury funds held under independent **3-of-5 multisignature control** throughout implementation.
 
 All Treasury-funded software, standards and reference implementations will be released under **Apache License 2.0**, with public repositories, documentation and operating instructions intended to make the infrastructure straightforward for technically capable third parties to inspect, deploy, integrate, modify and extend.
 

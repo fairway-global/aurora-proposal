@@ -41,7 +41,7 @@ This includes:
 * Open-source repository preparation and release.
 * Project coordination and public progress reporting.
 
-These deliverables belong to the proposal rather than to individual consortium members. They are developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
+These deliverables belong to the proposal rather than to individual consortium members. They will be developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
 
 The Core Infrastructure Development allocation is monitored against the deliverables and milestone outputs defined in Sections 4 and 7. Material changes in resource allocation across the approved delivery areas will be disclosed through milestone reporting.
 
@@ -64,7 +64,7 @@ Its contribution focuses on selected open-source components relating to the inte
 * Lightweight integration examples and related technical artifacts.
 * Review of capital-provider interoperability across the relevant standards and interfaces.
 
-These contributions are developed as part of the proposal's shared technical deliverables and remain available to the ecosystem under the same open-source commitments as the rest of the Treasury-funded infrastructure.
+These contributions will be developed as part of the proposal's shared technical deliverables and will remain available to the ecosystem under the same open-source commitments as the rest of the Treasury-funded infrastructure.
 
 ## Review, Hosting & Technical Contingency
 The **140,000 ADA** Review, Hosting & Technical Contingency allocation covers external and project-wide requirements necessary to deliver the infrastructure responsibly.

@@ -4,6 +4,8 @@ Open Infrastructure for Institutional Credit Markets on Cardano
 
 Aurora requests **940,000 ADA** from the Cardano Treasury to establish shared open-source market infrastructure for Cardano credit markets, supporting discovery, filtering, verification and evaluation across compatible lending implementations. Delivery is planned over approximately **five months** through **four implementation milestones**.
 
+**Development status:** Aurora is ready to begin the proposed development. Treasury-funded implementation has not started and will begin only after approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
+
 The Treasury-funded implementation focuses on building and validating the shared technical infrastructure described in the proposal. The request comprises **800,000 ADA** for Core Infrastructure Development and **140,000 ADA** for Review, Hosting & Technical Contingency.
 
 | Field | Detail |
@@ -53,7 +55,7 @@ Aurora does not replace lending protocols, originate loans, custody lending capi
 
 ## Governance Positioning
 
-The full allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature**, with all five keys held independently of implementation participants. Expenditure may progress only within the applicable cumulative milestone ceiling after evidence is published and reviewed by the Aurora Treasury Administrators. Independent oversight includes an interim expenditure and reconciliation review after M2 and a final Treasury-use audit after M4. Treasury balances and transactions remain publicly auditable, and unspent funds are returned if the project terminates under the proposal's conditions.
+If the Treasury Withdrawal is approved and enacted, the full allocation will be received into one dedicated **3-of-5 Aurora Treasury multisignature**, with all five keys held independently of implementation participants. Expenditure may progress only within the applicable cumulative milestone ceiling after evidence is published and reviewed by the Aurora Treasury Administrators. Independent oversight includes an interim expenditure and reconciliation review after M2 and a final Treasury-use audit after M4. Treasury balances and transactions remain publicly auditable, and unspent funds are returned if the project terminates under the proposal's conditions.
 
 ---
 

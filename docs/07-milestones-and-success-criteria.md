@@ -1,5 +1,5 @@
 # 7. Milestones and Success Criteria
-Aurora is delivered through four milestones over approximately five months.
+Aurora will be delivered through four milestones over approximately five months following approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
 
 Each milestone is tied to concrete public outputs that can be independently reviewed. Fairway remains responsible for integrated delivery of the proposal, with technical contributions from consortium partners and advisors incorporated where appropriate.
 

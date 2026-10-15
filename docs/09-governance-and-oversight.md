@@ -1,7 +1,7 @@
 # 9. Governance and Oversight
-Aurora uses a single, independently controlled Treasury custody structure for the implementation of the project.
+Under this proposal, Aurora will use a single, independently controlled Treasury custody structure for the implementation of the project.
 
-The full **940,000 ADA** Treasury allocation is held in a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled by independent Cardano ecosystem representatives. Fairway is responsible for project delivery but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
+If the Treasury Withdrawal is approved and enacted, the full **940,000 ADA** allocation will be received into a dedicated **3-of-5 Aurora Treasury multisignature wallet** controlled by independent Cardano ecosystem representatives. Fairway is responsible for project delivery but holds no Treasury signing key. Sundial, Fallen Icarus and other implementation contributors likewise hold no signing authority over Treasury funds.
 
 Expenditure progresses against the four milestones defined in Section 7. Fairway publishes the required milestone evidence before expenditure may progress beyond each cumulative milestone ceiling, and every Treasury transaction requires approval from at least three of the five Aurora Treasury Administrators.
 

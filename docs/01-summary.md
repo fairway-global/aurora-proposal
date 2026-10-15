@@ -14,6 +14,8 @@
 | **Open Source** | Treasury-funded software, standards and reference implementations released under **Apache License 2.0** |
 
 ## Proposal Summary
+**Development status:** Aurora is ready to begin the proposed development. Treasury-funded implementation has not started and will begin only after approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
+
 Cardano's eUTxO model allows individual credit opportunities to exist as distinct on-chain financial objects rather than requiring all lending activity to be organized through pooled liquidity. For the purposes of this proposal, a **Loan Request UTxO** refers to a UTxO created by compatible lending infrastructure that represents an individual funding request or credit opportunity.
 
 That transaction-based architecture provides the foundation for open credit markets, but settlement alone does not create a coherent market. Capital providers and applications still need consistent ways to describe opportunities, discover them across implementations, filter them according to relevant criteria, evaluate verification information and monitor the information associated with them.
@@ -43,7 +45,7 @@ Treasury funding produces a common set of reusable public outputs:
 The implementation culminates in an end-to-end technical demonstration and public open-source release.
 
 ## Consortium and Delivery
-Aurora is delivered as one integrated implementation.
+Aurora will be delivered as one integrated implementation.
 
 **Fairway** acts as lead implementer and project coordinator, responsible for overall delivery and integration of the funded work.
 
@@ -54,7 +56,7 @@ Aurora is delivered as one integrated implementation.
 Treasury funds Aurora's common public outputs rather than separate organizational work packages. Contributions from consortium partners and advisors form part of the same implementation and do not create separate Treasury custody or governance tracks.
 
 ## Governance Safeguards
-The full **940,000 ADA** Treasury allocation is held in one dedicated **3-of-5 Aurora Treasury multisignature** controlled entirely by independent Cardano ecosystem representatives.
+If the Treasury Withdrawal is approved and enacted, the full **940,000 ADA** allocation will be received into one dedicated **3-of-5 Aurora Treasury multisignature** controlled entirely by independent Cardano ecosystem representatives.
 
 Fairway, Sundial, Fallen Icarus and other implementation contributors hold no Treasury signing keys. Every Treasury transaction requires approval from at least three of the five independent signers.
 
