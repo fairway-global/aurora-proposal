@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP108": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0108/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP108:body",
+      "@context": {
+        "references": {
+          "@id": "CIP108:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP108:referenceHash",
+              "@context": {
+                "hashDigest": "CIP108:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "title": "CIP108:title",
+        "abstract": "CIP108:abstract",
+        "motivation": "CIP108:motivation",
+        "rationale": "CIP108:rationale"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "abstract": "AURORA will give Cardano builders shared infrastructure for finding, comparing and verifying individual credit opportunities across compatible lending implementations. Today, each application must build much of this infrastructure separately, increasing integration costs and fragmenting market information.\n\nAURORA provides that shared market layer. Treasury funding will deliver the Metadata Standard, Verification Framework, AURORA Discovery Engine, open APIs, filtering and query tooling, Capital Provider Profile Standard, developer tooling and reference implementation. Together, these components allow independent credit opportunities to expose standardized market information, become discoverable through common interfaces, and be evaluated according to different application and capital-provider requirements.\n\nThe infrastructure operates around compatible lending implementations while leaving loan origination, lending logic and settlement to those underlying systems. This allows different protocols and applications to share common market infrastructure without requiring adoption of a single lending protocol, verification system or commercial model.\n\nThe Treasury request is 940,000 ADA for approximately five months of delivery across four milestones. Fairway is responsible for delivery, with technical contributions from Sundial and architectural advice from Fallen Icarus. Treasury-funded implementation will begin following approval and enactment of the Treasury Withdrawal and receipt of funds. Treasury funds are initially received into an independent 3-of-5 AURORA Treasury multisignature, and all Treasury-funded software, standards and reference implementations will be released under Apache License 2.0 with public documentation and operating guidance.\n\nImplementation contributors hold no signing keys to the administrator-controlled Treasury multisignature. Implementation installments are paid to Fairway, beginning at project commencement, with subsequent releases based on acceptance of the preceding milestone. Fairway manages implementation resources. Administrators may approve budget reallocations within the approved scope and total request. Independent Treasury-use audits take place following publication of the M2 technical outputs and during M4 before project closure, covering the funding arrangement and records defined in Section 11 of the full proposal.\n",
+    "motivation": "Cardano’s eUTxO architecture is well suited to credit markets built around individual financial agreements. Rather than requiring lending activity to begin in shared liquidity pools, individual credit opportunities can exist as distinct Loan Request UTxOs, each with its own terms, state and lifecycle.\n\nThis provides the foundation for a more open credit market, but individual on-chain opportunities do not by themselves create a usable market. Capital providers and applications still need consistent ways to discover opportunities across different implementations, understand and compare their terms, apply their own filtering and verification requirements, and monitor relevant information over time.\n\nWithout shared standards and market infrastructure, each lending protocol, application and capital provider must build its own metadata formats, indexing logic, discovery interfaces, verification workflows and filtering systems. As more lending models, jurisdictions, verification systems and capital-provider requirements emerge, this creates fragmented market information and repeated integration work.\n\nAURORA addresses this missing layer. Standardized metadata provides a common way to describe credit opportunities, the AURORA Discovery Engine makes them searchable across compatible implementations, and open filtering and verification infrastructure allows different applications and capital providers to evaluate them according to their own requirements.\n\nThe result is shared infrastructure through which otherwise independent Cardano credit opportunities can function as a coherent and accessible market.\n",
+    "rationale": "AURORA addresses the market-infrastructure gap described above through a set of shared components that work together around compatible Cardano lending implementations.\n\nEach component solves a different part of the problem: standardizing how credit opportunities are described, making them discoverable across implementations, supporting different verification requirements, translating capital-provider requirements into market queries, and giving future builders open interfaces and tooling they can integrate directly.\n\n\n1. Metadata Standard: give credit opportunities a common language\n\nAURORA will develop a versioned Metadata Standard for associating consistent, machine-readable market information with Loan Request UTxOs.\n\nThe standard can describe attributes such as jurisdiction, duration, asset, ticket size, verification references and other information defined by the applicable schema. Because this information is standardized through metadata rather than embedded into one lending protocol’s core contract logic, different credit implementations can retain their own architecture while exposing opportunities through a common market-information model.\n\nThis provides the shared language on which discovery, filtering, verification and future integrations can operate.\n\n\n2. Verification Framework: support different forms of verifiable evidence\n\nInstitutional and professional capital providers may require information beyond the terms of the lending agreement itself, including institutional status, eligibility information, compliance-related evidence or other verifiable attributes.\n\nAURORA will build an open Verification Framework for associating and evaluating this proof-based information with credit opportunities.\n\nThe framework will define versioned schemas and common verification interfaces through which different credential systems, attestations and proof technologies can be integrated. Applications and capital providers will determine which evidence satisfies their requirements.\n\n\n3. AURORA Discovery Engine: turn independent opportunities into a searchable market\n\nThe AURORA Discovery Engine will identify and index compatible Loan Request UTxOs and their associated metadata, making otherwise independent credit opportunities searchable across Cardano.\n\nThe engine will organize standardized market information, expose associated verification information and track relevant lifecycle information made available by compatible lending implementations, including repayment events where available on-chain.\n\nInstead of each wallet, lending application or capital provider building its own indexer and reconstructing the same market information independently, they can build against common open infrastructure. The Discovery Engine will be open-source and independently deployable rather than dependent on a single hosted service.\n\n\n4. Filtering & Query Tooling: find the opportunities that meet specific requirements\n\nDifferent applications and capital providers need to search the same market according to different criteria.\n\nAURORA will provide common filtering and query capabilities for attributes such as jurisdiction, duration, asset, ticket size, verification requirements and other standardized information.\n\nThis turns indexed Loan Request UTxOs into a usable market: participants can move from seeing what opportunities exist to finding the opportunities relevant to their own requirements.\n\n\n5. Open APIs: make the market accessible to other applications\n\nAURORA will expose its market infrastructure through open APIs that applications can integrate directly.\n\nThese interfaces will allow wallets, lending applications, analytics services, capital-provider systems and other Cardano applications to query credit opportunities, standardized metadata, verification information and relevant lifecycle data without creating separate protocol-specific integrations for the same functions.\n\nPublished interfaces and operating documentation will allow the infrastructure to support multiple applications rather than functioning as a closed AURORA front end.\n\n\n6. Capital Provider Profile + Reference Query Library: translate capital requirements into reusable market queries\n\nAURORA will provide a Capital Provider Profile Standard for representing requirements such as jurisdiction, ticket size, duration, asset, verification requirements and risk preferences.\n\nThe accompanying Reference Query Library, Discovery and Filtering Specification and related integration artifacts will demonstrate how those requirements can be translated into reusable queries against AURORA-compatible credit opportunities.\n\nThese components, developed with selected technical contributions from Sundial, provide common infrastructure for connecting capital-provider requirements with market discovery. They do not make lending or capital-allocation decisions; individual capital providers continue to determine which opportunities satisfy their own requirements.\n\n\n7. Developer Tooling + Reference Implementation: make AURORA practical for other builders\n\nOpen standards are useful only if other builders can implement them.\n\nAURORA will therefore provide developer tooling and reference code demonstrating how applications can create AURORA-compatible metadata, identify and index Loan Request UTxOs, query the Discovery Engine, apply filtering criteria and evaluate verification references.\n\nThe reference implementation will bring the individual components together into a working blueprint for integrating the AURORA lifecycle.\n\n\n8. Documentation + Independent Review: make the infrastructure deployable and independently assessable\n\nThe final release will include technical documentation, specifications, build instructions, API documentation and operating guidance sufficient for technically capable third parties to inspect, integrate and operate the relevant infrastructure.\n\nThe funded scope also includes independent security review of the software and relevant technical interfaces, independent legal review within the infrastructure-only scope, and independent Treasury-use oversight.\n\n\nDelivery culminates in an end-to-end testnet demonstration validating the complete infrastructure flow:\nLoan Request UTxO → standardized metadata → indexing → discovery → filtering → verification → application-level consumption.\n\nAll Treasury-funded software, standards and reference implementations will be publicly released under Apache License 2.0, allowing Cardano builders to use, operate, modify and extend the resulting infrastructure.\n\nThe full AURORA Treasury Proposal forms part of this funding request and defines the architecture, deliverables, budget, milestones and funding terms. Fairway is the Treasury Withdrawal Recipient and lead implementer. Sections 5, 7, 9 and 11 specify budget reallocations, implementation payments, independent administration, audits, prior funding disclosure, refund conditions and Net Change Limit compliance.\n\n",
+    "references": [
+      {
+        "@type": "Other",
+        "label": "Full Treasury Proposal (Immutable Markdown)",
+        "uri": "https://github.com/fairway-global/aurora-proposal/releases/tag/proposal-snapshot-2026-10-18"
+      },
+      {
+        "@type": "Other",
+        "label": "Implementation Repository",
+        "uri": "https://github.com/fairway-global/cardano-aurora"
+      },
+      {
+        "@type": "Other",
+        "label": "Project Website",
+        "uri": "https://aurora.fairway.global"
+      },
+      {
+        "@type": "Other",
+        "label": "Presentation / Slide Deck",
+        "uri": "https://canva.link/cardano-aurora"
+      },
+      {
+        "@type": "Other",
+        "label": "Contact Project Lead X",
+        "uri": "https://x.com/fairway_global"
+      },
+      {
+        "@type": "Other",
+        "label": "Contact Lead proposer X",
+        "uri": "https://x.com/Henrik_Met"
+      }
+    ],
+    "title": "AURORA: Open infrastructure for bringing real credit markets to Cardano."
+  }
+}
