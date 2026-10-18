@@ -1,5 +1,5 @@
 # 7. Milestones and Success Criteria
-Aurora will be delivered through four milestones over approximately five months following approval and enactment of the Treasury Withdrawal governance action and receipt of the approved funds.
+AURORA will be delivered through four milestones over approximately five months following approval and enactment of the Treasury Withdrawal governance action and receipt by Fairway of the initial implementation instalment.
 
 Each milestone is tied to concrete public outputs that can be independently reviewed. Fairway remains responsible for integrated delivery of the proposal, with technical contributions from consortium partners and advisors incorporated where appropriate.
 
@@ -18,7 +18,7 @@ Each milestone is tied to concrete public outputs that can be independently revi
 ### Key Outputs
 * Metadata Standard.
 * Verification Framework specification.
-* Aurora Discovery Engine architecture.
+* AURORA Discovery Engine architecture.
 * Discovery and Filtering Specification.
 * Capital Provider Profile Standard.
 * Initial API, query and implementation architecture.
@@ -28,7 +28,7 @@ Technical review may include contributions from Sundial and architectural input 
 ### Completion Criteria
 * Core specifications and architecture documents are published in public repositories.
 * The architecture defines how compatible Loan Request UTxOs are indexed, discovered, filtered and associated with verification information.
-* The specifications remain protocol independent and do not require a single verification provider, lending implementation or hosted Aurora operator.
+* The specifications remain protocol independent and do not require a single verification provider, lending implementation or hosted AURORA operator.
 * Public milestone report published with links to the completed outputs.
 
 ## M2: Core Build
@@ -36,19 +36,18 @@ Technical review may include contributions from Sundial and architectural input 
  **ADA Allocation:** **320,000 ADA**
 
 ### Key Outputs
-* Operational Aurora Discovery Engine on testnet.
+* Operational AURORA Discovery Engine on testnet.
 * Verification Framework implementation.
 * Indexing, discovery and filtering functionality.
 * Open API implementation.
 * Initial developer tooling and technical documentation.
 
 ### Completion Criteria
-* Aurora can identify and index compatible Loan Request UTxOs and associated metadata on testnet.
+* AURORA can identify and index compatible Loan Request UTxOs and associated metadata on testnet.
 * The public API can retrieve and filter indexed opportunities using published metadata criteria.
 * Verification information can be exposed and evaluated through the Verification Framework.
 * The Discovery Engine can be deployed in a test environment without dependence on a Fairway-hosted API.
 * Source code and milestone documentation are publicly available.
-* Interim independent Treasury-use expenditure and reconciliation review completed and published.
 
 ## M3: Integration & Technical Demonstration
 **Timeline:** Month 4
@@ -77,7 +76,7 @@ Independent review preparation may begin during the preceding implementation mil
 
 ### Key Outputs
 * Independent security review of the Treasury-funded software and relevant interfaces.
-* Independent Treasury-use audit and oversight report covering Treasury expenditure and reconciliation against the approved scope and milestone ceilings.
+* Final independent Treasury-use audit and oversight report covering the funding arrangement and records defined in Section 11.
 * Independent legal review within the infrastructure-only scope of the proposal.
 * Resolution or documented remediation of material findings.
 * Final specifications, software, APIs, tooling, reference implementation and documentation.
@@ -89,13 +88,17 @@ Independent review preparation may begin during the preceding implementation mil
 * Independent Treasury-use audit and oversight has been completed and included in the final project reporting.
 * All Treasury-funded software, standards and reference implementations are publicly released under **Apache License 2.0**.
 * Public repositories contain sufficient source code, specifications, documentation and deployment instructions for independent inspection and operation.
-* A technically capable third party can deploy and operate the relevant Aurora infrastructure using the published repositories, documentation and deployment instructions.
+* A technically capable third party can deploy and operate the relevant AURORA infrastructure using the published repositories, documentation and deployment instructions.
 * Final report maps the completed public outputs against the proposal deliverables and milestone requirements.
 
-## Milestone Expenditure Principles
-The milestone allocations define the maximum cumulative Treasury expenditure as implementation progresses. At project commencement, up to **140,000 ADA** may be used for M1. Following completion and approval of M1, the cumulative expenditure ceiling increases to **460,000 ADA**; following M2, to **750,000 ADA**; and following M3, to the full **940,000 ADA**. Completion of M4 triggers final reconciliation and reporting.
+## Milestone Funding and Payment Principles
+The milestone allocations are funding envelopes covering implementation payments and supporting costs. The initial allocation is 800,000 ADA for core implementation and 140,000 ADA for review, hosting, Treasury-use oversight and technical contingency. These allocations may be adjusted under the reallocation provisions in Section 5, without increasing the total 940,000 ADA request or changing the approved infrastructure scope.
 
-Fairway is responsible for the integrated delivery of Aurora. The Aurora Treasury Administrators review the published milestone evidence before authorizing progression to each subsequent expenditure ceiling.
+Funding is released in advance for each implementation stage. At project commencement, aggregate disbursements of up to 140,000 ADA are authorized. Following acceptance of M1, this cumulative limit increases to 460,000 ADA; following M2, to 750,000 ADA; and following M3, to 940,000 ADA.
+
+Within these limits, implementation instalments are transferred from the AURORA Treasury multisignature to Fairway's designated implementation wallet. Supporting costs and approved reallocations are recorded separately. Additional implementation payments require administrator approval under Section 5.
+
+Acceptance is based on the published outputs and completion criteria for the preceding milestone. Fairway's internal payroll, supplier invoices and actual delivery costs are not the basis for calculating its fixed implementation payments. Completion of M4 triggers final delivery reporting, the final independent audit and project closure.
 
 ---
 

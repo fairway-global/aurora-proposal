@@ -1,5 +1,5 @@
 # 5. Budget and Resource Allocation
-The Treasury withdrawal requests **940,000 ADA** for the 5-month delivery of Aurora's open credit-market infrastructure, equivalent to approximately **$188,000 at a reference price of $0.20 per ADA**.
+The Treasury withdrawal requests **940,000 ADA** for the 5-month delivery of AURORA's open credit-market infrastructure, equivalent to approximately **$188,000 at a reference price of $0.20 per ADA**.
 
 The budget covers the development and delivery of the technical standards, open-source software, testing, documentation, independent review, hosting and supporting infrastructure defined in this proposal.
 
@@ -7,15 +7,17 @@ Treasury funding is allocated to the open infrastructure and public deliverables
 
 | Allocation | ADA | Approx. USD\* | Primary Scope |
 | ----- | ----- | ----- | ----- |
-| Core Infrastructure Development | **800,000** | **$160,000** | Metadata and verification standards, Aurora Discovery Engine, APIs, filtering capabilities, developer tooling, reference implementation, Capital Discovery Layer components, technical demonstration, documentation and project delivery |
-| Review, Hosting & Technical Contingency | **140,000** | **$28,000** | Covers approximately **60,000 ADA** for independent security and legal review, **20,000 ADA** for independent Treasury-use audit and oversight, **30,000 ADA** for infrastructure hosting and technical operations, and **30,000 ADA** for technical contingency within the approved Aurora scope. |
+| Core Infrastructure Development | **800,000** | **$160,000** | Metadata and verification standards, AURORA Discovery Engine, APIs, filtering capabilities, developer tooling, reference implementation, Capital Discovery Layer components, technical demonstration, documentation and project delivery |
+| Review, Hosting & Technical Contingency | **140,000** | **$28,000** | Covers approximately **60,000 ADA** for independent security and legal review, **20,000 ADA** for independent Treasury-use audit and oversight, **30,000 ADA** for infrastructure hosting and technical operations, and **30,000 ADA** for technical contingency within the approved AURORA scope. |
 | **Total** | **940,000** | **$188,000** |  |
 
 \*Illustrative values calculated using a reference ADA price of **US$0.20**.
 
 The USD values are provided solely to assist reviewers in understanding the approximate scale of the proposal. Treasury funding is requested in ADA. The deliverables described in this proposal are defined by scope and milestone completion rather than by subsequent movements in the ADA/USD exchange rate.
 
-The budget reflects responsibility for producing public deliverables rather than compensation of individual contributors or consortium members. Internal allocation of implementation resources is managed by the lead implementer and does not alter the Treasury-funded scope, milestone requirements or public deliverables.
+The 800,000 ADA Core Infrastructure Development allocation is a fixed implementation fee payable to Fairway for delivering the approved public outputs. It is paid in milestone instalments rather than reimbursed against Fairway's actual internal costs. Fairway determines staffing, contributor compensation, subcontracting and internal resource allocation, while remaining responsible for the agreed scope and milestone requirements.
+
+The 140,000 ADA Review, Hosting & Technical Contingency allocation initially provides for the supporting purposes described below. Savings and unused amounts may be reallocated to implementation requirements within the approved AURORA scope, subject to the reallocation provisions below.
 
 All Treasury-funded software, standards and reference implementations will be released under Apache License 2.0.
 
@@ -26,7 +28,7 @@ This includes:
 
 * Metadata Standard development.
 * Verification Framework implementation.
-* Aurora Discovery Engine development.
+* AURORA Discovery Engine development.
 * Indexing, discovery and filtering capabilities.
 * Open APIs.
 * Developer tooling.
@@ -43,7 +45,7 @@ This includes:
 
 These deliverables belong to the proposal rather than to individual consortium members. They will be developed under a unified implementation programme led by Fairway, with technical contributions from consortium partners where appropriate.
 
-The Core Infrastructure Development allocation is monitored against the deliverables and milestone outputs defined in Sections 4 and 7. Material changes in resource allocation across the approved delivery areas will be disclosed through milestone reporting.
+Core Infrastructure Development payments are assessed against the deliverables and milestone outputs defined in Sections 4 and 7. Fairway may adjust its internal resource allocation without separate administrator approval, provided the approved scope and deliverables remain unchanged. Public milestone reports disclose material changes affecting delivery.
 
 ## Implementation Responsibility
 Fairway acts as lead implementer and is responsible for overall delivery of the Treasury-funded work.
@@ -53,9 +55,9 @@ This includes coordinating engineering, standards development, technical integra
 This structure does not imply that every individual deliverable must be implemented exclusively by Fairway personnel. Treasury funds the completed public infrastructure and associated milestones rather than a prescribed division of labour between contributors.
 
 ## Consortium Technical Collaboration
-Sundial acts as a strategic technical collaborator within the unified Aurora implementation.
+Sundial acts as a strategic technical collaborator within the unified AURORA implementation.
 
-Its contribution focuses on selected open-source components relating to the interaction between capital-provider requirements and Aurora-compatible market information, including:
+Its contribution focuses on selected open-source components relating to the interaction between capital-provider requirements and AURORA-compatible market information, including:
 
 * Capital Provider Profile Standard.
 * Discovery and Filtering Specification.
@@ -75,14 +77,14 @@ These resources include:
 * Independent legal review of the open infrastructure, standards and intended operating model within the scope of this proposal.
 * Infrastructure hosting required for development, testing and the technical demonstration.
 * Technical contingency for unforeseen implementation requirements within the approved infrastructure scope.
-* **Independent Treasury-use audit and oversight**, including reconciliation of Treasury transactions against reported expenditure, approved budget categories and milestone expenditure ceilings.
+* Independent Treasury-use audits and oversight covering authorized disbursements, milestone evidence, supporting-cost expenditure and funds remaining under administrator custody, as defined in Section 11.
 
-These resources are limited to external review, infrastructure operations, Treasury-use oversight and technical requirements directly related to the approved Aurora scope.
+These resources are limited to external review, infrastructure operations, Treasury-use oversight and technical requirements directly related to the approved AURORA scope.
 
-Any use of technical contingency remains limited to delivery of the approved proposal scope, requires written justification and authorization by the Aurora Treasury Administrators, and will be disclosed in the next public milestone report. Unused contingency remains unspent Treasury ADA and is subject to the proposal's normal reconciliation and refund provisions.
+The AURORA Treasury Administrators may approve reallocations between review, hosting, technical contingency and implementation, including additional implementation payments to Fairway, within the approved scope and total project budget. Required independent reviews, audits and existing commitments must remain adequately funded. Approved reallocations will be disclosed in the next milestone report. Unused funds will be returned to the Cardano Treasury at project closure.
 
 ## Resource Allocation Principles
-The allocation follows three principles.
+The revised allocation follows three principles.
 
 * Treasury funds are allocated according to the infrastructure and supporting work required to deliver the approved public outputs rather than according to the internal compensation arrangements of consortium members.
 * Fairway remains responsible for overall delivery while technical contributions from consortium partners are incorporated into the same implementation programme where appropriate.
